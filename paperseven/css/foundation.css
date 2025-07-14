@@ -1,0 +1,91 @@
+:root {
+  --white: #fff;
+  --black: #000;
+
+  /* gray color */
+  --gray50: #F8F9FA;
+  --gray100: #F1F3F5;
+  --gray200: #E9ECEF;
+  --gray300: #DEE2E6;
+  --gray400: #CED4DA;
+  --gray500: #ADB5BD;
+  --gray600: #868E96;
+  --gray700: #495057;
+  --gray800: #343A40;
+  --gray900: #212529;
+
+  /* primary color */
+  --primary50: #e8eaf3;
+  --primary100: #c4cbe3;
+  --primary200: #9ea9cf;
+  --primary300: #7988bc;
+  --primary400: #5c6eae;
+  --primary500: #3f55a1;
+  --primary600: #394e98;
+  --primary700: #30448c;
+  --primary800: #293a80;
+  --primary900: #1d2969;
+
+  /* secondary color */
+  --secondary50: #e8eaf3;
+  --secondary100: #c4cbe3;
+  --secondary200: #9ea9cf;
+  --secondary300: #7988bc;
+  --secondary400: #5c6eae;
+  --secondary500: #3f55a1;
+  --secondary600: #394e98;
+  --secondary700: #30448c;
+  --secondary800: #293a80;
+  --secondary900: #1d2969;
+
+  /* font size */
+  --font-s-2xs: 1.2rem;
+  --font-s-xs: 1.4rem;
+  --font-s-sm: 1.6rem;
+  --font-s-md: 1.8rem;
+  --font-s-lg: 2.0rem;
+  --font-s-xl: 2.4rem;
+  --font-s-2xl: 2.8rem;
+  --font-s-3xl: 3.2rem;
+  --font-s-4xl: 3.6rem;
+  --font-s-5xl: 4rem;
+  --font-s-6xl: 4.8rem;
+  --font-s-7xl: 5.2rem;
+
+  /* font weight */
+  --font-w-thin: 100;
+  --font-w-light: 300;
+  --font-w-regular: 400;
+  --font-w-mid: 500;
+  --font-w-semibold: 600;
+  --font-w-bold: 700;
+  --font-w-black: 900;
+
+  /* line height */
+  --line-height-default: 1.6;
+
+  /* radius */
+  --border-radius-2xs: 0.4rem;
+  --border-radius-xs: 0.8rem;
+  --border-radius-sm: 1.2rem;
+  --border-radius-md: 1.6rem;
+  --border-radius-lg: 2rem;
+  --border-radius-xl: 2.4rem;
+  --border-radius-full: 1000rem; /* 레디우스 크기 조정 (100%) */
+
+  /* space */
+  --space-4xs: 0.2rem;
+  --space-3xs: 0.4rem;
+  --space-2xs: 0.8rem;
+  --space-xs: 1.2rem;
+  --space-sm: 1.6rem;
+  --space-md: 2rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-2xl: 4rem;
+  --space-3xl: 4.4rem;
+  --space-4xl: 4.8rem;
+  --space-5xl: 6rem;
+  --space-6xl: 8rem;
+  --space-7xl: 10rem;
+}

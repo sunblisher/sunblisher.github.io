@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>박스가이드</title>
+    <meta name="description" content="박스가이드" />
+    <meta name="keywords" content="박스가이드, 인쇄 제작" />
+    <meta name="author" content="박스가이드" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="박스가이드" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.boxguide.co.kr" />
+    <meta property="og:site_name" content="박스가이드" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="박스가이드" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.boxguide.co.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      fetch("../Components/Header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "../JS/Header.js";
+          document.body.appendChild(script);
+        });
+    </script>
+    <!-- Header END -->
+    <!-- 모달-계좌 변경 START -->
+    <div class="c_section">
+      <div class="c_inner">
+        <div class="modal_container modalChangeAccount">
+          <div class="modal_box">
+            <div class="modal_content">
+              <div class="titleBox">
+                <div class="title">계좌 변경</div>
+                <button type="button" class="btnClose">
+                  <img src="../image/common/icon_close.svg" alt="x" />
+                </button>
+              </div>
+              <div class="contents">
+                <div class="form_container-typeLine">
+                  <div class="form_wrap">
+                    <label class="c_label">은행명</label>
+                    <div class="input_wrap">
+                      <div class="c_radio_list buttonType-bgWhite bank_list">
+                        <label for="bank01" class="c_radio_wrap">
+                          <input type="radio" id="bank01" name="bank" checked />
+                          <div class="icon_wrap">
+                            <img
+                              src="../image/common/img_kb.svg"
+                              alt="kb 아이콘"
+                            />
+                          </div>
+                          <span>국민은행</span>
+                        </label>
+                        <label for="bank02" class="c_radio_wrap">
+                          <input type="radio" id="bank02" name="bank" />
+                          <div class="icon_wrap">
+                            <img
+                              src="../image/common/img_ibk.svg"
+                              alt="ibk 아이콘"
+                            />
+                          </div>
+                          <span>기업은행</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_wrap">
+                    <label class="c_label">입금자명</label>
+                    <div class="input_wrap">
+                      <input
+                        type="text"
+                        class="c_input"
+                        name=""
+                        value=""
+                        placeholder="입금자 성함을 입력해주세요"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <ul class="c_info_list c_boxStyle">
+                  <li class="item">설명이 들어가는 공간입니다.</li>
+                  <li class="item">설명이 들어가는 공간입니다.</li>
+                  <li class="item">설명이 들어가는 공간입니다.</li>
+                </ul>
+              </div>
+              <div class="bottomBtn-fix">
+                <div class="btn_wrap-full">
+                  <button type="button" class="c_btn-large-full-round-primary">
+                    계좌 변경
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 모달-계좌 변경 END -->
+  </body>
+</html>

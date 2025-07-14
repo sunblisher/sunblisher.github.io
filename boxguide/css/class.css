@@ -1,0 +1,36 @@
+[class*="c_flex"] {
+  display: flex;
+}
+[class*="c_flex"][class*="-alignCenter"] {
+  align-items: center;
+}
+[class*="c_flex"][class*="-alignStart"] {
+  align-items: flex-start;
+}
+[class*="c_flex"][class*="-justifyBetween"] {
+  justify-content: space-between;
+}
+[class*="c_flex"][class*="-justifyEvenly"] {
+  justify-content: space-evenly;
+}
+[class*="c_flex"][class*="-row"] {
+  flex-direction: row;
+}
+[class*="c_flex"][class*="-column"] {
+  flex-direction: column;
+}
+[class*="c_flex"][class*="-full"] {
+  width: 100%;
+}
+[class*="c_flex"][class*="-gap"] {
+  gap: var(--space-sm);
+}
+[class*="c_padding"][class*="-vertical"][class*="-small"] {
+  padding: var(--space-xs) 0;
+}
+[class*="c_object"][class*="-positionTop"] img {
+  object-position: top;
+}
+[class*="c_object"][class*="-positionBottom"] img {
+  object-position: bottom;
+}

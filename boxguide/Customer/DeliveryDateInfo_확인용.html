@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>박스가이드</title>
+    <meta name="description" content="박스가이드" />
+    <meta name="keywords" content="박스가이드, 인쇄 제작" />
+    <meta name="author" content="박스가이드" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="박스가이드" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.boxguide.co.kr" />
+    <meta property="og:site_name" content="박스가이드" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="박스가이드" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.boxguide.co.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div class="c_section">
+      <div class="topBanner">
+        <ul class="banner_list">
+          <li class="item">
+            <div class="img_wrap">
+              <img src="../image/banner/topBanner_01.png" alt="배너 이미지" />
+            </div>
+          </li>
+        </ul>
+        <!-- <div class="btn_wrap">
+          <button type="button" class="icon_wrap">
+            <img src="../image/common/icon_close.svg" alt="닫기" />
+          </button>
+        </div> -->
+      </div>
+    </div>
+    <header class="header">
+      <div class="c_section">
+        <div class="memberInfo_container">
+          <div class="c_inner">
+            <!-- comment : header 반응형 시 메뉴에서 .memberInfo 에 .login / .logout 시 화면 변경 -->
+            <div class="memberInfo login">
+              <div class="welcome">
+                <span><strong>홍길동</strong>님, 반갑습니다.</span>
+                <div class="btn_wrap">
+                  <a
+                    href="../Product/ProductList_All.html"
+                    class="c_btn-small-round-primary mobileShow"
+                  >
+                    박스 주문하기
+                  </a>
+                  <a
+                    href="../Order/QuotationOrder.html"
+                    class="c_btn-small-round-primary-reverse mobileShow"
+                  >
+                    견적요청
+                  </a>
+                </div>
+              </div>
+              <div class="loginField">
+                <div class="input_wrap">
+                  <div class="input_wrap">
+                    <input
+                      type="text"
+                      class="c_input"
+                      name=""
+                      placeholder="아이디 입력"
+                    />
+                    <input
+                      type="password"
+                      class="c_input"
+                      name=""
+                      placeholder="비밀번호 입력"
+                    />
+                    <button type="button" class="c_btn-small-round-primary">
+                      로그인
+                    </button>
+                  </div>
+                  <div class="input_wrap">
+                    <div class="c_checkbox_list">
+                      <label for="saveID" class="c_checkbox_wrap">
+                        <input type="checkbox" id="saveID" name="" checked />
+                        <span>아이디 저장</span>
+                      </label>
+                    </div>
+                    <div class="btn_wrap-alignCenter">
+                      <div class="c_btn-small-round-primary-reverse mobileShow">
+                        <a href="../Order/sample_box_request.html"
+                          >박스 주문하기</a
+                        >
+                        <span class="line_primary"></span>
+                        <a href="../Order/QuotationOrder.html"> 견적요청 </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cashInfo_container">
+                <div class="wrap">
+                  <div class="badge">전용계좌</div>
+                  <div class="value">
+                    <span class="icon_wrap">
+                      <img src="../image/common/img_kb.svg" alt="kb 아이콘" />
+                    </span>
+                    <span>국민은행 0750-0977-5978-94</span>
+                  </div>
+                </div>
+                <div class="wrap">
+                  <div class="badge">계좌잔액</div>
+                  <div class="value">50,000원</div>
+                </div>
+              </div>
+              <ul class="sns_list">
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/img_header_naver.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/img_header_kakao.svg"
+                      alt="카카오톡 아이콘"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c_section">
+        <div class="gnb_container">
+          <div class="c_inner">
+            <nav class="gnb">
+              <div class="ci_wrap">
+                <a href="../Home/Home.html" class="">
+                  <img src="../image/common/logo.svg" class="logo" alt="로고" />
+                  <img
+                    src="../image/common/symbol.svg"
+                    class="symbol"
+                    alt="심볼"
+                  />
+                </a>
+              </div>
+              <ul class="gnbMenu_list">
+                <li class="item btnMenu">
+                  <!-- comment : .mainCategory 클릭 시 ProductList_All.html에 해당하는 탭메뉴로 이동 -->
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >전체</a
+                  >
+                  <div class="sub_list">
+                    <div class="element">
+                      <div class="item">
+                        <p class="subCategory">종이박스</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Package_paperBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="종이박스 단상자"
+                                /> </span
+                              >단상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_paperBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="종이박스 포장상자"
+                                /> </span
+                              >포장상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_paperBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="종이박스 분리상자"
+                                /> </span
+                              >분리상자</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <p class="subCategory">골판지박스</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Package_corrugatedBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="골판지박스 단상자"
+                                /> </span
+                              >단상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_corrugatedBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="골판지박스 포장상자"
+                                /> </span
+                              >포장상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_corrugatedBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="골판지박스 택배박스" /></span
+                              >택배박스</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <p class="subCategory">싸바리박스</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Package_rigidBox_top.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="싸바리박스 표지" /></span
+                              >표지</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_rigidBox_top.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="싸바리박스 2단" /></span
+                              >2단</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_rigidBox_top.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="싸바리박스 3단" /></span
+                              >3단</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <p class="subCategory">기타</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Others_shoppingbag.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="쇼핑백" /></span
+                              >쇼핑백</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_booklet.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="제본" /></span
+                              >제본</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_leaflet.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="리플렛" /></span
+                              >리플렛</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_sticker.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="스티커" /></span
+                              >스티커</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_tape.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="스티커" /></span
+                              >박스 테이프</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Order/sample_box_request.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_lnb_thumnail.jpg"
+                                  alt="무지 샘플요청" /></span
+                              >무지 샘플요청</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <a
+                          href="../Product/industry_All.html"
+                          class="subCategory"
+                          >업종별 보기</a
+                        >
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >화장품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >식품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >베이커리/카페</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >반려동물</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >문구/완구</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >문류/유통</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >전자제품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >패션/액세서리</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >농수산</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >교육</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >헬스케어/의료</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >인테리어/소품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >예술/문화</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >종이박스</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >단상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >포장상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >분리상자</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >골판지박스</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >단상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >포장상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >택배박스</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >싸바리박스</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >표지</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >2단</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >3단</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >기타</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Others_shoppingbag.html"
+                        class="subCategory"
+                        >쇼핑백</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >제본</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >리플렛</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Others_sticker.html"
+                        class="subCategory"
+                        >스티커</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/Others_tape.html" class="subCategory"
+                        >박스 테이프</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Order/sample_box_request.html"
+                        class="subCategory"
+                        >무지 샘플요청</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/industry_All.html" class="mainCategory"
+                    >업종별 보기</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >화장품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >식품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >베이커리/카페</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >반려동물</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >문구/완구</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >물류/유통</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >전자제품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >패션/액세서리</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >농수산</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >교육</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >헬스케어/의류</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >인테리어/소품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >예술/문화</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="topMenu_container">
+                <div class="topMenu">
+                  <ul class="topMenu_list">
+                    <li class="item">
+                      <a href="../WorkGuide/Program_illustrator.html">
+                        <span class="text">작업가이드</span>
+                      </a>
+                    </li>
+                    <li class="item">
+                      <a href="../Customer/FAQ.html">
+                        <span class="text">고객센터</span>
+                      </a>
+                    </li>
+                    <!-- comment : .logout / .login 에 .on 추가 시 화면 변경 -->
+                    <!-- 로그아웃 시 바뀌는 화면 START -->
+                    <li class="item logout line_none">
+                      <a href="/">
+                        <span class="text line_none">로그인/회원가입</span>
+                      </a>
+                    </li>
+                    <!-- 로그아웃 시 바뀌는 화면 END -->
+                    <!-- 로그인 시 바뀌는 화면 START -->
+                    <li class="item login on">
+                      <a href="../MyPage/MyPageHome.html">
+                        <span class="text">홍길동님</span>
+                      </a>
+                      <span class="text line_none">로그아웃</span>
+                    </li>
+                    <!-- 로그인 시 바뀌는 END -->
+                    <li class="line_none btn_wrap">
+                      <a
+                        href="../Product/ProductList_All.html"
+                        class="c_btn-mid-round-primary"
+                      >
+                        <div class="icon_wrap">
+                          <img
+                            src="../image/common/icon_topMenu_boxOrder_white.svg"
+                            alt="박스 주문하기"
+                          />
+                        </div>
+                        <span class="text line_none">박스 주문하기</span>
+                      </a>
+                      <a
+                        href="../Order/QuotationOrder.html"
+                        class="c_btn-mid-round-primary-reverse"
+                      >
+                        <span class="text line_none">견적요청</span>
+                      </a>
+                    </li>
+                    <li class="item line_none basket_btn">
+                      <a href="../MyPage/Basket.html" class="right_btn">
+                        <div class="icon_wrap icon_basket">
+                          <img
+                            src="../image/common/icon_topMenu_basket.svg"
+                            alt="장바구니 아이콘"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="mobileMenu">
+                    <a
+                      href="../WorkGuide/Program_illustrator.html"
+                      class="icon_wrap"
+                    >
+                      <img
+                        src="../image/common/icon_topMenu_guide.svg"
+                        alt="작업가이드 아이콘"
+                      />
+                    </a>
+                    <a href="../Customer/FAQ.html" class="icon_wrap">
+                      <img
+                        src="../image/common/icon_topMenu_help.svg"
+                        alt="고객센터 아이콘"
+                      />
+                    </a>
+                    <a href="../MyPage/Basket.html" class="icon_wrap">
+                      <img
+                        src="../image/common/icon_topMenu_basket.svg"
+                        alt="장바구니 아이콘"
+                      />
+                    </a>
+                    <a href="../MyPage/MyPageHome.html" class="icon_wrap">
+                      <img
+                        src="../image/common/icon_topMenu_join.svg"
+                        alt="마이페이지 아이콘"
+                      />
+                    </a>
+                    <div class="icon_wrap btnMenuList">
+                      <img
+                        src="../image/common/icon_menuList.svg"
+                        alt="메뉴 아이콘"
+                      />
+                    </div>
+                    <div class="icon_wrap btnMenuClose">
+                      <img
+                        src="../image/common/icon_close.svg"
+                        alt="닫기 아이콘"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="c_section">
+        <div class="etcMenu">
+          <div class="c_inner">
+            <ul class="etcMenu_list">
+              <!-- comment : header 반응형 시 메뉴에서 .memberInfo 에 .logout 이 붙을 시 회원가입, 로그인 .item에 .on 추가 -->
+              <!-- comment : header 반응형 시 메뉴에서 .memberInfo 에 .login 이 붙을 시 로그아웃 .item에 .on 추가 -->
+              <li class="item">
+                <a href="../Product/Ev.html" class="">회원가입</a>
+              </li>
+              <li class="item">
+                <a href="../Product/Ev.html" class="">로그인</a>
+              </li>
+              <li class="item on">
+                <a href="../Product/Ev.html" class="">로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header END -->
+
+    <!-- fixdButton START -->
+    <div class="fixBtn_wrap">
+      <!-- <button type="button" class="icon_wrap btnKakao">
+        <img src="../image/common/icon_kakaotalk.svg" alt="카카오톡 아이콘" />
+      </button> -->
+      <button type="button" class="icon_wrap btnTop">
+        <img src="../image/common/icon_dropBox_gray.svg" alt="위로 가기 버튼" />
+      </button>
+    </div>
+    <!-- fixdButton END -->
+
+    <main class="c_contents_container customer">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- Customer_SideMenu START -->
+          <nav class="lnb">
+            <!-- comment: .lnb_list > .item 클릭 시 .on 추가 -->
+            <!-- comment: .sub_list > .item 클릭 시 .on 추가 -->
+            <ul class="lnb_list">
+              <!-- <li class="item on">
+                <p class="title">서비스 안내</p>
+                <ul class="sub_list">
+                  <li class="item on">
+                    <a href="../Customer/DeliveryDateInfo.html">출고일 안내</a>
+                  </li>
+                </ul>
+              </li> -->
+              <li class="item on">
+                <p class="title">고객센터</p>
+                <ul class="sub_list">
+                  <li class="item on">
+                    <a href="../Customer/FAQ.html">FAQ</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Customer/NoticeList.html">공지사항</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">박스가이드 소개</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Customer/Location.html">찾아오시는길</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="title">기타 서비스</p>
+                <ul class="sub_list">
+                  <li class="item">
+                    <a
+                      href="https://www.law.go.kr/lsInfoP.do?lsId=000815&ancYnChk=0#0000"
+                      target="_blank"
+                      >유해인쇄물 접수불가</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- Customer_SideMenu END -->
+
+          <div class="layout_contents">
+            <!-- 페이지 제목 START -->
+            <div class="c_section-gap">
+              <h2 class="pageTitle">출고일 안내</h2>
+            </div>
+            <!-- 페이지 제목 END -->
+            <!-- 출고일안내 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-unsetPadding">
+                  <h3 class="sectionTitle">
+                    출고일 구분
+                    <span class="description"
+                      >(접수완료를 시점으로 상품이 제작 완료 출고 되는 기간을
+                      구분 합니다.)</span
+                    >
+                  </h3>
+                </div>
+                <ul class="c_info_list-typeNumber deliveryInfo">
+                  <li class="item">
+                    <span class="number">1</span>
+                    <span class="tel">
+                      <span class="title"
+                        >당일출고 - 주문시 당일판에 체크한 경우</span
+                      >
+                      <ul class="inner_list">
+                        <li class="item">
+                          명함/스티커 : 상품에 따라 접수일 오후 12시, 15시 까지
+                          당일판 체크하여 결제완료된 주문에 한해 당일 출고가
+                          됩니다.
+                        </li>
+                        <li class="item">
+                          전단 : 주문하실 때 전달사항란에 '당일판여부'를
+                          적어주세요. 단, 후공정은 후공정당 1일씩 추가됩니다.
+                        </li>
+                      </ul>
+                    </span>
+                  </li>
+                  <li class="item">
+                    <span class="number">2</span>
+                    <span class="tel">
+                      <span class="title">1박 2일 - 오늘접수 내일출고</span>
+                      <ul class="inner_list">
+                        <li class="item">
+                          품목별 마감시간 전에 결제 완료된 주문에 한합니다.
+                        </li>
+                      </ul>
+                    </span>
+                  </li>
+                </ul>
+                <p class="c_guideText">
+                  ※ 당사의 사정에 따라 납기일이 지연될 수 있으니 이 점
+                  참고하시어 납기일은 넉넉히 잡아주시기 바랍니다.
+                </p>
+              </div>
+            </div>
+            <!-- 출고일안내 END -->
+            <!-- 테이블 START -->
+            <div class="c_section-gap-small">
+              <table class="c_table">
+                <thead>
+                  <th>품목</th>
+                  <th>마감시간</th>
+                  <th>출고일</th>
+                  <th>상품</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">명함</td>
+                    <td>당일판</td>
+                    <td rowspan="2">당일</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>정오 12시<br />오후3시</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">명함</td>
+                    <td>당일판</td>
+                    <td rowspan="2">당일</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>정오 12시<br />오후3시</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 테이블 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <footer>
+      <div class="footerTop">
+        <div class="c_inner">
+          <div class="contents_wrap">
+            <div class="serviceInfo_container">
+              <div class="serviceInfo">
+                <p class="title">이용안내</p>
+                <div class="text_container">
+                  <p class="tel">02-2264-0512</p>
+                  <div class="textBox">
+                    <p>운영시간 : 평일 09:00 ~ 18:00</p>
+                    <p>점심시간 : 12:00 ~ 13:30</p>
+                    <p>토/일 공휴일 휴무</p>
+                  </div>
+                </div>
+              </div>
+              <!-- <ul class="sns_list">
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_blog.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_kakao.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_twitter.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_youtube.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_face.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+            <ul class="footerMenu_list">
+              <li class="item">
+                <p class="title">고객센터</p>
+                <ul class="subMenu_list">
+                  <li class="item">
+                    <a href="../Customer/FAQ.html">FAQ</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Customer/NoticeList.html">공지사항</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">박스가이드 소개</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Customer/Location.html">찾아오시는길</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="title">Q&A</p>
+                <ul class="subMenu_list">
+                  <li class="item">
+                    <a href="../MyPage/Inquiry_write.html">문의하기</a>
+                  </li>
+                  <li class="item">
+                    <a href="../MyPage/QnA.html">문의내역</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="title">약관</p>
+                <ul class="subMenu_list">
+                  <li class="item">
+                    <a href="../Terms/Terms.html">이용약관</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Terms/Individual.html">개인정보취급방침</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="bankInfo">
+              <p class="title">입금계좌 정보</p>
+              <ul class="bank_list">
+                <li class="item">
+                  <div class="icon_wrap">
+                    <img src="../image/common/img_kb.svg" alt="kb 아이콘" />
+                  </div>
+                  <span>국민은행 : 068801-04-198807</span>
+                </li>
+                <li class="item">
+                  <div class="icon_wrap">
+                    <img src="../image/common/img_ibk.svg" alt="ibk 아이콘" />
+                  </div>
+                  <span>기업은행 : 034-061088-04-015</span>
+                </li>
+                <li class="item">
+                  <div class="icon_wrap"></div>
+                  <span>예금주 : <strong>박스가이드(박호승)</strong></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <div class="c_inner">
+          <div class="contents_wrap">
+            <div class="companyInfo_container">
+              <div class="companyInfo">
+                <p class="name">박스가이드</p>
+                <p>
+                  <span>대표이사 : 박호승</span
+                  ><span
+                    >주소 : 서울시 중구 충무로 22 호운빌딩3층 301호
+                    (인현동1가)</span
+                  >
+                </p>
+                <p>
+                  <span>사업자등록번호 : 203-02-43295</span
+                  ><span>통신판매허가번호 : 중구05580</span>
+                </p>
+                <p>
+                  <span>대표번호 : 02-2264-0512</span
+                  ><span>팩스번호 : 02-2264-0514</span>
+                </p>
+                <p><span>이메일 : boxguide@boxguide.co.kr</span></p>
+              </div>
+              <div class="pgInfo">PG사 정보</div>
+            </div>
+            <div class="copyright">
+              COPYRIGHT (C) 2024 BOXGUIDE.CO.KR ALL RIGHT RESERVED.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer END -->
+
+    <script src="../JS/Header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="종이일곱장" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="종이일곱장" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <!-- Main START -->
+    <main class="home">
+      <!-- 메인슬라이드 START -->
+      <section class="c_section-gap">
+        <div class="mainSlide_container">
+          <div class="swiper visualSwiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <picture class="img_wrap">
+                  <source
+                    srcset="../image/banner/mainSlide_01_m.jpg"
+                    media="(max-width: 840px)"
+                  />
+                  <img
+                    src="../image/banner/mainSlide_01.jpg"
+                    alt="메인 배너1"
+                  />
+                  <!-- comment: .text_area에 .font-white가 붙을 시 폰트 컬러가 변경됩니다. -->
+                </picture>
+                <div class="text_area font-white">
+                  <h2 class="title">인쇄의 퀄리티가 다릅니다!</h2>
+                  <p class="sub_title">
+                    품격있는 첫 만남의 단 한장, 고급스러운 브랜딩의 시작
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <picture class="img_wrap">
+                  <source
+                    srcset="../image/banner/mainSlide_02_m.jpg"
+                    media="(max-width: 840px)"
+                  />
+                  <img
+                    src="../image/banner/mainSlide_02.jpg"
+                    alt="메인 배너2"
+                  />
+                </picture>
+                <div class="text_area">
+                  <h2 class="title">인쇄의 퀄리티가 다릅니다!</h2>
+                  <p class="sub_title">
+                    품격있는 첫 만남의 단 한장, 고급스러운 브랜딩의 시작
+                  </p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <picture class="img_wrap">
+                  <source
+                    srcset="../image/banner/mainSlide_03_m.jpg"
+                    media="(max-width: 840px)"
+                  />
+                  <img
+                    src="../image/banner/mainSlide_03.jpg"
+                    alt="메인 배너3"
+                  />
+                </picture>
+                <div class="text_area font-white">
+                  <h2 class="title">인쇄의 퀄리티가 다릅니다!</h2>
+                  <p class="sub_title">
+                    품격있는 첫 만남의 단 한장, 고급스러운 브랜딩의 시작
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- 메인슬라이드 END -->
+      <!-- 포트폴리오 START -->
+      <section class="c_section-gap-xlarge portfolio">
+        <div class="c_inner">
+          <div class="sectionTitle_wrap">
+            <h3 class="sectionTitle-large">포트폴리오</h3>
+            <div class="input_wrap">
+              <input
+                type="text"
+                class="c_input inputKeyword"
+                name=""
+                placeholder="검색어를 입력해 주세요"
+              />
+              <button type="submit" class="btn_search">
+                <div class="wrap">
+                  <img
+                    src="../image/common/icon_search_white.svg"
+                    alt="검색"
+                    class="img_search"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+          <ul class="portfolio_list">
+            <li class="list_item">
+              <!-- comment : 썸네일 클릭 시 해당 카테고리와 사양이 선택 된 주문페이지로 이동 -->
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="../Product/booklet.html">
+                <div class="img_wrap">
+                  <img src="../image/portfolio/img_card.jpg" alt="목업" />
+                </div>
+                <div class="info_wrap">
+                  <p class="spec">
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                    텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역 텍스트 영역
+                  </p>
+                  <div class="category_wrap">
+                    <p class="category">
+                      카테고리 영역 카테고리 영역 카테고리 영역
+                    </p>
+                    <span class="icon_wrap">
+                      <img
+                        src="../image/common/icon_next_circle.svg"
+                        alt="이동하기"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="pagination">
+            <div class="icon_wrap prevMax">
+              <img src="../image/common/icon_page_first.svg" alt="" />
+            </div>
+            <div class="icon_wrap prev">
+              <img src="../image/common/icon_page_prev.svg" alt="" />
+            </div>
+            <div class="num_wrap"><p class="on">1</p></div>
+            <div class="num_wrap"><p class="">2</p></div>
+            <div class="num_wrap"><p class="">3</p></div>
+            <div class="num_wrap"><p class="">4</p></div>
+
+            <div class="icon_wrap next">
+              <img src="../image/common/icon_page_next.svg" alt="" />
+            </div>
+            <div class="icon_wrap nextMax">
+              <img src="../image/common/icon_page_last.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 포트폴리오 END -->
+      <!-- 디지털 샘플 신청 START -->
+      <section class="c_section-gap-xlarge free_sample">
+        <div class="c_inner">
+          <div class="sectionTitle_wrap">
+            <h3 class="sectionTitle-large">
+              대량 주문전에 디지털 샘플을 만드세요!
+            </h3>
+          </div>
+          <p class="text">
+            대량 주문 책자는 오프셋 인쇄 전에 디지털 샘플을 제작해 보세요.
+            디지털 인쇄로 샘플을 제작한 후 본작업을 진행하시면, 샘플 비용은
+            차감해 드립니다.
+          </p>
+          <div class="btn_wrap">
+            <a
+              href="../Order/digitalSample.html"
+              class="c_btn-round-white-reverse-large"
+            >
+              책자
+            </a>
+            <a
+              href="../Order/digitalSample.html"
+              class="c_btn-round-white-reverse-large"
+            >
+              리플렛
+            </a>
+            <a
+              href="../Order/digitalSample.html"
+              class="c_btn-round-white-reverse-large"
+            >
+              패키지
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 디지털 샘플 신청 END -->
+      <!-- 종이일곱장 소식 START -->
+      <section class="c_section-gap-xlarge">
+        <div class="c_inner">
+          <div class="swiper newsSwiper">
+            <div class="sectionTitle_wrap">
+              <h3 class="sectionTitle-large">종이일곱장 소식</h3>
+            </div>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="left">
+                  <img src="../image/home/news/img_news_01.png" alt="소식01" />
+                </div>
+                <div class="right">
+                  <h4 class="title">고객 만족과 함께 성장하는 서울프로아트</h4>
+                  <p class="text">
+                    기획, 디자인, 인쇄, 후가공까지 직접생산 장비를 보유한 인쇄물
+                    전문 제작 에이전시
+                  </p>
+                  <a
+                    href="https://seoulproart.com/"
+                    class="c_btn-round-primary-large"
+                  >
+                    바로이동
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <!-- 종이일곱장 소식 END -->
+      <!-- 고객지원 START -->
+      <section class="c_section-gap-xlarge customer_area">
+        <div class="c_inner">
+          <div class="sectionTitle_wrap">
+            <h3 class="sectionTitle-large">고객지원</h3>
+          </div>
+          <div class="content_wrap">
+            <div class="quote box_wrap">
+              <h4 class="title">당신만의 인쇄가 필요할 때</h4>
+              <p class="text">
+                <span>
+                  특수 용지부터 비표준 사이즈까지,
+                  <span class="space">
+                    별도 문의로 정밀하게 안내해 드립니다.</span
+                  >
+                </span>
+              </p>
+              <a
+                href="../Customer/Contact.html"
+                class="c_btn-round-primary-large"
+                >별도 문의</a
+              >
+            </div>
+            <div class="kako box_wrap">
+              <h4 class="title">궁금사항이 있으신가요?</h4>
+              <p class="text">
+                카카오톡 친구추가에 ‘paperseven’ 추가 후 문의주시면<span
+                  class="space"
+                  >답변을 빠르게 받아보실 수 있어요!</span
+                >
+              </p>
+              <div class="kako_info">
+                <div class="info_wrap">
+                  <img
+                    src="../image/home/img_kakao.svg"
+                    alt=""
+                    class="img_kakao"
+                  />
+                  <div class="input_wrap">paperseven</div>
+                </div>
+                <a href="#" class="c_btn-round-primary-large">친구추가</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 고객지원 END -->
+    </main>
+    <!-- main END -->
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+
+    <!-- FloatingButton START -->
+    <div id="floatingButton"></div>
+    <script>
+      async function loadFloatingButton() {
+        const res = await fetch("/Components/FloatingButton.html");
+        const data = await res.text();
+        document.getElementById("floatingButton").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/FloatingButton.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadFloatingButton);
+    </script>
+    <!-- FloatingButton END -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // 비쥬얼 스와이퍼
+      var swiper = new Swiper(".visualSwiper", {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      // 소식 스와이퍼
+      var swiper = new Swiper(".newsSwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>박스가이드</title>
+    <meta name="description" content="박스가이드" />
+    <meta name="keywords" content="박스가이드, 인쇄 제작" />
+    <meta name="author" content="박스가이드" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="박스가이드" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.boxguide.co.kr" />
+    <meta property="og:site_name" content="박스가이드" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="박스가이드" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.boxguide.co.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeaderAndScript() {
+        const res = await fetch("../Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeaderAndScript);
+    </script>
+    <!-- Header END -->
+
+    <!-- fixdButton START -->
+    <div id="fixedButton"></div>
+    <script>
+      fetch("../Components/FixedButton.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("fixedButton").innerHTML = data;
+        });
+    </script>
+    <!-- fixdButton END -->
+    <main class="c_contents_container customer">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- Customer_SideMenu START -->
+          <div id="Customer_SideMenu"></div>
+          <script>
+            fetch("../Components/Customer_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("Customer_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- Customer_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 페이지 제목 START -->
+            <div class="c_section-gap">
+              <h2 class="pageTitle">출고일 안내</h2>
+            </div>
+            <!-- 페이지 제목 END -->
+            <!-- 출고일안내 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-unsetPadding">
+                  <h3 class="sectionTitle">
+                    출고일 구분
+                    <span class="description"
+                      >(접수완료를 시점으로 상품이 제작 완료 출고 되는 기간을
+                      구분 합니다.)</span
+                    >
+                  </h3>
+                </div>
+                <ul class="c_info_list-typeNumber deliveryInfo">
+                  <li class="item">
+                    <span class="number">1</span>
+                    <span class="tel">
+                      <span class="title"
+                        >당일출고 - 주문시 당일판에 체크한 경우</span
+                      >
+                      <ul class="inner_list">
+                        <li class="item">
+                          명함/스티커 : 상품에 따라 접수일 오후 12시, 15시 까지
+                          당일판 체크하여 결제완료된 주문에 한해 당일 출고가
+                          됩니다.
+                        </li>
+                        <li class="item">
+                          전단 : 주문하실 때 전달사항란에 '당일판여부'를
+                          적어주세요. 단, 후공정은 후공정당 1일씩 추가됩니다.
+                        </li>
+                      </ul>
+                    </span>
+                  </li>
+                  <li class="item">
+                    <span class="number">2</span>
+                    <span class="tel">
+                      <span class="title">1박 2일 - 오늘접수 내일출고</span>
+                      <ul class="inner_list">
+                        <li class="item">
+                          품목별 마감시간 전에 결제 완료된 주문에 한합니다.
+                        </li>
+                      </ul>
+                    </span>
+                  </li>
+                </ul>
+                <p class="c_guideText">
+                  ※ 당사의 사정에 따라 납기일이 지연될 수 있으니 이 점
+                  참고하시어 납기일은 넉넉히 잡아주시기 바랍니다.
+                </p>
+              </div>
+            </div>
+            <!-- 출고일안내 END -->
+            <!-- 테이블 START -->
+            <div class="c_section-gap-small">
+              <table class="c_table">
+                <thead>
+                  <th>품목</th>
+                  <th>마감시간</th>
+                  <th>출고일</th>
+                  <th>상품</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">명함</td>
+                    <td>당일판</td>
+                    <td rowspan="2">당일</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>정오 12시<br />오후3시</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">명함</td>
+                    <td>당일판</td>
+                    <td rowspan="2">당일</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>정오 12시<br />오후3시</td>
+                    <td class="product">
+                      <strong>[일반명함]</strong>
+                      코팅/무코팅/고품격코팅/고품격무코팅
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 테이블 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

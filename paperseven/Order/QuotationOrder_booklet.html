@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="종이일곱장" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="종이일곱장" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <!-- Main START  -->
+    <main class="c_contents_container quotationOrder">
+      <div class="c_section-gap">
+        <div class="c_inner">
+          <div class="sectionTitle_wrap">
+            <h2 class="sectionTitle-large">책자형 견적 요청</h2>
+            <p class="caption">
+              <strong> 자동견적으로 금액을 알 수 없는 제품을 문의</strong>하는
+              페이지입니다.
+              <span>조금 더 자세한 사항을 기록하거나 문의주시면</span>
+              최대한 빠른 시일 안에 답변드리겠습니다.
+              <span
+                >직접입력으로 입력 시 전화나 문자 등 상담이 요청될 수
+                있습니다.</span
+              >
+            </p>
+            <div class="img_wrap">
+              <img src="../image/order/quotedDocuments.svg" alt="견적 요청" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 폼 START -->
+      <form class="c_section">
+        <div class="c_inner">
+          <div class="orderOption_area">
+            <div class="tab_area">
+              <div class="tab_contents">
+                <!-- 제품 형태 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">제품 형태</h3>
+                    </div>
+                    <p class="help_text">
+                      제작하고 싶은 제품 형태를 선택해 주세요.
+                    </p>
+                  </div>
+                  <ul class="custom_imgBtn_area">
+                    <li class="c_imgBtn on">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_booklet.svg"
+                          alt="무선제본"
+                        />
+                      </div>
+                      <p class="text">무선제본</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_saddleStitch.svg"
+                          alt="중철제본"
+                        />
+                      </div>
+                      <p class="text">중철제본</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_spiral.svg"
+                          alt="스프링제본"
+                        />
+                      </div>
+                      <p class="text">스프링제본</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_hardcover.svg"
+                          alt="양장제본"
+                        />
+                      </div>
+                      <p class="text">양장제본</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_dark_toner.svg"
+                          alt="흑백 책자(토너)"
+                        />
+                      </div>
+                      <p class="text">흑백 책자(토너)</p>
+                    </li>
+                  </ul>
+                  <!-- comment : '직접입력' 클릭 시 .input_wrap.custom 에 disabled 속성 해제 -->
+                  <!-- comment : '추천받기' 클릭 시 input 에 placeholder 속성에 문구가 바뀝니다. (문구 : 추천 시 참고할 수 있는 내용을 입력해 주세요.) -->
+                  <div class="selection_area">
+                    <div class="title_wrap">
+                      <p class="title">원하는 선택지가 없으신가요?</p>
+                      <ul class="custom_btn_area">
+                        <li class="c_custom_btn">직접입력</li>
+                        <li class="c_custom_btn">추천받기</li>
+                      </ul>
+                    </div>
+                    <fieldset class="input_wrap custom" disabled>
+                      <input
+                        id=""
+                        class=""
+                        type="text"
+                        placeholder="'직접 입력'을 선택하여 입력해 주세요."
+                      />
+                    </fieldset>
+                  </div>
+                </div>
+                <!-- 제품 형태 END -->
+
+                <!-- 제본 방향 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">제품 방향</h3>
+                    </div>
+                    <p class="help_text">제본의 방향을 선택해 주세요.</p>
+                  </div>
+                  <ul class="custom_imgBtn_area">
+                    <li class="c_imgBtn on">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_width_left.svg"
+                          alt="가로 좌철"
+                        />
+                      </div>
+                      <p class="text">가로 좌철</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_width_right.svg"
+                          alt="가로 우철"
+                        />
+                      </div>
+                      <p class="text">가로 우철</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_width_top.svg"
+                          alt="스프링제본"
+                        />
+                      </div>
+                      <p class="text">가로 상철</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_vertical_left.svg"
+                          alt="스프링제본"
+                        />
+                      </div>
+                      <p class="text">세로 좌철</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_vertical_right.svg"
+                          alt="스프링제본"
+                        />
+                      </div>
+                      <p class="text">세로 우철</p>
+                    </li>
+                    <li class="c_imgBtn">
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/booklet/icon_form_vertical_top.svg"
+                          alt="스프링제본"
+                        />
+                      </div>
+                      <p class="text">세로 상철</p>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 제본 방향 END -->
+
+                <!-- 사이즈 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">사이즈 입력</h3>
+                    </div>
+                    <p class="help_text">
+                      제품 사이즈는 직접 제품을 수령하고 약간의 차이가 발생될 수
+                      있습니다.
+                    </p>
+                  </div>
+                  <div class="sizeselector_area c_flex-column">
+                    <!-- comment : .sizeselector에 .standardSize 추가 시 '규격 사이즈' 폼 노출 -->
+                    <!-- comment : .sizeselector에 .directlySize 추가 시 '직접 입력' 폼 노출 -->
+                    <!-- comment : .c_custom_btn 버튼 클릭 시 .on 추가  -->
+                    <ul class="sizeselector directlySize">
+                      <li class="c_custom_btn">
+                        <span class="icon_wrap">
+                          <img
+                            src="../image/common/icon_standardSize.svg"
+                            alt="규격사이즈"
+                          /> </span
+                        >규격 사이즈
+                      </li>
+                      <li class="c_custom_btn on">
+                        <span class="icon_wrap">
+                          <img
+                            src="../image/common/icon_directlySize.svg"
+                            alt="규격사이즈"
+                          /> </span
+                        >사이즈 직접 입력
+                      </li>
+                    </ul>
+                    <div class="field_area select">
+                      <div class="wrap">
+                        <!-- comment : .selected에 .on을 추가 시 드롭다운 메뉴 노출 -->
+                        <div class="selected">
+                          <span class="value">A5(148x210)</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">A5(148x210)</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                          <li class="list_item">옵션7</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="field_area input">
+                      <div class="wrap">
+                        <label for="length" class="input_wrap custom">
+                          <input id="length" type="text" placeholder="mm" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 사이즈 END -->
+
+                <!-- 표지 전체 옵션 START -->
+                <!-- 표지 종류 선택 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">표지 종류 선택</h3>
+                    </div>
+                    <p class="help_text">표지를 선택해 주세요.</p>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">날개</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <!-- comment : .selected 클릭 시 .on 추가 -->
+                          <div class="selected">
+                            <span class="value">날개1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">날개1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                        <div class="wrap">
+                          <label for="input" class="input_wrap custom">
+                            <input id="input" type="text" placeholder="mm" />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">종이</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <div class="selected">
+                            <span class="value">종이1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">종이1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                        <div class="wrap">
+                          <div class="selected">
+                            <span class="value">100g</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">100g</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="selection_area">
+                    <div class="title_wrap">
+                      <p class="title">원하는 선택지가 없으신가요?</p>
+                      <ul class="custom_btn_area">
+                        <li class="c_custom_btn">직접입력</li>
+                        <li class="c_custom_btn">추천받기</li>
+                      </ul>
+                    </div>
+                    <fieldset class="input_wrap custom" disabled>
+                      <input
+                        id=""
+                        class=""
+                        type="text"
+                        placeholder="'직접 입력'을 선택하여 입력해 주세요."
+                      />
+                    </fieldset>
+                  </div>
+                </div>
+                <!-- 표지 종류 선택 END -->
+                <!-- 표지 인쇄 선택 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">표지 인쇄 선택</h3>
+                      <div class="toggle_area">
+                        <span class="text">없음</span>
+                        <div class="toggle_wrap on c_flex">
+                          <div class="circle"></div>
+                        </div>
+                        <span class="text">있음</span>
+                      </div>
+                    </div>
+                    <p class="help_text">인쇄 옵션을 선택해 주세요.</p>
+                  </div>
+                  <div class="toggleTarget on">
+                    <div class="box_area flex-row">
+                      <div class="box_wrap">
+                        <div class="field_area">
+                          <div class="wrap">
+                            <div class="selected">
+                              <span class="value">전면 인쇄</span>
+                              <img
+                                class="icon"
+                                src="../image/common/icon_downward_gray.svg"
+                                alt="옵션 선택"
+                              />
+                            </div>
+                            <ul class="select_list">
+                              <li class="list_item on">옵션1</li>
+                              <li class="list_item">옵션2</li>
+                              <li class="list_item">옵션3</li>
+                              <li class="list_item">옵션4</li>
+                              <li class="list_item">옵션5</li>
+                              <li class="list_item">옵션6</li>
+                              <li class="list_item">옵션7</li>
+                            </ul>
+                          </div>
+                          <div class="wrap">
+                            <div class="selected">
+                              <span class="value">후면 인쇄</span>
+                              <img
+                                class="icon"
+                                src="../image/common/icon_downward_gray.svg"
+                                alt="옵션 선택"
+                              />
+                            </div>
+                            <ul class="select_list">
+                              <li class="list_item on">별색 없음</li>
+                              <li class="list_item">옵션1</li>
+                              <li class="list_item">옵션2</li>
+                              <li class="list_item">옵션3</li>
+                              <li class="list_item">옵션4</li>
+                              <li class="list_item">옵션5</li>
+                              <li class="list_item">옵션6</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="selection_area">
+                      <div class="title_wrap">
+                        <p class="title">원하는 선택지가 없으신가요?</p>
+                        <ul class="custom_btn_area">
+                          <li class="c_custom_btn">직접입력</li>
+                          <li class="c_custom_btn">추천받기</li>
+                        </ul>
+                      </div>
+                      <fieldset class="input_wrap custom" disabled>
+                        <input
+                          id=""
+                          class=""
+                          type="text"
+                          placeholder="'직접 입력'을 선택하여 입력해 주세요."
+                        />
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <!-- 표지 인쇄 선택 END -->
+                <!-- 표지 후공정 선택 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">표지 후공정 선택</h3>
+                      <div class="toggle_area">
+                        <span class="text">없음</span>
+                        <div class="toggle_wrap on c_flex">
+                          <div class="circle"></div>
+                        </div>
+                        <span class="text">있음</span>
+                      </div>
+                    </div>
+                    <p class="help_text">후공정 옵션을 선택해 주세요.</p>
+                  </div>
+                  <div class="toggleTarget on">
+                    <div class="box_area flex-row">
+                      <div class="box_wrap">
+                        <!-- comment : 첫번쨰 기본 항목은 '-' 클릭해도 사라지지 않음 -->
+                        <!-- comment : '+' 버튼 클릭 시 .field_area 구조 생성 -->
+                        <div class="field_area">
+                          <div class="wrap">
+                            <div class="selected">
+                              <span class="value">후공정1</span>
+                              <img
+                                class="icon"
+                                src="../image/common/icon_downward_gray.svg"
+                                alt="옵션 선택"
+                              />
+                            </div>
+                            <ul class="select_list">
+                              <li class="list_item on">옵션1</li>
+                              <li class="list_item">옵션2</li>
+                              <li class="list_item">옵션3</li>
+                              <li class="list_item">옵션4</li>
+                              <li class="list_item">옵션5</li>
+                              <li class="list_item">옵션6</li>
+                              <li class="list_item">옵션7</li>
+                            </ul>
+                          </div>
+                          <div class="wrap">
+                            <div class="selected">
+                              <span class="value">후공정2</span>
+                              <img
+                                class="icon"
+                                src="../image/common/icon_downward_gray.svg"
+                                alt="옵션 선택"
+                              />
+                            </div>
+                            <ul class="select_list">
+                              <li class="list_item on">후공정2</li>
+                              <li class="list_item">옵션1</li>
+                              <li class="list_item">옵션2</li>
+                              <li class="list_item">옵션3</li>
+                              <li class="list_item">옵션4</li>
+                              <li class="list_item">옵션5</li>
+                              <li class="list_item">옵션6</li>
+                            </ul>
+                          </div>
+                          <div class="custom_btn_area btn_fieldControls">
+                            <button
+                              type="button"
+                              class="c_custom_btn btn_add"
+                            ></button>
+                            <button
+                              type="button"
+                              class="c_custom_btn btn_delete"
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="selection_area">
+                      <div class="title_wrap">
+                        <p class="title">원하는 선택지가 없으신가요?</p>
+                        <ul class="custom_btn_area">
+                          <li class="c_custom_btn">직접입력</li>
+                          <li class="c_custom_btn">추천받기</li>
+                        </ul>
+                      </div>
+                      <fieldset class="input_wrap custom" disabled>
+                        <input
+                          id=""
+                          class=""
+                          type="text"
+                          placeholder="'직접 입력'을 선택하여 입력해 주세요."
+                        />
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <!-- 표지 후공정 선택 END -->
+                <!-- 표지 전체 옵션 END -->
+
+                <!-- 내지 전체 옵션 START -->
+                <!-- 내지 선택 START -->
+                <!-- comment : .btn_add 클릭 시 .option_list 구조 추가 -->
+                <!-- comment : .option_list 구초 추가 될 시 .page_inner 에 '내지' 우측 숫자 증가 -->
+                <!-- comment : '내지 추가' 될 시 이전 내지 섹션은 버튼 '내지 삭제'로 교체 -->
+                <div class="optionSection option_list">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">내지1 선택</h3>
+                      <button type="button" class="c_custom_btn btn_delete">
+                        내지 삭제
+                      </button>
+                    </div>
+                    <p class="help_text">내지를 선택해 주세요.</p>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">페이지</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <!-- comment : .selected 클릭 시 .on 추가 -->
+                          <div class="selected">
+                            <span class="value">날개1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">날개1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">종이</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <div class="selected">
+                            <span class="value">종이1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">종이1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                        <div class="wrap">
+                          <div class="selected">
+                            <span class="value">100g</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">100g</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">인쇄</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <!-- comment : .selected 클릭 시 .on 추가 -->
+                          <div class="selected">
+                            <span class="value">인쇄1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">인쇄1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="optionSection option_list">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">내지2 선택</h3>
+                      <button type="button" class="c_custom_btn btn_add">
+                        내지 추가
+                      </button>
+                    </div>
+                    <p class="help_text">내지를 선택해 주세요.</p>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">페이지</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <!-- comment : .selected 클릭 시 .on 추가 -->
+                          <div class="selected">
+                            <span class="value">날개1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">날개1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">종이</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <div class="selected">
+                            <span class="value">종이1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">종이1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                        <div class="wrap">
+                          <div class="selected">
+                            <span class="value">100g</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">100g</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box_area flex-row">
+                    <div class="box_wrap">
+                      <p class="label">인쇄</p>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <!-- comment : .selected 클릭 시 .on 추가 -->
+                          <div class="selected">
+                            <span class="value">인쇄1</span>
+                            <img
+                              class="icon"
+                              src="../image/common/icon_downward_gray.svg"
+                              alt="옵션 선택"
+                            />
+                          </div>
+                          <ul class="select_list">
+                            <li class="list_item on">인쇄1</li>
+                            <li class="list_item">옵션2</li>
+                            <li class="list_item">옵션3</li>
+                            <li class="list_item">옵션4</li>
+                            <li class="list_item">옵션5</li>
+                            <li class="list_item">옵션6</li>
+                            <li class="list_item">옵션7</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 내지 선택 END -->
+                <!-- 내지 옵션 END -->
+
+                <!-- 주문 수량 입력 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">주문 수량 입력</h3>
+                    </div>
+                    <p class="help_text">주문 수량을 입력해 주세요.</p>
+                  </div>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <label for="quantity" class="input_wrap custom">
+                        <input
+                          id="quantity"
+                          type="text"
+                          placeholder="수량을 입력해 주세요."
+                        />
+                      </label>
+                    </div>
+                    <div class="wrap">
+                      <div class="selected">
+                        <span class="value">1건</span>
+                        <img
+                          class="icon"
+                          src="../image/common/icon_downward_gray.svg"
+                          alt="옵션 선택"
+                        />
+                      </div>
+                      <ul class="select_list">
+                        <li class="list_item on">1건</li>
+                        <li class="list_item">옵션1</li>
+                        <li class="list_item">옵션2</li>
+                        <li class="list_item">옵션3</li>
+                        <li class="list_item">옵션4</li>
+                        <li class="list_item">옵션5</li>
+                        <li class="list_item">옵션6</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- 주문 수량 입력 END -->
+
+                <!-- 옵션 선택 START -->
+                <div class="optionSection">
+                  <div class="title_area">
+                    <div class="wrap">
+                      <h3 class="title">옵션 선택</h3>
+                      <div class="toggle_area">
+                        <span class="text">없음</span>
+                        <div class="toggle_wrap on c_flex">
+                          <div class="circle"></div>
+                        </div>
+                        <span class="text">있음</span>
+                      </div>
+                    </div>
+                    <p class="help_text">옵션을 선택해 주세요.</p>
+                  </div>
+                  <div class="toggleTarget on">
+                    <div class="box_area flex-row">
+                      <div class="box_wrap">
+                        <div class="field_area">
+                          <div class="wrap">
+                            <div class="selected">
+                              <span class="value">옵션1</span>
+                              <img
+                                class="icon"
+                                src="../image/common/icon_downward_gray.svg"
+                                alt="옵션 선택"
+                              />
+                            </div>
+                            <ul class="select_list">
+                              <li class="list_item on">옵션1</li>
+                              <li class="list_item">옵션2</li>
+                              <li class="list_item">옵션3</li>
+                              <li class="list_item">옵션4</li>
+                              <li class="list_item">옵션5</li>
+                              <li class="list_item">옵션6</li>
+                              <li class="list_item">옵션7</li>
+                            </ul>
+                          </div>
+                          <div class="wrap">
+                            <div class="selected">
+                              <span class="value">옵션2</span>
+                              <img
+                                class="icon"
+                                src="../image/common/icon_downward_gray.svg"
+                                alt="옵션 선택"
+                              />
+                            </div>
+                            <ul class="select_list">
+                              <li class="list_item on">옵션1</li>
+                              <li class="list_item">옵션2</li>
+                              <li class="list_item">옵션3</li>
+                              <li class="list_item">옵션4</li>
+                              <li class="list_item">옵션5</li>
+                              <li class="list_item">옵션6</li>
+                            </ul>
+                          </div>
+                          <div class="custom_btn_area btn_fieldControls">
+                            <button
+                              type="button"
+                              class="c_custom_btn btn_add"
+                            ></button>
+                            <button
+                              type="button"
+                              class="c_custom_btn btn_delete"
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 옵션 선택 END -->
+              </div>
+            </div>
+
+            <!-- 공통 이미지 업로드 START -->
+            <div class="optionSection">
+              <div class="title_area">
+                <div class="wrap">
+                  <h3 class="title">견적시 참고 될 파일 업로드</h3>
+                </div>
+              </div>
+              <div class="fileUpload_area">
+                <button type="button" class="fileUpload_wrap">
+                  <div class="icon_fileUpload">
+                    <img
+                      src="../image/common/icon_file_gray.svg"
+                      alt="파일업로드"
+                    />
+                  </div>
+                  <p class="text">
+                    제품 사진, 디자인파일, 참고 이미지 등을 업로드 해주세요.
+                    <span class="space"
+                      >jpg, png, doc, docx, ppt, pptx, cdr, ai, pdf, eps, psd,
+                      indd 파일만 가능 (파일 용량 최대 200MB)</span
+                    >
+                  </p>
+                </button>
+                <div class="guide_text">
+                  <p>
+                    - 정확한 납기는 주문페이지를 참고하시거나 고객센터로
+                    문의주시기 바랍니다.
+                  </p>
+                </div>
+              </div>
+              <!-- comment : 첨부파일 업로드 시 fileUpload_list 구조 생성 -->
+              <!-- comment : 업로드 된 첨부파일이 없을 시 fileUpload_list 구조 삭제 -->
+              <div class="fileUpload_list">
+                <div class="box_wrap">
+                  <div class="field_area">
+                    <div class="wrap">
+                      <input
+                        type="text"
+                        readonly
+                        class="input_wrap custom"
+                        value="종이일곱장 패키지 시안.ai"
+                      />
+                    </div>
+                    <div class="custom_btn_area btn_fieldControls">
+                      <button
+                        type="button"
+                        class="c_custom_btn btn_delete"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <input
+                        type="text"
+                        readonly
+                        class="input_wrap custom"
+                        value="리플렛 기획안.pdf"
+                      />
+                    </div>
+                    <div class="custom_btn_area btn_fieldControls">
+                      <button
+                        type="button"
+                        class="c_custom_btn btn_delete"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 공통 이미지 업로드 END -->
+
+            <!-- 공통 문의자 정보 입력 START  -->
+            <div class="optionSection">
+              <div class="title_area">
+                <div class="wrap">
+                  <h3 class="title">문의자 정보 입력</h3>
+                </div>
+                <p class="help_text">필수항목 정보들을 입력해 주세요.</p>
+              </div>
+              <div class="box_area flex-row">
+                <div class="box_wrap">
+                  <p class="label required">이름</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <label for="name" class="input_wrap custom">
+                        <input
+                          id="name"
+                          type="text"
+                          required
+                          placeholder="이름을 입력해 주세요."
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_wrap">
+                  <p class="label required">전화번호</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <label for="number" class="input_wrap custom">
+                        <input
+                          id="number"
+                          type="text"
+                          required
+                          placeholder="'-' 없이 입력해 주세요."
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box_area flex-row">
+                <div class="box_wrap">
+                  <p class="label required">이메일</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <label for="email" class="input_wrap custom">
+                        <input
+                          id="email"
+                          type="email"
+                          required
+                          placeholder="이메일을 입력해 주세요."
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_wrap">
+                  <p class="label">회사명</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <label for="number" class="input_wrap custom">
+                        <input
+                          id="number"
+                          type="text"
+                          placeholder="회사명을 입력해 주세요."
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box_area flex-row">
+                <div class="box_wrap">
+                  <p class="label">유입 경로</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <div class="selected">
+                        <span class="value">광고/마케팅</span>
+                        <img
+                          class="icon"
+                          src="../image/common/icon_downward_gray.svg"
+                          alt="옵션 선택"
+                        />
+                      </div>
+                      <ul class="select_list">
+                        <li class="list_item on">광고/마케팅</li>
+                        <li class="list_item">인터넷검색</li>
+                        <li class="list_item">지인소개</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="box_wrap">
+                  <p class="label">배송지</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <label for="shipping_address" class="input_wrap custom">
+                        <input
+                          id="shipping_address"
+                          type="text"
+                          placeholder="배송지를 입력해 주세요."
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box_area flex-row">
+                <div class="box_wrap">
+                  <p class="label">요청사항</p>
+                  <div class="field_area">
+                    <div class="wrap">
+                      <textarea
+                        name=""
+                        id="other"
+                        rows="5"
+                        maxlength="300"
+                        class="textarea custom"
+                        placeholder="300글자 이내로 작성해 주세요."
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 공통 문의자 정보 입력 END  -->
+
+            <!-- 공통 개인정보 동의 START -->
+            <div class="optionSection">
+              <div class="title_area">
+                <div class="wrap">
+                  <h3 class="title">개인정보 수집 및 이용 동의</h3>
+                </div>
+              </div>
+              <div class="consent_area">
+                <div class="consent_list">
+                  <div class="c_checkbox_list">
+                    <label for="termsAgree" class="c_checkbox_wrap">
+                      <input type="checkbox" id="termsAgree" name="" required />
+                      <span>개인정보처리방침 및 이용약관에 동의</span>
+                    </label>
+                  </div>
+                  <ul class="terms_list">
+                    <li class="item">
+                      <a href="../Terms/Individual.html" target="_blank"
+                        >개인정보처리방침 보러가기
+                        <div class="icon_wrap">
+                          <img
+                            src="../image/common/icon_next_gray.svg"
+                            alt="바로가기 아이콘"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                    <li class="item">
+                      <a href="../Terms/Terms.html" target="_blank"
+                        >이용약관 보러가기
+                        <div class="icon_wrap">
+                          <img
+                            src="../image/common/icon_next_gray.svg"
+                            alt="바로가기 아이콘"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- 공통 개인정보 동의 END -->
+
+            <!-- 공통 폼 제출 버튼 START -->
+            <div class="submitButton_wrap c_flex-column-alignCenter">
+              <button
+                type="submit"
+                class="c_btn-round-primary-large submission"
+              >
+                제출하기
+              </button>
+            </div>
+            <!-- 공통 폼 제출 버튼 END -->
+          </div>
+        </div>
+      </form>
+      <!-- 폼 END -->
+    </main>
+    <!-- Main END  -->
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+
+    <!-- FloatingButton START -->
+    <div id="floatingButton"></div>
+    <script>
+      async function loadFloatingButton() {
+        const res = await fetch("/Components/FloatingButton.html");
+        const data = await res.text();
+        document.getElementById("floatingButton").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/FloatingButton.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadFloatingButton);
+    </script>
+    <!-- FloatingButton END -->
+  </body>
+</html>

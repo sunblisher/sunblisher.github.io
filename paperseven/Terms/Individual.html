@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.boxguide.co.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.boxguide.co.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/terms.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <main class="c_contents_container terms">
+      <!-- 페이지 제목 START -->
+      <div class="c_section-gap">
+        <div class="c_inner">
+          <h2 class="pageTitle">개인정보취급방침</h2>
+        </div>
+      </div>
+      <!-- 페이지 제목 END -->
+      <div class="c_section-gap">
+        <div class="c_inner">
+          <div class="c_section-gap">
+            <div class="sectionTitle_wrap-unsetPadding">
+              <h3 class="sectionTitle">제1조(목적)</h3>
+            </div>
+            <ul class="num">
+              <li>
+                이 약관은 엘데이터(이하 “회사”라 합니다.)가 온라인으로 제공하는
+                ‘메타바이셀’(이하 "플랫폼"이라고 한다.) 및 제반서비스의 이용과
+                관련하여 회사와 이용자와의 권리, 의무 및 책임사항 등을 규정함을
+                목적으로 합니다.
+              </li>
+              <li>
+                이용자가 되고자 하는 자가 회사가 정한 소정의 절차를 거쳐서
+                "회원가입" 버튼을 누르면 본 약관에 동의하는 것으로 간주합니다.
+                본 약관에서 정의하는 이외의 이용자의 권리, 의무 및 책임에
+                관해서는 전기통신사업법, 기타 대한민국의 관련 법령과 상관례에
+                의합니다.
+              </li>
+              <li>
+                회원은 회사가 제공하는 서비스를 이용함에 있어서 전자상거래
+                등에서의 소비자보호에 관한 법률(전자문서, 표시광고, 반품, 배송
+                등 통신판매에 관한 규정 등), 전자거래기본법(소비자보호에 관한
+                규정 등), 소비자기본법(사업자의 의무에 관한 규정 등), 표시광고의
+                공정화에 관한 법률(물품상세설명에 관련한 표시, 기재사항 등),
+                정보통신망이용촉진 및 정보보호 등에 관한 법률(개인정보보호에
+                관한 규정) 등 관련법령을 준수해야 하며, 이 약관의 규정을 들어
+                관련법령 위반에 대한 면책을 주장할 수 없습니다.
+              </li>
+            </ul>
+          </div>
+          <div class="c_section-gap">
+            <div class="sectionTitle_wrap-unsetPadding">
+              <h3 class="sectionTitle">제2조 개인정보 수집 및 이용 목적</h3>
+            </div>
+            <p>
+              회사는 서비스 제공을 위하여 필요한 최소한의 범위 내에서 다음 각
+              항목과 같은 목적으로 개인정보를 수집하고 있습니다.
+            </p>
+            <ul class="num">
+              <li>
+                회원관리
+                <ul class="inner_ul hyphen">
+                  <li>
+                    서비스 제공을 위한 본인확인, 법령 및 약관위반 고객에 대한
+                    이용제한 및 서비스 부정이용 행위 제재
+                  </li>
+                  <li>
+                    공지, 불만처리 등 서비스 운영을 위한 원활한 의사소통의 경로
+                    확보
+                  </li>
+                  <li>가입 및 탈퇴 의사 확인</li>
+                  <li>중복 가입방지와 만 14세 미만 여부 확인</li>
+                  <li>우수고객 선정 및 멤버십 서비스 제공</li>
+                </ul>
+              </li>
+              <li>
+                서비스 제공을 위한 계약 이행 및 정산
+                <ul class="inner_ul hyphen">
+                  <li>
+                    물품 및 서비스 상품에 대한 주문 및 대금결제, 배송, 환불 업무
+                    처리
+                  </li>
+                  <li>포인트 적립 및 사용, 정산, 고객센터 운영 등</li>
+                  <li>
+                    편의 서비스 제공정보(재입고 알림, 상품 추천 서비스, 고객상담
+                    등)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                신규 서비스 개발 및 마케팅 활용
+                <ul class="inner_ul hyphen">
+                  <li>신규 서비스 개발 및 맞춤형 서비스 제공</li>
+                  <li>
+                    회사, 관계사 제공 상품 및 서비스 안내, 이벤트정보 및
+                    참여기회 제공(SMS, 전자우편, 등)
+                  </li>
+                  <li>서비스 이용에 대한 통계 작성</li>
+                  <li>
+                    제휴행사 및 서비스 홍보를 위한 마케팅 활용, 마케팅을 위한
+                    고객정보 분석 및 서비스 개발
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="c_section-gap">
+            <div class="sectionTitle_wrap-unsetPadding">
+              <h3 class="sectionTitle">제3조 수집하는 개인정보 항목 및 방법</h3>
+            </div>
+            <h3 class="c_subTitle"></h3>
+            <ul class="num">
+              <li>
+                회사는 다음과 같은 개인정보를 수집합니다.
+                <table>
+                  <colgroup>
+                    <col style="width: 20%" />
+                    <col style="width: auto" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>수집방법</th>
+                      <th>수집/이용방법</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>이메일 회원가입 시</th>
+                      <td>성명, 이메일, 휴대전화번호</td>
+                    </tr>
+                    <tr>
+                      <th>카카오 간편 회원가입 시</th>
+                      <td>
+                        [필수항목] 성명, 닉네임, 이메일<br />
+                        [선택항목] 휴대전화번호, 주소, 성별, 생일
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>네이버 간편 회원가입 시</th>
+                      <td>
+                        [필수항목] 성명, 이메일<br />
+                        [선택항목] 휴대전화번호, 닉네임, 주소, 성별, 생일
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>구글 간편 회원가입 시</th>
+                      <td>
+                        [필수항목] 이메일<br />
+                        [선택항목] 성명
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>환불계좌정보 등록 시</th>
+                      <td>은행명, 계좌번호, 예금주</td>
+                    </tr>
+                    <tr>
+                      <th>상품 배송 시</th>
+                      <td>
+                        주문자 및 수령인의 성명, 전화번호, 휴대전화번호,
+                        (배송지)주소, 이메일 주소
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>대금결제 시</th>
+                      <td>신용카드정보, 은행계좌정보, 휴대폰가입정보</td>
+                    </tr>
+                    <tr>
+                      <th>
+                        서비스 이용 또는 민원 처리 과정에서<br />생성/수집 시
+                      </th>
+                      <td>
+                        <ul class="inner_ul hyphen">
+                          <li>
+                            IP 주소, 방문 일시, 접속로그, 쿠키(Cookie) 등의
+                            서비스 이용 기록 및 중지 기록
+                          </li>
+                          <li>
+                            결제기록, 이용정지기록, 접속기록, IP주소,
+                            쿠키(Cookie)
+                          </li>
+                          <li>
+                            단말기식별정보, 단말기os정보 등 기기정보(단말기
+                            고유식별정보 미수집)
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>현금영수증 신청 시</th>
+                      <td>휴대전화번호</td>
+                    </tr>
+                    <tr>
+                      <th>서비스/이벤트 알림 수신 동의 시</th>
+                      <td>
+                        이름, 휴대전화번호, 이메일주소, 생년월일, 성별, 서비스
+                        이용 내역, 광고성 정보 수신 채널(SMS, 알림톡, 이메일)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="table_bottom_text">
+                  (*선택항목은 해당 서비스 이용 시 별도 동의 후 수집합니다.)
+                </p>
+              </li>
+              <li>
+                허위 정보 입력 시 당사의 조치
+                <p>
+                  고객은 자신의 정보에 대해 정확성 및 적법성을 보장해야 합니다.
+                  만약 이를 위반하여 타인의 정보를 도용하는 등 각종 방법으로
+                  허위 정보를 입력할 경우 회사는 해당 고객을 관계법령에 따라
+                  신고 할 수 있으며 강제 탈퇴를 시킬 수도 있습니다.
+                </p>
+              </li>
+              <li>
+                고객이 자발적으로 공개한 개인정보로 인해 고객 개인에게 발생하는
+                손실이나 문제는 전적으로 개인의 책임이며, 공개적인 공간에
+                게재되는 개인정보는 다른 사람이 수집하여 무단으로 사용할 수
+                있음을 인지하시어, 이로 인해 원하지 않는 피해를 입을 수 있음을
+                유념하시기 바랍니다.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

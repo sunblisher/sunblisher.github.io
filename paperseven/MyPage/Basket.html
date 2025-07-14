@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="종이일곱장" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="종이일곱장" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <!-- Main START -->
+    <main class="c_contents_container mypage basket">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- MyPage_SideMenu START -->
+          <div id="Mypage_SideMenu"></div>
+          <script>
+            fetch("../Components/Mypage_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("Mypage_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- MyPage_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 페이지 제목 START -->
+            <div class="c_section-gap">
+              <h2 class="pageTitle">장바구니</h2>
+            </div>
+            <!-- 페이지 제목 END -->
+            <!-- 장바구니 조회 START -->
+            <div class="c_section-gap">
+              <div class="c_list_container">
+                <div class="c_caption">
+                  <div class="titleBox">
+                    <!-- <h3 class="c_subTitle">견적 리스트</h3> -->
+                    <p class="text">
+                      총 <span class="strong">3</span>건의 조회결과가 있습니다.
+                    </p>
+                  </div>
+                  <select class="c_select-small">
+                    <option>10개씩 보기</option>
+                  </select>
+                </div>
+                <ul class="c_list-typeTable basketTable">
+                  <li class="item thread">
+                    <div class="checkbox">
+                      <label for="checkBox" class="c_checkbox_wrap">
+                        <input type="checkbox" id="checkBox" name="" />
+                      </label>
+                    </div>
+                    <div class="no">No.</div>
+                    <div class="date">담은날</div>
+                    <div class="productInfo">상품정보</div>
+                    <div class="after">후공정</div>
+                    <div class="quantity">수량(건)</div>
+                    <div class="price">결제예정금액</div>
+                    <div class="admin">파일</div>
+                  </li>
+                  <li class="item">
+                    <div class="checkbox">
+                      <label for="checkBox" class="c_checkbox_wrap">
+                        <input type="checkbox" id="checkBox" name="" />
+                      </label>
+                    </div>
+                    <div class="no" data-label="No.">
+                      <p class="text">211</p>
+                    </div>
+                    <div class="date" data-label="담은날">
+                      <p class="text">2024-08-13</p>
+                    </div>
+                    <div class="productInfo" data-label="상품정보">
+                      <div class="wrap">
+                        <p class="title c_ellipsis">
+                          <strong>[일반명함] </strong>종이일곱장 사원 명함
+                        </p>
+                        <p class="text c_ellipsis-two">
+                          스노우지 백색(무광코팅) 250g / 86*52 / 양면칼라8도
+                        </p>
+                      </div>
+                    </div>
+                    <div class="after" data-label="후공정">
+                      <p class="text">3단 접지/미싱/오시</p>
+                    </div>
+                    <div class="quantity" data-label="수량(건)">
+                      <p class="text">500건</p>
+                    </div>
+                    <div class="price" data-label="결제예정금액">
+                      <p class="text"><strong>350,000,000</strong>원</p>
+                    </div>
+                    <div class="admin" data-label="파일">
+                      <button type="button" class="c_btn-small-round-gray">
+                        파일 재전송
+                      </button>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="checkbox">
+                      <label for="checkBox" class="c_checkbox_wrap">
+                        <input type="checkbox" id="checkBox" name="" />
+                      </label>
+                    </div>
+                    <div class="no" data-label="No.">
+                      <p class="text">211</p>
+                    </div>
+                    <div class="date" data-label="담은날">
+                      <p class="text">2024-08-13</p>
+                    </div>
+                    <div class="productInfo" data-label="상품정보">
+                      <div class="wrap">
+                        <p class="title c_ellipsis">
+                          <strong>[일반명함] </strong>종이일곱장 사원 명함
+                        </p>
+                        <p class="text c_ellipsis-two">
+                          스노우지 백색(무광코팅) 250g / 86*52 / 양면칼라8도
+                        </p>
+                      </div>
+                    </div>
+                    <div class="after" data-label="후공정">
+                      <p class="text">3단 접지/미싱/오시</p>
+                    </div>
+                    <div class="quantity" data-label="수량(건)">
+                      <p class="text">500건</p>
+                    </div>
+                    <div class="price" data-label="결제예정금액">
+                      <p class="text"><strong>350,000,000</strong>원</p>
+                    </div>
+                    <div class="admin" data-label="파일">
+                      <button type="button" class="c_btn-small-round-gray">
+                        파일 재전송
+                      </button>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="checkbox">
+                      <label for="checkBox" class="c_checkbox_wrap">
+                        <input type="checkbox" id="checkBox" name="" />
+                      </label>
+                    </div>
+                    <div class="no" data-label="No.">
+                      <p class="text">211</p>
+                    </div>
+                    <div class="date" data-label="담은날">
+                      <p class="text">2024-08-13</p>
+                    </div>
+                    <div class="productInfo" data-label="상품정보">
+                      <div class="wrap">
+                        <p class="title c_ellipsis">
+                          <strong>[일반명함] </strong>종이일곱장 사원 명함
+                        </p>
+                        <p class="text c_ellipsis-two">
+                          스노우지 백색(무광코팅) 250g / 86*52 / 양면칼라8도
+                        </p>
+                      </div>
+                    </div>
+                    <div class="after" data-label="후공정">
+                      <p class="text">3단 접지/미싱/오시</p>
+                    </div>
+                    <div class="quantity" data-label="수량(건)">
+                      <p class="text">500건</p>
+                    </div>
+                    <div class="price" data-label="결제예정금액">
+                      <p class="text"><strong>350,000,000</strong>원</p>
+                    </div>
+                    <div class="admin" data-label="파일">
+                      <button type="button" class="c_btn-small-round-gray">
+                        파일 재전송
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="btn_wrap-justifyBetween">
+                  <div class="btn_wrap">
+                    <button type="button" class="c_btn-round-danger-reverse">
+                      선택 삭제
+                    </button>
+                  </div>
+                  <div class="btn_wrap-justifyBetween">
+                    <button type="button" class="c_btn-round-primary-reverse">
+                      선택 주문
+                    </button>
+                    <a
+                      href="../Order/OrderProduct.html"
+                      class="c_btn-round-primary"
+                      >전체 주문</a
+                    >
+                  </div>
+                </div>
+                <div class="pagination">
+                  <div class="icon_wrap prevMax">
+                    <img src="../image/common/icon_page_first.svg" alt="" />
+                  </div>
+                  <div class="icon_wrap prev">
+                    <img src="../image/common/icon_page_prev.svg" alt="" />
+                  </div>
+                  <div class="num_wrap"><p class="on">1</p></div>
+                  <div class="num_wrap"><p class="">2</p></div>
+                  <div class="num_wrap"><p class="">3</p></div>
+                  <div class="num_wrap"><p class="">4</p></div>
+
+                  <div class="icon_wrap next">
+                    <img src="../image/common/icon_page_next.svg" alt="" />
+                  </div>
+                  <div class="icon_wrap nextMax">
+                    <img src="../image/common/icon_page_last.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 장바구니 조회 END -->
+            <div class="c_section-gap-small">
+              <div class="basketContents">
+                <div class="priceInfoBox">
+                  <div class="priceinfo_wrap">
+                    <span class="name">결제금액</span>
+                    <div class="priceDetail">
+                      <span>공급가 : 86,000원 + 부가세 : 8,600원 = </span>
+                      <span class="totalPrice"><strong>94,600</strong>원</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c_section-gap-small">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-unsetPadding">
+                  <h3 class="sectionTitle">꼭 확인해주세요!</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    이미지 사용의 경우, 공공으로 사용 가능한 이미지라고 명시되어
+                    있거나, 저작권이 만료된 이미지에 한해 사용 가능합니다.
+                  </li>
+                  <li class="item">
+                    저작권 또는 초상권이 있는 이미지를 무단으로 사용하는 경우,
+                    저작권법 관련 조항에 의거하여 처벌받을 수 있습니다.
+                  </li>
+                  <li class="item">
+                    상품 제작 시 특정 상표나 로고, 브랜드명의 사용, 혹은 특정
+                    브랜드나 디자인의 복제, 타인의 저작권을 침해하거나 이 외에도
+                    저작권법에 위배가 될 수 있는 내용의 제작물은 제작이 불가할
+                    수 있습니다.
+                  </li>
+                  <li class="item">
+                    개인용도로 사용하는 상품일지라도 유명연예인, 작품, 디자인 등
+                    허가없이 무단으로 제작되는 경우 초상권, 저작권으로 인한
+                    문제가 발생할 수 있습니다. 이러한 경우의 모든 책임은 이용자
+                    및 주문자에게 있습니다. 문제 발생 시 오프린트미는
+                    당사자들간의 분쟁에 개입하지 않습니다. 타인의 권리를
+                    침해하지 않도록 특별히 주의바랍니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Main END -->
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+
+    <!-- FloatingButton START -->
+    <div id="floatingButton"></div>
+    <script>
+      async function loadFloatingButton() {
+        const res = await fetch("/Components/FloatingButton.html");
+        const data = await res.text();
+        document.getElementById("floatingButton").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/FloatingButton.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadFloatingButton);
+    </script>
+    <!-- FloatingButton END -->
+  </body>
+</html>

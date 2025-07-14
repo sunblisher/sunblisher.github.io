@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>박스가이드</title>
+    <meta name="description" content="박스가이드" />
+    <meta name="keywords" content="박스가이드, 인쇄 제작" />
+    <meta name="author" content="박스가이드" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="박스가이드" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.boxguide.co.kr" />
+    <meta property="og:site_name" content="박스가이드" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="박스가이드" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.boxguide.co.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div class="c_section">
+      <div class="topBanner">
+        <ul class="banner_list">
+          <li class="item">
+            <div class="img_wrap">
+              <img src="../image/banner/topBanner_01.png" alt="배너 이미지" />
+            </div>
+          </li>
+        </ul>
+        <!-- <div class="btn_wrap">
+      <button type="button" class="icon_wrap">
+        <img src="../image/common/icon_close.svg" alt="닫기" />
+      </button>
+    </div> -->
+      </div>
+    </div>
+    <header class="header">
+      <div class="c_section">
+        <div class="memberInfo_container">
+          <div class="c_inner">
+            <!-- comment : header 반응형 시 메뉴에서 .memberInfo 에 .login / .logout 시 화면 변경 -->
+            <div class="memberInfo login">
+              <div class="welcome">
+                <span><strong>홍길동</strong>님, 반갑습니다.</span>
+                <div class="btn_wrap">
+                  <a
+                    href="../Product/ProductList_All.html"
+                    class="c_btn-small-round-primary mobileShow"
+                  >
+                    박스 주문하기
+                  </a>
+                  <a
+                    href="../Order/QuotationOrder.html"
+                    class="c_btn-small-round-primary-reverse mobileShow"
+                  >
+                    견적요청
+                  </a>
+                </div>
+              </div>
+              <div class="loginField">
+                <div class="input_wrap">
+                  <div class="input_wrap">
+                    <input
+                      type="text"
+                      class="c_input"
+                      name=""
+                      placeholder="아이디 입력"
+                    />
+                    <input
+                      type="password"
+                      class="c_input"
+                      name=""
+                      placeholder="비밀번호 입력"
+                    />
+                    <button type="button" class="c_btn-small-round-primary">
+                      로그인
+                    </button>
+                  </div>
+                  <div class="input_wrap">
+                    <div class="c_checkbox_list">
+                      <label for="saveID" class="c_checkbox_wrap">
+                        <input type="checkbox" id="saveID" name="" checked />
+                        <span>아이디 저장</span>
+                      </label>
+                    </div>
+                    <div class="btn_wrap-alignCenter">
+                      <div class="c_btn-small-round-primary-reverse mobileShow">
+                        <a href="../Order/sample_box_request.html"
+                          >박스 주문하기</a
+                        >
+                        <span class="line_primary"></span>
+                        <a href="../Order/QuotationOrder.html"> 견적요청 </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cashInfo_container">
+                <div class="wrap">
+                  <div class="badge">전용계좌</div>
+                  <div class="value">
+                    <span class="icon_wrap">
+                      <img src="../image/common/img_kb.svg" alt="kb 아이콘" />
+                    </span>
+                    <span>국민은행 0750-0977-5978-94</span>
+                  </div>
+                </div>
+                <div class="wrap">
+                  <div class="badge">계좌잔액</div>
+                  <div class="value">50,000원</div>
+                </div>
+              </div>
+              <ul class="sns_list">
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/img_header_naver.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/img_header_kakao.svg"
+                      alt="카카오톡 아이콘"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c_section">
+        <div class="gnb_container">
+          <div class="c_inner">
+            <nav class="gnb">
+              <div class="ci_wrap">
+                <a href="../Home/Home.html" class="">
+                  <img src="../image/common/logo.svg" class="logo" alt="로고" />
+                  <img
+                    src="../image/common/symbol.svg"
+                    class="symbol"
+                    alt="심볼"
+                  />
+                </a>
+              </div>
+              <ul class="gnbMenu_list">
+                <li class="item btnMenu">
+                  <!-- comment : .mainCategory 클릭 시 ProductList_All.html에 해당하는 탭메뉴로 이동 -->
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >전체</a
+                  >
+                  <div class="sub_list">
+                    <div class="element">
+                      <div class="item">
+                        <p class="subCategory">종이박스</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Package_paperBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_paper_01.png"
+                                  alt="종이박스 단상자"
+                                /> </span
+                              >단상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_paperBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_paper_02.png"
+                                  alt="종이박스 포장상자"
+                                /> </span
+                              >포장상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_paperBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_paper_03.png"
+                                  alt="종이박스 분리상자"
+                                /> </span
+                              >분리상자</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <p class="subCategory">골판지박스</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Package_corrugatedBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_corrugated_01.png"
+                                  alt="골판지박스 단상자"
+                                /> </span
+                              >단상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_corrugatedBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_corrugated_02.png"
+                                  alt="골판지박스 포장상자"
+                                /> </span
+                              >포장상자</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_corrugatedBox_single.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_corrugated_03.png"
+                                  alt="골판지박스 택배박스" /></span
+                              >택배박스</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <p class="subCategory">싸바리박스</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Package_rigidBox_top.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_rigid_01.png"
+                                  alt="싸바리박스 표지" /></span
+                              >표지</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_rigidBox_top.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_rigid_02.png"
+                                  alt="싸바리박스 2단" /></span
+                              >2단</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Package_rigidBox_top.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_rigid_03.png"
+                                  alt="싸바리박스 3단" /></span
+                              >3단</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <p class="subCategory">기타</p>
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/Others_shoppingbag.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_others_01.png"
+                                  alt="쇼핑백" /></span
+                              >쇼핑백</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_booklet.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_others_02.png"
+                                  alt="제본" /></span
+                              >제본</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_leaflet.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_others_03.png"
+                                  alt="리플렛" /></span
+                              >리플렛</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_sticker.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_others_04.png"
+                                  alt="스티커" /></span
+                              >스티커</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/Others_tape.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_others_05.png"
+                                  alt="스티커" /></span
+                              >박스 테이프</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Order/sample_box_request.html"
+                              class="lnb_item_img"
+                            >
+                              <span class="thumbnail">
+                                <img
+                                  src="../image/common/img_thumnail_others_06.png"
+                                  alt="무지 샘플요청" /></span
+                              >무지 샘플요청</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="item">
+                        <a
+                          href="../Product/industry_All.html"
+                          class="subCategory"
+                          >업종별 보기</a
+                        >
+                        <ul class="depth_list">
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >화장품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >식품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >베이커리/카페</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >반려동물</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >문구/완구</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >문류/유통</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >전자제품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >패션/액세서리</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >농수산</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >교육</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >헬스케어/의료</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >인테리어/소품</a
+                            >
+                          </li>
+                          <li class="item">
+                            <a
+                              href="../Product/industry_All.html"
+                              class="lnb_item_img"
+                              >예술/문화</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >종이박스</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >단상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >포장상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >분리상자</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >골판지박스</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >단상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >포장상자</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >택배박스</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >싸바리박스</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >표지</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >2단</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >3단</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/ProductList_All.html" class="mainCategory"
+                    >기타</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a
+                        href="../Product/Others_shoppingbag.html"
+                        class="subCategory"
+                        >쇼핑백</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >제본</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Package_paperBox_single.html"
+                        class="subCategory"
+                        >리플렛</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Product/Others_sticker.html"
+                        class="subCategory"
+                        >스티커</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/Others_tape.html" class="subCategory"
+                        >박스 테이프</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a
+                        href="../Order/sample_box_request.html"
+                        class="subCategory"
+                        >무지 샘플요청</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a href="../Product/industry_All.html" class="mainCategory"
+                    >업종별 보기</a
+                  >
+                  <ul class="sub_list">
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >화장품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >식품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >베이커리/카페</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >반려동물</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >문구/완구</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >물류/유통</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >전자제품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >패션/액세서리</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >농수산</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >교육</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >헬스케어/의류</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >인테리어/소품</a
+                      >
+                    </li>
+                    <li class="item">
+                      <a href="../Product/industry_All.html" class="subCategory"
+                        >예술/문화</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="topMenu_container">
+                <div class="topMenu">
+                  <ul class="topMenu_list">
+                    <li class="item">
+                      <a href="../WorkGuide/Program_illustrator.html">
+                        <span class="text">작업가이드</span>
+                      </a>
+                    </li>
+                    <li class="item">
+                      <a href="../Customer/FAQ.html">
+                        <span class="text">고객센터</span>
+                      </a>
+                    </li>
+                    <!-- comment : .logout / .login 에 .on 추가 시 화면 변경 -->
+                    <!-- 로그아웃 시 바뀌는 화면 START -->
+                    <li class="item logout line_none">
+                      <a href="/">
+                        <span class="text line_none">로그인/회원가입</span>
+                      </a>
+                    </li>
+                    <!-- 로그아웃 시 바뀌는 화면 END -->
+                    <!-- 로그인 시 바뀌는 화면 START -->
+                    <li class="item login on">
+                      <a href="../MyPage/MyPageHome.html">
+                        <span class="text">홍길동님</span>
+                      </a>
+                      <span class="text line_none">로그아웃</span>
+                    </li>
+                    <!-- 로그인 시 바뀌는 END -->
+                    <li class="line_none btn_wrap">
+                      <a
+                        href="../Product/ProductList_All.html"
+                        class="c_btn-mid-round-primary"
+                      >
+                        <div class="icon_wrap">
+                          <img
+                            src="../image/common/icon_topMenu_boxOrder_white.svg"
+                            alt="박스 주문하기"
+                          />
+                        </div>
+                        <span class="text line_none">박스 주문하기</span>
+                      </a>
+                      <a
+                        href="../Order/QuotationOrder.html"
+                        class="c_btn-mid-round-primary-reverse"
+                      >
+                        <span class="text line_none">견적요청</span>
+                      </a>
+                    </li>
+                    <li class="item line_none basket_btn">
+                      <a href="../MyPage/Basket.html" class="right_btn">
+                        <div class="icon_wrap icon_basket">
+                          <img
+                            src="../image/common/icon_topMenu_basket.svg"
+                            alt="장바구니 아이콘"
+                          />
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="mobileMenu">
+                    <a
+                      href="../WorkGuide/Program_illustrator.html"
+                      class="icon_wrap"
+                    >
+                      <img
+                        src="../image/common/icon_topMenu_guide.svg"
+                        alt="작업가이드 아이콘"
+                      />
+                    </a>
+                    <a href="../Customer/FAQ.html" class="icon_wrap">
+                      <img
+                        src="../image/common/icon_topMenu_help.svg"
+                        alt="고객센터 아이콘"
+                      />
+                    </a>
+                    <a href="../MyPage/Basket.html" class="icon_wrap">
+                      <img
+                        src="../image/common/icon_topMenu_basket.svg"
+                        alt="장바구니 아이콘"
+                      />
+                    </a>
+                    <a href="../MyPage/MyPageHome.html" class="icon_wrap">
+                      <img
+                        src="../image/common/icon_topMenu_join.svg"
+                        alt="마이페이지 아이콘"
+                      />
+                    </a>
+                    <div class="icon_wrap btnMenuList">
+                      <img
+                        src="../image/common/icon_menuList.svg"
+                        alt="메뉴 아이콘"
+                      />
+                    </div>
+                    <div class="icon_wrap btnMenuClose">
+                      <img
+                        src="../image/common/icon_close.svg"
+                        alt="닫기 아이콘"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="c_section">
+        <div class="etcMenu">
+          <div class="c_inner">
+            <ul class="etcMenu_list">
+              <!-- comment : header 반응형 시 메뉴에서 .memberInfo 에 .logout 이 붙을 시 회원가입, 로그인 .item에 .on 추가 -->
+              <!-- comment : header 반응형 시 메뉴에서 .memberInfo 에 .login 이 붙을 시 로그아웃 .item에 .on 추가 -->
+              <li class="item">
+                <a href="../Product/Ev.html" class="">회원가입</a>
+              </li>
+              <li class="item">
+                <a href="../Product/Ev.html" class="">로그인</a>
+              </li>
+              <li class="item on">
+                <a href="../Product/Ev.html" class="">로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header END -->
+
+    <!-- fixdButton START -->
+    <div class="fixBtn_wrap">
+      <button type="button" class="icon_wrap btnTop">
+        <img src="../image/common/icon_dropBox_gray.svg" alt="위로 가기 버튼" />
+      </button>
+    </div>
+    <!-- fixdButton END -->
+
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <nav class="lnb">
+            <!-- comment: .lnb_list > .item 클릭 시 .on 추가 -->
+            <ul class="lnb_list">
+              <li class="item on">
+                <p class="title">작업유의사항</p>
+                <ul class="sub_list">
+                  <!-- comment: .sub_list > .item 클릭 시 .on 추가 -->
+                  <li class="item on">
+                    <a href="Program_illustrator.html">프로그램별</a>
+                  </li>
+                  <li class="item">
+                    <a href="Category_foldingCarton.html">품목별</a>
+                  </li>
+                  <li class="item">
+                    <a href="Delivery.html">출고/배송</a>
+                  </li>
+                  <li class="item">
+                    <a href="Price.html">가격/환불</a>
+                  </li>
+                  <li class="item">
+                    <a href="Regulation.html">작업규약</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- <li class="item">
+      <p class="title">칼선 다운로드</p>
+      <ul class="sub_list">
+        <li class="item">
+          <a href="NoticeList.html">칼선 논의</a>
+        </li>
+      </ul>
+    </li> -->
+              <li class="item">
+                <p class="title">후공정 보기</p>
+                <ul class="sub_list">
+                  <li class="item">
+                    <a href="After_thomson.html">톰슨</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_foil.html">박</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_pushLine.html">누름선(오시)</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_coating.html">코팅</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_epoxy.html">에폭시</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_binding.html">제본</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_pressure.html">형압</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_embossing.html">엠보싱</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_folding.html">접지양식</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_shoppingBag.html">쇼핑백</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_missing.html">절취선(미싱)</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_window.html">창문가공</a>
+                  </li>
+                  <li class="item">
+                    <a href="After_hangerTab.html">날개고리</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="title">용지 안내</p>
+                <ul class="sub_list">
+                  <li class="item">
+                    <a href="Paper_normalPaper.html">일반지</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_importedPaper.html">고급지</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_packaging.html">패키지용지</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_card.html">카드명함</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_st.html">스티커</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_flyer.html">전단지</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_ev.html">봉투</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_ncr.html">NCR지</a>
+                  </li>
+                  <li class="item">
+                    <a href="Paper_leaflet.html">리플렛/카다로그</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- WorkGuide_SideMenu END -->
+
+          <div class="layout_contents">
+            <!-- 상단 탭 START -->
+            <div class="c_section-gap">
+              <div class="c_scroll_container-full">
+                <ul class="c_tab-typeButton c_scroll_wrap">
+                  <li class="item on">
+                    <a href="Program_illustrator.html">일러스트레이터</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_coreldraw.html">코렐드로우</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 상단 탭 END -->
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap">
+                    <img
+                      src="../image/workguide/icon_illustrator.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">일러스트레이터 작업가이드</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    인쇄할 파일은 모두 어도비 일러스트에서 작업해주시기
+                    바랍니다. (어도비 일러스트 또는 PDF로 저장해주세요.)
+                  </li>
+                  <li class="item">
+                    프로그램 버전은 2024를 기준으로 작업하였습니다. 버전은
+                    CS6버전으로 하위 조정해 보내주세요.
+                  </li>
+                  <li class="item">
+                    주문하신 데이터 수정은 불가능합니다. 작업가이드 확인 후
+                    데이터를 업로드해 주세요.
+                  </li>
+                  <li class="item">
+                    포함이 되지 않은 이미지 혹은 변환하지 않은 서체로 인해
+                    발생된 인쇄오류는 당사에서 책임질 수 없습니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">파일 저장 방법</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list contain">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_01_1.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                색상은 반드시 CMYK 모드에서 작업하여 주세요.
+                                도련값은 모두 0으로,<span class="block"
+                                  >해상도는 300ppi로 설정해주세요.</span
+                                ><span class="block"
+                                  >(이미지 해상도가 낮을 경우 깨질 수가 있으니
+                                  주의바랍니다.)</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_01_2.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                인쇄 오류를 방지하기 위해 CS6 버전으로
+                                저장해주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_01_3.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                PDF로 저장할 시 고품질 인쇄로 설정해주세요. 문서
+                                도련설정을 체크해 주시고<span class="block"
+                                  >텍스트와 라인 아트 압축을 체크해
+                                  주세요.</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_01_4.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                PDF파일로 저장할 시 양면 인쇄는 앞면(전면),
+                                뒷면(후면) 순으로 차례로 배열해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_01_5.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                Ai파일로 저장할 시 앞면(전면)은 좌측,
+                                뒷면(후면)은 우측으로 대지 순서에 맞춰 차례로
+                                나열해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_01_6.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                어도비 일러스트 외 다른 프로그램으로 작업할 시
+                                Ai또는 PDF로 저장해주세요.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">전처리 작업하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list contain">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_02_1.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                사용한 이미지는 반드시 포함(Embed) 시켜주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_02_2.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                잠겨있는 레이어는 풀어주고 사용하지 않는
+                                레이어는 삭제해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_02_3.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                칠/선 중복 인쇄(Overprint)를 해제해 주세요.
+                                (창(W) - 특성)오버프린트를 선택한 후<span
+                                  class="block"
+                                  >인쇄를 하게 되면 모니터와 다르게 인쇄가
+                                  됩니다.</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_02_4.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                모서리를 둥글게 처리한 경우 모양확장을 해주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_02_5.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                레이어 이름 지정 시 영문으로 표기해주세요.
+                                (오시선=crease, 재단=cut, 디자인=image) 레이어가
+                                제대로 지정이 되어있지 않을 시 데이터 오류나
+                                제작물에 문제가 발생할 수 있습니다.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_02_6.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                이미지를 원하시는 사이즈 보다 재단선 바깥으로
+                                사방 3mm 늘려서 작업해 주세요.<span
+                                  class="block"
+                                  >(재단시 오차가 발생할 수 있습니다.)</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">칼선 작업하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list contain">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_03_1.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                칼선은 M : 100%, 선두께 0.5pt로 작업하고,
+                                오시선은 C : 100%, 선두께 0.5pt로
+                                작업해주세요.<span class="block"
+                                  >(반드시 일러스트로 면이 아닌 선으로
+                                  작업해주세요.)</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_03_2.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                칼선이 급하게 꺾이는 부분은 칼선과 오시선 사이에
+                                2mm 간격을 두고 오시선을 작업해 주세요.<span
+                                  class="block"
+                                  >(칼선과 오시선이 맞닿아 있을 경우 뜯김 현상이
+                                  발생할 수 있습니다.)</span
+                                ><span class="block"
+                                  >또한 각진 모서리가 아닌 둥근 모서리 형태로
+                                  작업해 주세요.</span
+                                >
+                              </li>
+                              <li class="item">
+                                칼선은 하나의 선으로 이어지게 작업해 주세요.
+                                (선이 끊어져 있을 경우 뜯김 현상이 발생할 수
+                                있습니다.)
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_03_3.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                칼선, 오시선은 반드시 별색 작업을 해주세요.
+                                (칼선이 동시에 인쇄되어 인쇄사고가 발생할 수
+                                있습니다.)
+                              </li>
+                              <li class="item">
+                                칼선, 오시선은 모두 선 중복 인쇄(Overprint) 를
+                                체크해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_03_4.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                칼선, 오시선, 디자인 레이어들을 각각 나눠서
+                                작업해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_03_5.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                칼선과 인쇄파일은 같은 위치에 배치해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_03_6.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                접착면 양쪽(붙이는 면, 붙는 면)에는 이미지 없이
+                                비워주세요. (접착면까지 인쇄 시 접착이 떨어질 수
+                                있습니다.)
+                              </li>
+                              <li class="item">
+                                접착면 크기는 15mm 이상으로 작업해 주세요.
+                              </li>
+                              <li class="item">
+                                이미지를 칼선보다 3mm 크게 작업해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">글씨는 확장하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list contain">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_04_1.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                레이아웃에 있는 모든 서체는 반드시 윤곽선 또는
+                                확장(Expand) 처리를 해주세요.<span
+                                  class="block"
+                                >
+                                  (윤곽선 또는 확장 처리를 하지 않은 글자는 기본
+                                  글꼴로 대체되어 인쇄될 수 있습니다.)</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_04_2.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                문자(Type) – 글꼴 찾기(Find font) 순대로 확인해
+                                남아있는 서체가 있는지 다시 한 번 확인해 주세요.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">05</div>
+                          <h3 class="sectionTitle-large">개체 래스터화하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list contain">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_05_1.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                그라데이션, 투명도, 흐림, 필터효과, 패턴 등
+                                효과와 고정점들로 이우러진 개체는<span
+                                  class="block"
+                                  >인쇄가 반영되지 않을 수 있으니 레스터화를
+                                  해주세요. 오브젝트(Objact) –
+                                  레스터화(Rasterize)</span
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_Ai_workguide_05_2.png"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">
+                                반드시 색상모드는 CMYK 모드, 해상도는 300dpi로
+                                체크해 주세요.
+                              </li>
+                              <li class="item">
+                                옵션은 체크하지 않고 배경은 투명으로
+                                선택해주세요.
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <footer>
+      <div class="footerTop">
+        <div class="c_inner">
+          <div class="contents_wrap">
+            <div class="serviceInfo_container">
+              <div class="serviceInfo">
+                <p class="title">이용안내</p>
+                <div class="text_container">
+                  <p class="tel">02-2264-0512</p>
+                  <div class="textBox">
+                    <p>운영시간 : 평일 09:00 ~ 18:00</p>
+                    <p>점심시간 : 12:00 ~ 13:30</p>
+                    <p>토/일 공휴일 휴무</p>
+                  </div>
+                </div>
+              </div>
+              <!-- <ul class="sns_list">
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_blog.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_kakao.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_twitter.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_youtube.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="/" class="icon_wrap">
+                    <img
+                      src="../image/common/icon_footer_face.svg"
+                      alt="네이버 아이콘"
+                    />
+                  </a>
+                </li>
+              </ul> -->
+            </div>
+            <ul class="footerMenu_list">
+              <li class="item">
+                <p class="title">고객센터</p>
+                <ul class="subMenu_list">
+                  <li class="item">
+                    <a href="../Customer/FAQ.html">FAQ</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Customer/NoticeList.html">공지사항</a>
+                  </li>
+                  <li class="item">
+                    <a href="#">박스가이드 소개</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Customer/Location.html">찾아오시는길</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="title">Q&A</p>
+                <ul class="subMenu_list">
+                  <li class="item">
+                    <a href="../MyPage/Inquiry_write.html">문의하기</a>
+                  </li>
+                  <li class="item">
+                    <a href="../MyPage/QnA.html">문의내역</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <p class="title">약관</p>
+                <ul class="subMenu_list">
+                  <li class="item">
+                    <a href="../Terms/Terms.html">이용약관</a>
+                  </li>
+                  <li class="item">
+                    <a href="../Terms/Individual.html">개인정보취급방침</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="bankInfo">
+              <p class="title">입금계좌 정보</p>
+              <ul class="bank_list">
+                <li class="item">
+                  <div class="icon_wrap">
+                    <img src="../image/common/img_kb.svg" alt="kb 아이콘" />
+                  </div>
+                  <span>국민은행 : 068801-04-198807</span>
+                </li>
+                <li class="item">
+                  <div class="icon_wrap">
+                    <img src="../image/common/img_ibk.svg" alt="ibk 아이콘" />
+                  </div>
+                  <span>기업은행 : 034-061088-04-015</span>
+                </li>
+                <li class="item">
+                  <div class="icon_wrap"></div>
+                  <span>예금주 : <strong>박스가이드(박호승)</strong></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <div class="c_inner">
+          <div class="contents_wrap">
+            <div class="companyInfo_container">
+              <div class="companyInfo">
+                <p class="name">박스가이드</p>
+                <p>
+                  <span>대표이사 : 박호승</span
+                  ><span
+                    >주소 : 서울시 중구 충무로 22 호운빌딩3층 301호
+                    (인현동1가)</span
+                  >
+                </p>
+                <p>
+                  <span>사업자등록번호 : 203-02-43295</span
+                  ><span>통신판매허가번호 : 중구05580</span>
+                </p>
+                <p>
+                  <span>대표번호 : 02-2264-0512</span
+                  ><span>팩스번호 : 02-2264-0514</span>
+                </p>
+                <p><span>이메일 : boxguide@boxguide.co.kr</span></p>
+              </div>
+              <div class="pgInfo">PG사 정보</div>
+            </div>
+            <div class="copyright">
+              COPYRIGHT (C) 2024 BOXGUIDE.CO.KR ALL RIGHT RESERVED.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer END -->
+
+    <script src="../JS/Header.js"></script>
+    
+  </body>
+</html>

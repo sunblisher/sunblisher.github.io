@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="종이일곱장" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="종이일곱장" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <div id="WorkGuide_SideMenu"></div>
+          <script>
+            fetch("../Components/WorkGuide_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("WorkGuide_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- WorkGuide_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 상단 탭 START -->
+            <div class="c_section-gap">
+              <div class="c_scroll_container-full">
+                <ul class="c_tab-typeButton c_scroll_wrap">
+                  <li class="item">
+                    <a href="Program_illustrator.html">일러스트레이터</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_photoshop.html">포토샵</a>
+                  </li>
+                  <li class="item on">
+                    <a href="Program_indesign.html">인디자인</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_coreldraw.html">코렐드로우</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_quark.html">쿽</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_powerpoint.html">파워포인트</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_word.html">워드</a>
+                  </li>
+                  <li class="item">
+                    <a href="Program_hw.html">한글</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 상단 탭 END -->
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap">
+                    <img
+                      src="../image/workguide/icon_indesign.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">인디자인 작업가이드</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    이미지 사용의 경우, 공공으로 사용 가능한 이미지라고 명시되어
+                    있거나, 저작권이 만료된 이미지에 한해 사용 가능합니다.
+                  </li>
+                  <li class="item">
+                    저작권 또는 초상권이 있는 이미지를 무단으로 사용하는 경우,
+                    저작권법 관련 조항에 의거하여 처벌받을 수 있습니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">파일 저장 방법</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">전처리 작업하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">글씨는 확장하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">개체 래스터화하기</h3>
+                        </div>
+                        <ul class="guideImg_list guideProgram_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/sample.jpg"
+                                alt="가이드 이미지"
+                              />
+                            </div>
+                            <ul class="c_info_list">
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                              <li class="item">설명이 들어가는 영역입니다.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

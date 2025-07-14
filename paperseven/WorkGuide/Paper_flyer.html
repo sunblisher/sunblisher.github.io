@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="종이일곱장" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="종이일곱장" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <div id="WorkGuide_SideMenu"></div>
+          <script>
+            fetch("../Components/WorkGuide_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("WorkGuide_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- WorkGuide_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap-addBg">
+                    <img
+                      src="../image/workguide/icon_poster.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">전단지</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    모니터 색상과 실제 상품과 색상 차이가 날 수 있습니다.
+                    참고해주세요.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container paper">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">모조지(백색)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              일반적으로 백색은 복사용지, 책의 속지, 각종 서식류
+                              등 다양한 용도로 폭넓게 이용되고 있으며
+                              <br />미색은 주로 책에 많이 쓰여 서적지라고도
+                              합니다. 면이 매끄럽고 가격이 저렴해 많이 사용되는
+                              재질입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 복사용지, 서식류, 서적, 메모지,
+                                스티커용지, 봉투 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">아트지(백색)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              아트지는 면이 곱고 고르며, 종이 자체에 약간의
+                              광택이 있는 재질입니다. <br />
+                              가격대가 저렴하고 인쇄 색상표현이 뛰어납니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 전단, 리플렛, 카다로그, 포스터,
+                                엽서, 카렌다, 명함 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">스노지(백색)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              스노우지는 아트지와 더불어 대중적으로 많이
+                              사용되는 인쇄용지로 종이 자체에 광택이 없어
+                              부드러우면서 촉감이 부드럽습니다. <br />
+                              광택이 없는 차분한 특징과 반사율이 적어 인쇄 후
+                              은은한 광택이 납니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 전단, 리플렛, 카다로그, 포스터,
+                                엽서, 카렌다, 명함 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">랑데뷰(내츄럴)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              자연스러움과 부드러운 감촉, 두터운 느낌의 고급
+                              특수코팅 인쇄용지로 이미지 재현에 우수합니다.
+                              <br />
+                              우수한 품질의 고급 인쇄물 내지 및 표지에
+                              적합합니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 카다로그, 브로슈어, 리플렛, 캘린더,
+                                초청장, 카드, 엽서 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">05</div>
+                          <h3 class="sectionTitle-large">
+                            스타드림(크리스탈 펄지)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              펄색지로 부드러운 표면과 은은한 칼라, 독특한 펄이
+                              조화를 이루며 인쇄성이 뛰어나 화려함과
+                              고급스러움을 표현할 수 있습니다. <br />
+                              빛의 각도에 따라 펄의 느낌이 달라지는 재질입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 커버, 카다로그, 브로슈어, 싸바리,
+                                고급카드, 명함, 홀더, 화보집, 각종 고급패키지,
+                                북아트, 고급앨범 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_flyer05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

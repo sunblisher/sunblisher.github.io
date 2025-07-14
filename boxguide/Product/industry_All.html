@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2025 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>박스가이드</title>
+    <meta name="description" content="박스가이드" />
+    <meta name="keywords" content="박스가이드, 종이 인쇄 제작" />
+    <meta name="author" content="박스가이드" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeaderAndScript() {
+        const res = await fetch("../Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeaderAndScript);
+    </script>
+    <!-- Header END -->
+
+    <!-- fixdButton START -->
+    <div id="fixedButton"></div>
+    <script>
+      fetch("../Components/FixedButton.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("fixedButton").innerHTML = data;
+        });
+    </script>
+    <!-- fixdButton END -->
+
+    <main class="c_contents_container list_page">
+      <div class="c_section">
+        <div class="c_inner">
+          <!-- 페이지 제목 START -->
+          <div class="page_title_area">
+            <h2 class="page_title">업종별 보기</h2>
+          </div>
+          <!-- 페이지 제목 END -->
+          <!-- 탭메뉴 START -->
+          <div class="tab_contents">
+            <ul
+              class="c_tab-typeButton-size-md-round-flex-basis-auto-stroke portfolio_category_list flex-wrap"
+            >
+              <li>
+                <button type="button" class="item on">
+                  <img
+                    src="../image/category/icon_cosmetics.png"
+                    alt="화장품"
+                  />화장품
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img src="../image/category/icon_food.png" alt="식품" />식품
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_bakery.png"
+                    alt="베이커리/카페"
+                  />베이커리/카페
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_pet.png"
+                    alt="반려동물"
+                  />반려동물
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_stationery.png"
+                    alt="문구/완구"
+                  />문구/완구
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_shipping.png"
+                    alt="문류/유통"
+                  />문류/유통
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_electronics.png"
+                    alt="전자제품"
+                  />전자제품
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_fashion.png"
+                    alt="패션/액세서리"
+                  />패션/액세서리
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_agriculture.png"
+                    alt="농수산"
+                  />농수산
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_education.png"
+                    alt="교육"
+                  />교육
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_healthcare.png"
+                    alt="헬스케어/의료"
+                  />헬스케어/의료
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_interior.png"
+                    alt="인테리어/소품"
+                  />인테리어/소품
+                </button>
+              </li>
+              <li>
+                <button type="button" class="item">
+                  <img
+                    src="../image/category/icon_art.png"
+                    alt="예술/문화"
+                  />예술/문화
+                </button>
+              </li>
+            </ul>
+            <ul class="product_list">
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+              <li class="item_list">
+                <a
+                  href="../Product/Package_paperBox_single.html"
+                  class="btn_area"
+                >
+                  <div class="img_wrap">
+                    <img
+                      src="../image/product/commerce/paperBox/img_SleeveBox.jpg"
+                      alt="티웨이"
+                      cl
+                    />
+                  </div>
+                  <div class="text_wrap">
+                    <p class="title">단상자</p>
+                    <p class="category">종이박스</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 탭메뉴 END -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

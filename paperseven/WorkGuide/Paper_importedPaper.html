@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+		본 HTML코드는 데버 주식회사의 지적재산이므로 지적재산권에 의해 보호를 받으며, 무단으로 사용할 경우 법적인 제재를 받을 수 있습니다.
+		© 2024 DEVER <luna.kwoun@devercorp.com>
+		-->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>종이일곱장</title>
+    <meta name="description" content="종이일곱장" />
+    <meta name="keywords" content="종이일곱장, 인쇄 제작" />
+    <meta name="author" content="종이일곱장" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="종이일곱장" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="종이일곱장" />
+    <meta property="og:description" content="종이일곱장" />
+    <meta name="twitter:title" content="종이일곱장" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="종이일곱장" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("/Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <div id="WorkGuide_SideMenu"></div>
+          <script>
+            fetch("../Components/WorkGuide_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("WorkGuide_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- WorkGuide_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap-addBg">
+                    <img
+                      src="../image/workguide/icon_paper.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">수입지</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    모니터 색상과 실제 상품과 색상 차이가 날 수 있습니다.
+                    참고해주세요.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container paper">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">
+                            UV글로시(스노우지300g)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              대중적으로 많이 사용되는 인쇄용지로 광택이 없으며
+                              차분한 특징과 반사율이 적어 은은한 느낌이 납니다.
+                              <br />인쇄 후 UV코팅 처리하여 글로시한 느낌을 주며
+                              인쇄얼룩과 지분이 거의 없는 특징이 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">누브지 210g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              백색 팬시지로 종이 본래의 촉각과 느낌을 가지면서
+                              칼라인쇄가 잘 되는 고급스러운 매트지로서
+                              <br />
+                              종이표면은 무광이나 인쇄면은 은은한 광이 살아나는
+                              장점이 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">반누보204g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              반누보는 백색계통의 팬시페이퍼로는 최고도의
+                              인쇄효과를 내도록 표면을 특수코팅 처리한
+                              인쇄용지입니다. <br />
+                              따뜻하고 부피감 있는 표면질감과 잉크의 양을
+                              조절함에 따라 원하는 인쇄 광택을 자유롭게 표현
+                              가능합니다. <br />
+                              칼라가 많이 들어가는 인쇄물이나 고급스럽고 깔끔한
+                              인쇄물에 잘 어울립니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">베이직 233g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              고유의 표면 질감과 고감도 인쇄 광택이 조화를 이뤄
+                              색상과 망점 재현성이 우수합니다. <br />
+                              적은 잉크 사용으로 완벽한 인쇄 광택 재현에 손색이
+                              없으며, 건조성이 좋아 인쇄 작업성이 탁월합니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">05</div>
+                          <h3 class="sectionTitle-large">휘라레 216g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              고급스러운 색상과 정교한 양면 직물무늬의
+                              용지입니다. <br />
+                              뛰어난 강도와 내구성이 있으며 불투명성이 높아 후면
+                              비침이 거의 없고 탄성이 우수하여 인쇄 및 각종
+                              후공정이 용이합니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">06</div>
+                          <h3 class="sectionTitle-large">스타드림</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              펄과 메탈의 독특한 조화는 품격있고 세련된 스타일의
+                              디자인 완성을 도와주며, <br />보는 각도에 따라
+                              색채의 다채로움이 있는 고급용지입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper06.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper06.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">07</div>
+                          <h3 class="sectionTitle-large">키칼라메탈릭 230g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              펄과 메탈의 독특한 조화는 품격있고 세련된 스타일의
+                              디자인 완성을 도와주며, <br />보는 각도에 따라
+                              색채의 다채로움이 있는 고급용지입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper07.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper07.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">08</div>
+                          <h3 class="sectionTitle-large">
+                            키칼라메탈릭 골드 200g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              펄과 메탈의 독특한 조화는 품격있고 세련된 스타일의
+                              디자인 완성을 도와주며, <br />보는 각도에 따라
+                              색채의 다채로움이 있는 고급용지입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper08.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper08.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">09</div>
+                          <h3 class="sectionTitle-large">컨셉 블루펄 250g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              블루펄과 메탈이 조화를 이루어 은은하고 오묘한 빛을
+                              내는 세련된 감각의 재질로 표면이 부드럽고
+                              매끄럽습니다. <br />
+                              각도에 따라 고운 펄감과 다양한 빛을 연출합니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper09.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper09.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">10</div>
+                          <h3 class="sectionTitle-large">팝셋 화이트펄 240g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              금속 펄 처리된 새롭고 현대적인 제품으로 각도에
+                              따라 <br />다르게 보이는 펄감이 있으며 독특한
+                              디자인 연출을 도와줍니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap"></div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap"></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">11</div>
+                          <h3 class="sectionTitle-large">
+                            다이니티 골드펄 250g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              블루펄과 메탈이 조화를 이루어 은은하고 오묘한 빛을
+                              내는 세련된 감각의 재질로 표면이 부드럽고
+                              매끄럽습니다. <br />
+                              각도에 따라 고운 펄감과 다양한 빛을 연출합니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper11.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper11.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">12</div>
+                          <h3 class="sectionTitle-large">빌리지 200g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              독특한 물결무늬 표면을 가지고 있고 인쇄성이
+                              뛰어나며 <br />표면이 부드럽고 자연스럽습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper12.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper12.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">13</div>
+                          <h3 class="sectionTitle-large">스코틀랜 220g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              순백색재질의 엠보싱 처리로 품위있는 표면 질감이
+                              느껴지며 <br />칼라인쇄시 은은한 느낌으로 연출이
+                              됩니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper13.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper13.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">14</div>
+                          <h3 class="sectionTitle-large">머쉬멜로우 209g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              종이질감이 매끄럽고 고급스러우며 색상 선명도가
+                              뛰어납니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper14.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper14.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">15</div>
+                          <h3 class="sectionTitle-large">유포지 250g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              재질표면은 부드럽고 백색이며 내구성이 뛰어나
+                              인장강도가 강하여 잘 찢어지지 않으며 방수성이
+                              뛰어납니다. <br />
+                              또한 정전기에 의한 트러블도 거의 없고 칼라출력물의
+                              화질이 매우 뛰어납니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper15.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper15.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">16</div>
+                          <h3 class="sectionTitle-large">스타골드 220g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              골드펄과 메탈의 독특한 조화는 품격있고 세련된
+                              스타일의 디자인 완성을 도와주며, <br />
+                              보는 각도에 따라 색채의 다채로움이 있는
+                              고급용지입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >표면이 골드펄이라 인쇄 시 모니터 색상과 차이가
+                                날 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper16.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper16.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">17</div>
+                          <h3 class="sectionTitle-large">스타드림 실버 240g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              실버펄과 메탈의 독특한 조화는 품격있고 세련된
+                              스타일의 디자인 완성을 도와주며, <br />
+                              보는 각도에 따라 색채의 다채로움이 있는
+                              고급용지입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >표면이 실버펄이라 인쇄 시 모니터 색상과 차이가
+                                날 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper17.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper17.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">18</div>
+                          <h3 class="sectionTitle-large">크라프트 250g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              표백을 하지 않아 환경 오염을 일으키지 않고,
+                              <br />100% 천연 펄프를 사용하여 자연 친화적인
+                              이미지를 갖고 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >표면이 실버펄이라 인쇄 시 모니터 색상과 차이가
+                                날 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper18.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper18.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">19</div>
+                          <h3 class="sectionTitle-large">띤또레또</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              유럽 전통 수공지의 감각을 현대적 기술로 재현한
+                              친환경 고급 지류입니다. <br />
+                              인쇄성이 탁월하고 높은 강도를 자랑하는 고급
+                              그래픽디자인 용지입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 명함, 행택, 엽서, 카렌다, 전단,
+                                리플렛, 카다로그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper19.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_importedPaper19.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>
