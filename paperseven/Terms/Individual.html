@@ -62,12 +62,12 @@
     <div id="header"></div>
     <script>
       async function loadHeader() {
-        const res = await fetch("/Components/Header.html");
+        const res = await fetch("../Components/Header.html");
         const data = await res.text();
         document.getElementById("header").innerHTML = data;
 
         const script = document.createElement("script");
-        script.src = "/JS/Header.js";
+        script.src = "../JS/Header.js";
         script.defer = true;
         document.body.appendChild(script);
       }
