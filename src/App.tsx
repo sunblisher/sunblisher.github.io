@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LoadingSpinner } from './components/LoadingSpinner';
-import { Header } from './components/Header';
-import { HeroSection } from './components/HeroSection';
-import { SkillsSection } from './components/SkillsSection';
-import { ProjectsSection } from './components/ProjectsSection';
-import { HistorySection } from './components/HistorySection';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { LoadingSpinner } from "./components/LoadingSpinner";
+import { Header } from "./components/Header";
+import { HeroSection } from "./components/HeroSection";
+import { SkillsSection } from "./components/SkillsSection";
+import { ProjectsSection } from "./components/ProjectsSection";
+import { HistorySection } from "./components/HistorySection";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,7 +41,7 @@ export default function App() {
               <ProjectsSection />
               <HistorySection />
             </main>
-            
+
             <footer className="bg-primary text-primary-foreground py-12">
               <div className="container mx-auto px-6 text-center">
                 <motion.div
@@ -51,9 +51,12 @@ export default function App() {
                   viewport={{ once: true }}
                   className="space-y-4"
                 >
-                  <h3 className="text-xl font-medium">함께 프로젝트를 시작해보세요</h3>
+                  <h3 className="text-xl font-medium">
+                    함께 프로젝트를 시작해보세요
+                  </h3>
                   <p className="text-primary-foreground/80 max-w-md mx-auto font-normal">
-                    새로운 아이디어를 현실로 만들어가는 여정에 함께하고 싶습니다.
+                    새로운 아이디어를 현실로 만들어가는 여정에 함께하고
+                    싶습니다.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                     <motion.a
@@ -77,7 +80,9 @@ export default function App() {
                   </div>
                 </motion.div>
                 <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-primary-foreground/60 text-sm">
-                  <p className="font-normal">&copy; 2025 UI/UX Designer Portfolio. All rights reserved.</p>
+                  <p className="font-normal">
+                    &copy; 2025 UI/UX Designer Portfolio. All rights reserved.
+                  </p>
                 </div>
               </div>
             </footer>
