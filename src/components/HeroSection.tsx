@@ -33,18 +33,18 @@ export function HeroSection() {
             <br />
             <span className="text-primary">& Web Publisher</span>
           </motion.h1>
-
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-normal"
           >
-            사용자 경험을 중시하는 디자이너로서 감각적인 디자인과
+            사용자 경험을 중시하는 디자이너로서 감각적인 디자인과 
             <br className="hidden md:block" />
             완벽한 웹 퍼블리싱을 통해 브랜드 가치를 높입니다.
           </motion.p>
-
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-
+      
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
