@@ -22,7 +22,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="w-full min-h-screen">
       <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingSpinner key="loading" />
@@ -34,16 +34,39 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <Header />
-            <main>
-              <HeroSection />
-              <SkillsSection />
-              <ProjectsSection />
-              <HistorySection />
-            </main>
-
-            <footer className="bg-primary text-primary-foreground py-12">
-              <div className="container mx-auto px-6 text-center">
+            {/* Header */}
+            <header className="w-full">
+              <div className="max-w-7xl mx-auto px-8">
+                <Header />
+              </div>
+            </header>
+            {/* Hero Section */}
+            <section className="w-full">
+              <div className="max-w-7xl mx-auto px-8">
+                <HeroSection />
+              </div>
+            </section>
+            {/* Skills Section */}
+            <section className="w-full bg-gray-100">
+              <div className="max-w-7xl mx-auto px-8">
+                <SkillsSection />
+              </div>
+            </section>
+            {/* Projects Section */}
+            <section className="w-full">
+              <div className="max-w-7xl mx-auto px-8">
+                <ProjectsSection />
+              </div>
+            </section>
+            {/* History Section */}
+            <section className="w-full  bg-gray-100">
+              <div className="max-w-7xl mx-auto px-8">
+                <HistorySection />
+              </div>
+            </section>
+            {/* Footer */}
+            <footer className="w-full bg-primary text-primary-foreground py-12">
+              <div className="max-w-7xl mx-auto px-8 text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

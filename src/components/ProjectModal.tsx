@@ -1,9 +1,15 @@
-'use client';
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
-import { useState } from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Github,
+} from "lucide-react";
+import { useState } from "react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export interface ProjectData {
   id: string;
@@ -36,7 +42,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + project.images.length) % project.images.length
+    );
   };
 
   return (
@@ -62,13 +70,17 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               <div>
                 <h2 className="text-2xl font-medium">{project.title}</h2>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-sm text-primary font-normal">{project.category}</span>
-                  <span className={`text-xs px-2 py-1 rounded-full font-normal ${
-                    project.isLaunched 
-                      ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' 
-                      : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-                  }`}>
-                    {project.isLaunched ? '런칭됨' : '개발중'}
+                  <span className="text-sm text-primary font-normal">
+                    {project.category}
+                  </span>
+                  <span
+                    className={`text-xs px-2 py-1 rounded-full font-normal ${
+                      project.isLaunched
+                        ? "bg-green-100 text-green-800"
+                        : "bg-yellow-100 text-yellow-800"
+                    }`}
+                  >
+                    {project.isLaunched ? "런칭됨" : "개발중"}
                   </span>
                 </div>
               </div>
@@ -89,11 +101,17 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   <div>
                     <div className="relative aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                       <ImageWithFallback
-                        src={project.images[currentImageIndex]?.url || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'}
-                        alt={project.images[currentImageIndex]?.caption || project.title}
+                        src={
+                          project.images[currentImageIndex]?.url ||
+                          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+                        }
+                        alt={
+                          project.images[currentImageIndex]?.caption ||
+                          project.title
+                        }
                         className="w-full h-full object-cover"
                       />
-                      
+
                       {project.images.length > 1 && (
                         <>
                           <motion.button
@@ -131,7 +149,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             key={index}
                             onClick={() => setCurrentImageIndex(index)}
                             className={`w-2 h-2 rounded-full transition-colors duration-200 cursor-pointer ${
-                              index === currentImageIndex ? 'bg-primary' : 'bg-muted'
+                              index === currentImageIndex
+                                ? "bg-primary"
+                                : "bg-muted"
                             }`}
                           />
                         ))}
@@ -141,7 +161,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg mb-3 font-medium">프로젝트 소개</h3>
+                      <h3 className="text-lg mb-3 font-medium">
+                        프로젝트 소개
+                      </h3>
                       <p className="text-muted-foreground leading-relaxed font-normal">
                         {project.description}
                       </p>
