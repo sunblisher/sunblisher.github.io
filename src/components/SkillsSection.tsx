@@ -12,12 +12,6 @@ const skills = [
       "프로토타이핑부터 디자인 시스템 구축까지, 모든 UI/UX 작업을 수행할 수 있습니다. 컴포넌트 기반 디자인과 Auto Layout을 활용한 반응형 디자인이 특기입니다.",
   },
   {
-    name: "Adobe XD",
-    category: "Design",
-    description:
-      "인터랙티브 프로토타입 제작과 사용자 테스트를 위한 와이어프레임 설계를 전문으로 합니다. Adobe Creative Suite와의 연동을 통한 효율적인 워크플로우를 구축할 수 있습니다.",
-  },
-  {
     name: "Photoshop",
     category: "Design",
     description:
@@ -30,28 +24,22 @@ const skills = [
       "아이콘, 로고, 일러스트레이션 제작을 통해 브랜드의 개성을 담은 그래픽 요소를 만듭니다. 벡터 기반의 확장 가능한 디자인 에셋 제작이 가능합니다.",
   },
   {
-    name: "HTML/CSS",
+    name: "HTML",
     category: "Development",
     description:
-      "시맨틱한 마크업과 모던 CSS(Grid, Flexbox)를 활용하여 접근성과 성능을 고려한 웹 구조를 설계합니다. 크로스 브라우저 호환성을 보장하는 코드 작성이 가능합니다.",
+      "시맨틱한 마크업을 활용하여 접근성과 성능을 고려한 웹 구조를 설계합니다. 크로스 브라우저 호환성을 보장하는 코드 작성이 가능합니다.",
+  },
+  {
+    name: "CSS",
+    category: "Development",
+    description:
+      "모던 CSS(Grid, Flexbox)를 활용하여 반응형 웹과 성능을 고려한 스타일링을 구현합니다.",
   },
   {
     name: "JavaScript",
     category: "Development",
     description:
       "ES6+ 문법을 활용한 인터랙티브한 웹 요소 구현과 API 연동을 통한 동적 콘텐츠 제어가 가능합니다. 사용자 경험을 향상시키는 마이크로 인터랙션 구현을 전문으로 합니다.",
-  },
-  {
-    name: "React",
-    category: "Development",
-    description:
-      "컴포넌트 기반 아키텍처와 상태 관리를 통해 유지보수성 높은 웹 애플리케이션을 구축합니다. Hooks와 Context API를 활용한 효율적인 데이터 흐름 설계가 가능합니다.",
-  },
-  {
-    name: "Vue.js",
-    category: "Development",
-    description:
-      "직관적인 템플릿 문법과 반응형 데이터 바인딩을 활용하여 빠른 프로토타이핑과 실제 서비스 개발을 모두 지원합니다. Composition API를 통한 코드 재사용성을 극대화합니다.",
   },
 ];
 

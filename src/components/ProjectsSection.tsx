@@ -125,7 +125,7 @@ export function ProjectsSection() {
 
   return (
     <>
-      <section id="projects" className="py-20" ref={ref}>
+      <section id="projects" className="py-20 min-h-screen" ref={ref}>
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

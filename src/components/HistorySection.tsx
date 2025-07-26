@@ -141,38 +141,40 @@ export function HistorySection() {
             </div>
           </div>
 
-          <div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.3 }}
-            >
+          <div className="sticky top-20 self-start">
+            <div>
               <h3 className="text-xl mb-8">Certifications</h3>
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <motion.div
-                    key={cert.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                    whileHover={{ scale: 1.02, y: -2 }}
-                    className="bg-background rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-200"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Award className="w-4 h-4 text-primary" />
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 }}
+              >
+                <div className="space-y-4">
+                  {certifications.map((cert, index) => (
+                    <motion.div
+                      key={cert.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      className="bg-background rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-200"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="p-2 bg-primary/10 rounded-lg">
+                          <Award className="w-4 h-4 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-sm mb-1">{cert.name}</h4>
+                          <p className="text-xs text-muted-foreground">
+                            {cert.issuer} • {cert.year}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm mb-1">{cert.name}</h4>
-                        <p className="text-xs text-muted-foreground">
-                          {cert.issuer} • {cert.year}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
