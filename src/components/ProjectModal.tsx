@@ -63,21 +63,21 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="bg-background rounded-lg shadow-2xl max-w-4xl max-h-[90vh] w-full mx-4 overflow-hidden cursor-default"
+            className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl max-w-4xl max-h-[90vh] w-full mx-4 overflow-hidden cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between p-6 border-b border-border">
+            <div className="flex items-center justify-between p-6 border-b border-white/20">
               <div>
                 <h2 className="text-2xl font-medium">{project.title}</h2>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-sm text-primary font-normal">
+                  <span className="text-sm text-white font-normal">
                     {project.category}
                   </span>
                   <span
                     className={`text-xs px-2 py-1 rounded-full font-normal ${
                       project.isLaunched
-                        ? "bg-green-100 text-green-800"
-                        : "bg-yellow-100 text-yellow-800"
+                        ? "bg-green-400/20 text-green-300 backdrop-blur-sm"
+                        : "bg-yellow-400/20 text-yellow-300 backdrop-blur-sm"
                     }`}
                   >
                     {project.isLaunched ? "런칭됨" : "개발중"}
@@ -89,7 +89,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 onClick={onClose}
-                className="p-2 hover:bg-accent rounded-lg transition-colors duration-200 cursor-pointer"
+                className="p-2 hover:bg-white/20 backdrop-blur-sm rounded-lg transition-all duration-200 cursor-pointer"
               >
                 <X className="w-6 h-6" />
               </motion.button>
@@ -137,7 +137,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     </div>
 
                     {project.images[currentImageIndex]?.caption && (
-                      <p className="text-sm text-muted-foreground text-center font-normal">
+                      <p className="text-sm text-white/70 text-center font-normal">
                         {project.images[currentImageIndex].caption}
                       </p>
                     )}
@@ -150,8 +150,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             onClick={() => setCurrentImageIndex(index)}
                             className={`w-2 h-2 rounded-full transition-colors duration-200 cursor-pointer ${
                               index === currentImageIndex
-                                ? "bg-primary"
-                                : "bg-muted"
+                                ? "bg-white"
+                                : "bg-white/30"
                             }`}
                           />
                         ))}
@@ -164,7 +164,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                       <h3 className="text-lg mb-3 font-medium">
                         프로젝트 소개
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed font-normal">
+                      <p className="text-white/70 leading-relaxed font-normal">
                         {project.description}
                       </p>
                     </div>
@@ -175,7 +175,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         {project.tools.map((tool) => (
                           <span
                             key={tool}
-                            className="px-3 py-1 bg-accent text-accent-foreground rounded-full text-sm font-normal"
+                            className="px-3 py-1 bg-white/20 text-white backdrop-blur-sm rounded-full text-sm font-normal"
                           >
                             {tool}
                           </span>
@@ -192,7 +192,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 cursor-pointer font-medium"
+                          className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-xl hover:bg-white/30 transition-all duration-200 cursor-pointer font-medium shadow-lg"
                         >
                           <ExternalLink className="w-4 h-4" />
                           Live Site
@@ -206,7 +206,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-accent transition-colors duration-200 cursor-pointer font-medium"
+                          className="flex items-center gap-2 px-4 py-2 bg-transparent text-white border border-white/50 rounded-xl hover:bg-white/10 backdrop-blur-md transition-all duration-200 cursor-pointer font-medium"
                         >
                           <Github className="w-4 h-4" />
                           GitHub

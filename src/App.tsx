@@ -22,7 +22,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingSpinner key="loading" />
@@ -42,12 +42,10 @@ export default function App() {
             </header>
             {/* Hero Section */}
             <section className="w-full">
-              <div className="max-w-7xl mx-auto px-8">
-                <HeroSection />
-              </div>
+              <HeroSection />
             </section>
             {/* Skills Section */}
-            <section className="w-full bg-gray-100">
+            <section className="w-full bg-black/20">
               <div className="max-w-7xl mx-auto px-8">
                 <SkillsSection />
               </div>
@@ -59,13 +57,13 @@ export default function App() {
               </div>
             </section>
             {/* History Section */}
-            <section className="w-full  bg-gray-100">
+            <section className="w-full bg-black/20">
               <div className="max-w-7xl mx-auto px-8">
                 <HistorySection />
               </div>
             </section>
             {/* Footer */}
-            <footer className="w-full bg-primary text-primary-foreground py-12">
+            <footer className="w-full bg-black/40 backdrop-blur-md text-white py-12 border-t border-white/10">
               <div className="max-w-7xl mx-auto px-8 text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -77,7 +75,7 @@ export default function App() {
                   <h3 className="text-xl font-medium">
                     함께 프로젝트를 시작해보세요
                   </h3>
-                  <p className="text-primary-foreground/80 max-w-md mx-auto font-normal">
+                  <p className="text-white/80 max-w-md mx-auto font-normal">
                     새로운 아이디어를 현실로 만들어가는 여정에 함께하고
                     싶습니다.
                   </p>
@@ -87,7 +85,7 @@ export default function App() {
                       whileTap={{ scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       href="mailto:contact@example.com"
-                      className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-background/90 transition-colors duration-200 cursor-pointer font-medium"
+                      className="px-6 py-3 bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-xl hover:bg-white/30 transition-all duration-200 cursor-pointer font-medium shadow-lg"
                     >
                       이메일 문의
                     </motion.a>
@@ -96,13 +94,13 @@ export default function App() {
                       whileTap={{ scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       href="tel:010-1234-5678"
-                      className="px-6 py-3 border border-primary-foreground/20 rounded-lg hover:bg-primary-foreground/10 transition-colors duration-200 cursor-pointer font-medium"
+                      className="px-6 py-3 bg-transparent text-white border border-white/50 rounded-xl hover:bg-white/10 backdrop-blur-md transition-all duration-200 cursor-pointer font-medium"
                     >
                       전화 문의
                     </motion.a>
                   </div>
                 </motion.div>
-                <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-primary-foreground/60 text-sm">
+                <div className="mt-8 pt-8 border-t border-white/20 text-white/60 text-sm">
                   <p className="font-normal">
                     &copy; 2025 UI/UX Designer Portfolio. All rights reserved.
                   </p>

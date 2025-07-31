@@ -8,7 +8,7 @@ export function LoadingSpinner() {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-background"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
     >
       <div className="flex flex-col items-center space-y-4">
         <motion.div
@@ -16,14 +16,14 @@ export function LoadingSpinner() {
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         >
-          <div className="w-16 h-16 border-4 border-border rounded-full"></div>
-          <div className="absolute top-0 left-0 w-16 h-16 border-4 border-primary border-t-transparent rounded-full"></div>
+          <div className="w-16 h-16 border-4 border-white/20 rounded-full"></div>
+          <div className="absolute top-0 left-0 w-16 h-16 border-4 border-white border-t-transparent rounded-full"></div>
         </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-muted-foreground"
+          className="text-white/80"
         >
           포트폴리오를 준비하고 있습니다...
         </motion.p>

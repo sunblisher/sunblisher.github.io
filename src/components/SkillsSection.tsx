@@ -63,10 +63,10 @@ export function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl mb-4 font-medium">
+          <h2 className="text-3xl md:text-4xl mb-4 font-medium text-white">
             Skills & Expertise
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-normal">
+          <p className="text-white/80 max-w-2xl mx-auto font-normal">
             디자인부터 개발까지, 다양한 도구와 기술을 활용하여 완성도 높은
             결과물을 만들어냅니다.
           </p>
@@ -79,7 +79,9 @@ export function SkillsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <h3 className="text-xl mb-8 font-medium">Technical Skills</h3>
+            <h3 className="text-xl mb-8 font-medium text-white">
+              Technical Skills
+            </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {skills.map((skill, index) => (
                 <motion.div
@@ -87,15 +89,17 @@ export function SkillsSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="bg-background rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+                  className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <h4 className="text-base font-medium">{skill.name}</h4>
-                    <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full font-normal">
+                    <h4 className="text-base font-medium text-white">
+                      {skill.name}
+                    </h4>
+                    <span className="text-xs px-2 py-1 bg-white/20 text-white backdrop-blur-sm rounded-full font-normal">
                       {skill.category}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed font-normal">
+                  <p className="text-sm text-white/70 leading-relaxed font-normal">
                     {skill.description}
                   </p>
                 </motion.div>
@@ -109,7 +113,9 @@ export function SkillsSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6"
           >
-            <h3 className="text-xl mb-8 font-medium">Career Overview</h3>
+            <h3 className="text-xl mb-8 font-medium text-white">
+              Career Overview
+            </h3>
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -117,12 +123,12 @@ export function SkillsSection() {
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="text-center p-8 bg-background rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+                className="text-center p-8 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300"
               >
-                <div className="text-3xl md:text-4xl text-primary mb-3 font-medium">
+                <div className="text-3xl md:text-4xl text-white mb-3 font-medium">
                   {stat.number}
                 </div>
-                <div className="text-sm text-muted-foreground font-normal">
+                <div className="text-sm text-white/70 font-normal">
                   {stat.label}
                 </div>
               </motion.div>
@@ -132,20 +138,22 @@ export function SkillsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.7 }}
-              className="bg-background rounded-lg p-6 shadow-sm"
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-lg"
             >
-              <h4 className="text-base mb-3 font-medium">주요 성과</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground font-normal">
+              <h4 className="text-base mb-3 font-medium text-white">
+                주요 성과
+              </h4>
+              <ul className="space-y-2 text-sm text-white/70 font-normal">
                 <li className="flex items-start gap-2">
-                  <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="w-1 h-1 bg-white rounded-full mt-2 flex-shrink-0"></span>
                   사용자 경험 개선으로 전환율 35% 향상
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="w-1 h-1 bg-white rounded-full mt-2 flex-shrink-0"></span>
                   디자인 시스템 도입으로 개발 효율성 40% 증대
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="w-1 h-1 bg-white rounded-full mt-2 flex-shrink-0"></span>
                   반응형 웹 구현으로 모바일 사용성 크게 개선
                 </li>
               </ul>

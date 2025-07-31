@@ -33,15 +33,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
+/* 전역 button 스타일 제거 - Tailwind CSS가 우선순위를 가지도록 함 */
 /* button:hover {
   border-color: #646cff;
 } */
@@ -58,7 +50,5 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+  /* 전역 button 스타일 제거 - Tailwind CSS가 우선순위를 가지도록 함 */
 }
