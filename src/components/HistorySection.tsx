@@ -141,7 +141,7 @@ export function HistorySection() {
             </div>
           </div>
 
-          <div className="sticky top-20 self-start">
+          <div className="sticky top-28 self-start">
             <div>
               <h3 className="text-xl mb-8 text-white">Certifications</h3>
               <motion.div
