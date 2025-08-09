@@ -5,6 +5,22 @@
   background: url(/image/bg.png) center center / cover;
   width: 100%;
   height: 100svh;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: 1;
+}
+.hero .c_container {
+  position: relative;
+  z-index: 2;
 }
 .hero .c_container {
   position: relative;
