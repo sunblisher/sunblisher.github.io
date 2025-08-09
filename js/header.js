@@ -1,11 +1,46 @@
+// Toast 함수
+function showToast(message, type = "success") {
+  // 기존 toast 제거
+  const existingToast = document.querySelector(".toast");
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // 새 toast 생성
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  // toast 표시
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  // 3초 후 toast 제거
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => {
+      if (toast.parentNode) {
+        toast.remove();
+      }
+    }, 300);
+  }, 3000);
+}
+
 // email 클립복사
 document.addEventListener("click", function (e) {
   const copyBtn = e.target.closest(".copy_email");
   if (copyBtn) {
     const email = "sunbisher@gmail.com";
-    navigator.clipboard.writeText(email).then(() => {
-      alert("이메일이 복사되었습니다!");
-    });
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        showToast("이메일이 복사되었습니다!", "success");
+      })
+      .catch(() => {
+        showToast("이메일 복사에 실패했습니다.", "error");
+      });
   }
 });
 
