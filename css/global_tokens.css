@@ -1,0 +1,133 @@
+/* foundation.css */
+:root {
+  /* === Color Palette === */
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Primary */
+  --color-primary-50: #fff7e0;
+  --color-primary-100: #ffe9b0;
+  --color-primary-200: #ffda7d;
+  --color-primary-300: #ffcd47;
+  --color-primary-400: #ffc11b;
+  --color-primary-500: #ffb700; /* primary */
+  --color-primary-600: #ffa900;
+  --color-primary-700: #ff9600;
+  --color-primary-800: #ff8400;
+  --color-primary-900: #ff6200;
+
+  /* Secondary */
+  --color-secondary-50: #fff9ec;
+  --color-secondary-100: #fff3d6;
+  --color-secondary-200: #ffe8ae;
+  --color-secondary-300: #ffdb83;
+  --color-secondary-400: #ffc94d;
+  --color-secondary-500: #fcb918; /* secondary */
+  --color-secondary-600: #dea310;
+  --color-secondary-700: #bb850d;
+  --color-secondary-800: #99690e;
+  --color-secondary-900: #7a530d;
+
+  /* Gray scale */
+  --white: #fff;
+  --gray-50: #f9f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #868e96;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --black: #000;
+
+  /* Green Scale */
+  --green-50: #e2f4e4;
+  --green-100: #b5e5b2;
+  --green-200: #7dd27d;
+  --green-300: #4cb14c;
+  --green-400: #2a9d2a;
+  --green-500: #28a745; /* 활성화 상태, 성공 색상 */
+  --green-600: #218838;
+  --green-700: #1a7031;
+  --green-800: #155f2a;
+  --green-900: #0e4c23;
+
+  /* Red Scale */
+  --red-50: #f8d7da;
+  --red-100: #f5c6cb;
+  --red-200: #f1aab7;
+  --red-300: #ec7a89;
+  --red-400: #e35462;
+  --red-500: #fd4f57; /* 에러 색상 */
+  --red-600: #e12f38;
+  --red-700: #d4262f;
+  --red-800: #c01f2b;
+  --red-900: #a61726;
+
+  /* Yellow Scale */
+  --yellow-50: #fff9e6;
+  --yellow-100: #fff3c2;
+  --yellow-200: #ffe78a;
+  --yellow-300: #ffdc3e;
+  --yellow-400: #ffcd18; /* 경고 색상 */
+  --yellow-500: #ffbb00;
+  --yellow-600: #e69900;
+  --yellow-700: #cc7f00;
+  --yellow-800: #b36600;
+  --yellow-900: #994d00;
+
+  /* Blue Scale */
+  --blue-50: #e6f2ff;
+  --blue-100: #b3d9ff; /* 정보 색상 */
+  --blue-200: #80bfff;
+  --blue-300: #4da6ff;
+  --blue-400: #1a8cff;
+  --blue-500: #007bff;
+  --blue-600: #0060d5;
+  --blue-700: #0049a8;
+  --blue-800: #00347b;
+  --blue-900: #002351;
+
+  /* === Typography === */
+  --font-s-3xs: 1.2rem;
+  --font-s-2xs: 1.3rem;
+  --font-s-xs: 1.4rem;
+  --font-s-sm: 1.6rem;
+  --font-s-md: 1.8rem;
+  --font-s-lg: 2rem;
+  --font-s-xl: 2.4rem;
+  --font-s-2xl: 3.2rem;
+  --font-s-3xl: 4rem;
+
+  /* === Font Weights === */
+  --font-w-thin: 200;
+  --font-w-light: 300;
+  --font-w-regular: 400;
+  --font-w-medium: 500;
+  --font-w-semibold: 600;
+  --font-w-bold: 700;
+
+  /* === Spacing Scale === */
+  --space-3xs: 0.4rem;
+  --space-2xs: 0.8rem;
+  --space-xs: 1.2rem;
+  --space-sm: 1.6rem;
+  --space-md: 2rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-2xl: 4rem;
+  --space-3xl: 4.8rem;
+  --space-4xl: 6.4rem;
+
+  /* === Radius === */
+  --radius-2xs: 0.4rem;
+  --radius-xs: 0.8rem;
+  --radius-sm: 1.2rem;
+  --radius-md: 1.6rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.4rem;
+  --radius-2xl: 3.2rem;
+  --radius-full: 9999px;
+}
