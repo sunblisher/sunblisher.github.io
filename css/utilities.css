@@ -236,7 +236,7 @@
 /* animation */
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 0.5s 2s ease forwards;
+  animation: fadeIn 0.5s 0.3s ease forwards;
 }
 @keyframes fadeIn {
   to {

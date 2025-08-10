@@ -4,9 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Pretendard', sans-serif;
+  font-family: "Pretendard", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,10 +15,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font: inherit;
   color: inherit;
   border: none;
@@ -29,7 +34,10 @@ button {
   cursor: pointer;
   background-color: transparent;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas {
   max-width: 100%;
   width: 100%;
   height: auto;

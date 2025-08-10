@@ -6,6 +6,7 @@
   width: 100%;
   height: 100svh;
   position: relative;
+  display: flex;
 }
 .hero::before {
   content: "";
@@ -19,34 +20,21 @@
   z-index: 1;
 }
 .hero .c_container {
-  position: relative;
-  z-index: 2;
-}
-.hero .c_container {
-  position: relative;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-.hero .hero_title {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
+
 .hero .hero_title svg {
-  width: calc(100% / 2);
+  width: 100%;
   height: auto;
 }
 .hero .hero_title path {
   fill: #ffffff;
   fill-opacity: 0;
-  animation: fillIn 0.5s ease forwards;
-  mask-image: linear-gradient(to right, transparent 0%, black 100%);
-  mask-size: 800% 100%;
+  animation: fillIn 0.3s ease forwards;
   mask-position: left;
 }
 @keyframes fillIn {
