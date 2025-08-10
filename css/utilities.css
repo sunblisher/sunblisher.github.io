@@ -1,5 +1,16 @@
 /* utilities.css */
 
+/* === Font Weight === */
+.font-w-light {
+  font-weight: var(--font-w-light);
+}
+.font-w-regular {
+  font-weight: var(--font-w-regular);
+}
+.font-w-medium {
+  font-weight: var(--font-w-medium);
+}
+
 /* === Text Colors === */
 .text-brand {
   color: var(--color-primary);
@@ -234,11 +245,11 @@
 }
 
 /* animation */
-.fadeIn {
+.introFadeIn {
   opacity: 0;
-  animation: fadeIn 0.5s 0.3s ease forwards;
+  animation: introFadeIn 0.5s 0.8s ease forwards;
 }
-@keyframes fadeIn {
+@keyframes introFadeIn {
   to {
     opacity: 1;
   }
