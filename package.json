@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "scripts": {
-    "dev": "npx http-server . -p 8080 -a 0.0.0.0 -o",
-    "start": "npx http-server . -p 8080 -a 0.0.0.0 -o"
+    "dev": "live-server --port=8080 --host=0.0.0.0 --no-browser",
+    "start": "live-server --port=8080 --host=0.0.0.0 --no-browser"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
