@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "scripts": {
-    "dev": "npx serve . -p 3000",
-    "start": "npx serve . -p 3000"
+    "dev": "npx http-server . -p 8080 -a 0.0.0.0 -o",
+    "start": "npx http-server . -p 8080 -a 0.0.0.0 -o"
   }
 }
