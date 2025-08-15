@@ -1,29 +1,20 @@
-/* alias_global_tokens.css */
 :root {
   /* Semantic Colors */
 
-  /* Brand primay */
+  /* === 브랜드 primay */
   --color-primary: var(--color-primary-900);
   --color-primary-contrast: var(--white);
   --color-primary-hover: var(--color-primary-400);
   --color-primary-focus: var(--color-primary-600);
 
-  /* Brand Secondary */
+  /* === 브랜드 Secondary === */
   --color-secondary: var(--color-secondary-500);
   --color-secondary-contrast: var(--white);
   --color-secondary-hover: var(--color-secondary-400);
   --color-secondary-focus: var(--color-secondary-600);
 
-  /* Background Colors */
-  /* UI의 기본 배경: 전체 페이지나 카드, 섹션의 바탕 */
-  --color-bg-surface: var(--white);
-  /* 겹치는 레이어나 섹션 구분 배경 (ex: 모달, 팝업 등) */
-  --color-bg-layer: var(--gray-100);
-  /* 반전된 배경 강조된 블록 등 */
-  --color-bg-inverse: var(--gray-900);
-
-  /* Text Colors */
-  --color-text-primary: var(--color-primary); /* 브랜드 텍스트 */
+  /* === 텍스트 Colors === */
+  --color-text-brand: var(--color-primary); /* 브랜드 텍스트 */
   --color-text-primary: var(--gray-900); /* 기본 텍스트 */
   --color-text-secondary: var(--gray-600); /* 보조 텍스트 */
   --color-text-tertiary: var(--gray-500); /* 약한 텍스트 */
@@ -31,73 +22,42 @@
   --color-text-placeholder: var(--gray-400);
   --color-text-disabled: var(--gray-500);
 
-  /* Base Layer Colors */
-  /* 브랜드 색상을 배경으로 쓸 때 */
-  --color-base-brand: var(--color-primary-50);
-  /* 컨테이너, 버튼 등 UI 컴포넌트의 배경 */
+  /* === 베이스 Colors === */
   --color-base-white: var(--white);
-  --color-base-muted: var(--gray-50); /* 구분배경, 약한 배경 등 보조용 */
-  --color-base-secondary: var(--gray-100); /* 구분배경, 약한 배경 등 보조용 */
-  --color-base-active: var(--gray-600); /* 선택되었거나 활성 상태를 나타낼 때 */
-  --color-base-disabled: var(--gray-200); /* 비활성 상태용 배경*/
+  --color-base-muted: var(--gray-50);
+  --color-base-muted-dark: var(--gray-100);
   --color-base-inverse: var(--gray-900);
+  --color-base-active: var(--green-300);
+  --color-base-error: var(--red-300);
+  --color-base-disabled: var(--gray-200);
+  --color-base-brand: var(--color-primary-50);
 
-  /* Border Colors */
-  --color-border-brand: var(--color-primary-100); /* 브랜드 톤의 테두리 */
+  /* === Border Colors === */
+
+  --color-border-white: var(--white);
   --color-border-muted: var(--gray-200); /* 약한 구분선, 서브 테두리 */
   --color-border-default: var(--gray-400); /* 기본 테두리 */
-  --color-border-strong: var(--gray-700); /* 강조된 테두리 */
-  --color-border-white: var(--white);
+  --color-border-strong: var(--gray-900); /* 강조된 테두리 */
+  --color-border-active: var(--green-600);
+  --color-border-error: var(--red-600);
+  --color-border-brand: var(--color-primary-100); /* 브랜드 톤의 테두리 */
 
-  /* Icon Colors */
-  --color-icon-brand: var(--color-primary);
+  /* === Icon Colors === */
+  --color-icon-white: var(--white);
   --color-icon-primary: var(--gray-600);
   --color-icon-secondary: var(--gray-400);
+  --color-icon-active: var(--green-600);
+  --color-icon-error: var(--red-600);
   --color-icon-disabled: var(--gray-400);
-  --color-icon-white: var(--white);
+  --color-icon-brand: var(--color-primary);
 
-  /* State Colors */
-  --color-state-active: var(--green-500);
-  --color-state-danger: var(--red-500);
-  --color-state-warning: var(--yellow-400);
-  --color-state-info: var(--blue-100);
-
-  /* === Z-Index global_tokens === */
+  /* === Z-Index === */
   --z-index-header: 1000;
   --z-index-dropdown: 1100;
   --z-index-modal: 1200;
   --z-index-tooltip: 1300;
   --z-index-toast: 1400;
 }
-
-/* === Dark Mode Overrides === */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-surface: var(--gray-900);
-    --color-bg-layer: var(--gray-800);
-    --color-bg-inverse: var(--gray-100);
-
-    --color-text-primary: var(--gray-50);
-    --color-text-secondary: var(--gray-300);
-    --color-text-tertiary: var(--gray-400);
-    --color-text-strong: var(--gray-50);
-    --color-text-placeholder: var(--gray-500);
-    --color-text-disabled: var(--gray-500);
-
-    --color-base-surface: var(--gray-800);
-    --color-base-muted: var(--gray-700);
-    --color-base-active: var(--gray-600);
-    --color-base-disabled: var(--gray-700);
-
-    --color-border-muted: var(--gray-600);
-    --color-border-default: var(--gray-500);
-    --color-border-strong: var(--gray-400);
-
-    --color-icon-primary: var(--gray-300);
-    --color-icon-secondary: var(--gray-500);
-    --color-icon-disabled: var(--gray-600);
-  }
-} */
 
 html {
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,

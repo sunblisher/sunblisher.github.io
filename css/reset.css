@@ -1,5 +1,6 @@
-/* reset.css */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,10 +35,18 @@ button {
   cursor: pointer;
   background-color: transparent;
 }
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-base-brand, #1976d2);
+  outline-offset: 2px;
+}
 img,
 picture,
 video,
-canvas {
+canvas,
+svg {
   max-width: 100%;
   width: 100%;
   height: auto;
