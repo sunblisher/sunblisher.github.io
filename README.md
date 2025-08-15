@@ -1,38 +1,12 @@
-# Hyosun Sunrise Portfolio
+# React + Vite
 
-## 개발 서버 실행
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### 로컬 개발
-```bash
-npm run dev
-```
+Currently, two official plugins are available:
 
-### 네트워크 접근 허용 (다른 컴퓨터에서 접근 가능)
-```bash
-npm run dev-network
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 네트워크 접근 방법
+## Expanding the ESLint configuration
 
-1. **서버 실행**: `npm run dev-network` 명령어로 서버를 실행합니다.
-
-2. **IP 주소 확인**: 
-   - Windows: `ipconfig` 명령어로 IP 주소 확인
-   - Mac/Linux: `ifconfig` 또는 `ip addr` 명령어로 IP 주소 확인
-
-3. **다른 컴퓨터에서 접근**:
-   - 같은 네트워크 내의 다른 컴퓨터에서 브라우저를 열고
-   - `http://[당신의IP주소]:8080` 으로 접근
-   - 예: `http://192.168.1.100:8080`
-
-## 주의사항
-
-- 방화벽에서 8080 포트가 열려있는지 확인하세요
-- 공용 네트워크에서는 보안에 주의하세요
-- 개발 목적으로만 사용하세요
-
-## 설치
-
-```bash
-npm install
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
