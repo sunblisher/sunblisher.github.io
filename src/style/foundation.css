@@ -1,0 +1,211 @@
+/* =========================================
+   Foundation Styles
+   - tokens.css를 기반으로 한 기본 HTML 요소 스타일링
+   - html, body, h1~h6, p 등 기본 규칙 세팅
+   ======================================== */
+
+:root {
+  /* ===== Brand primary ===== */
+  --color-primary: var(--color-primary-900);
+  --color-primary-hover: var(--color-primary-400);
+  --color-primary-focus: var(--color-primary-600);
+
+  /* ===== Brand Secondary ===== */
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-hover: var(--color-secondary-400);
+  --color-secondary-focus: var(--color-secondary-600);
+
+  /* ===== Brand Accent ===== */
+  --color-accent: var(--color-accent-500);
+  --color-accent-hover: var(--color-secondary-400);
+  --color-accent-focus: var(--color-secondary-600);
+
+  /* ===== Text Colors ===== */
+  --color-text-white: var(--color-white);
+  --color-text-lighter: var(--color-gray-700);
+  --color-text-light: var(--color-gray-700);
+  --color-text-mid: var(--color-gray-700);
+  --color-text-dark: var(--color-gray-700);
+  --color-text-darker: var(--color-gray-700);
+  --color-text-black: var(--color-gray-700);
+  --color-text-placeholder: var(--color-gray-400);
+  --color-text-disabled: var(--color-gray-500);
+
+  /* ===== Base Colors ===== */
+  --color-base-white: var(--color-white);
+  --color-base-brand: var(--color-primary-50);
+  --color-base-lighter: var(--color-gray-50);
+  --color-base-lighte: var(--color-gray-100);
+  --color-base-mid: var(--color-gray-600);
+  --color-base-dark: var(--color-gray-600);
+  --color-base-darker: var(--color-gray-600);
+  --color-base-disabled: var(--color-gray-200); /* 비활성 상태용 배경*/
+  --color-base-black: var(--color-black);
+
+  /* ===== Border Colors ===== */
+  --color-border-white: var(--color-white);
+  --color-border-brand: var(--color-primary-500);
+  --color-border-lighter: var(--color-gray-50);
+  --color-border-lighte: var(--color-gray-100);
+  --color-border-mid: var(--color-gray-600);
+  --color-border-dark: var(--color-gray-600);
+  --color-border-darker: var(--color-gray-600);
+  --color-border-black: var(--color-black);
+
+  /* ===== Icon Colors ===== */
+  --color-icon-white: var(--color-white);
+  --color-icon-main: var(--color-gray-600);
+  --color-icon-sub: var(--color-gray-400);
+  --color-icon-disabled: var(--color-gray-200);
+  --color-icon-black: var(--color-black);
+}
+
+/* HTML 기본 설정 */
+html {
+  font-family: var(--font-family-sans);
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Body 기본 설정 */
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh; /* 동적 뷰포트 높이 지원 */
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-300);
+  line-height: 1.5;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===== 타이포그래피 ===== */
+
+/* 제목 요소 (h1~h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-700);
+  line-height: 1.4;
+  color: var(--color-foreground);
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+}
+
+/* ===== 텍스트 요소 ===== */
+
+/* 강조 */
+strong,
+b {
+  font-weight: var(--font-weight-700);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* ===== 폼 요소 기본 스타일 ===== */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-foreground);
+  background-color: var(--color-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-6);
+  padding: var(--space-2xs) var(--space-xs);
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-ring);
+  box-shadow: 0 0 0 3px rgb(var(--color-ring) / 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted-foreground);
+}
+
+/* ===== 버튼 기본 스타일 ===== */
+
+button {
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-500);
+  color: var(--color-foreground);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-6);
+  padding: var(--space-2xs) var(--space-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+button:hover {
+  background-color: var(--color-muted);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== 미디어 요소 ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-6);
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

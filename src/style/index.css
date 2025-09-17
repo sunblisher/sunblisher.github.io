@@ -1,0 +1,20 @@
+/* =========================================
+   CSS 엔트리 파일
+   - 모든 스타일 파일을 순서대로 import
+   - 의존성 순서: reset → tokens → foundation → layout → components
+   ======================================== */
+
+/* 1. CSS 초기화 */
+@import "./reset.css";
+
+/* 2. 디자인 토큰 (변수 정의) */
+@import "./tokens.css";
+
+/* 3. 기본 HTML 요소 스타일링 */
+@import "./foundation.css";
+
+/* 4. 레이아웃 유틸리티 */
+@import "./layout.css";
+
+/* 5. 컴포넌트 스타일 */
+@import "./components.css";
