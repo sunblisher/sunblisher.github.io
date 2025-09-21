@@ -1,17 +1,14 @@
-import "../../style/common/header.css";
+import "../../style/components/header.css";
 
 function Header() {
   return (
     <header className="header">
-      <h1>
-        <div className="logo">logo</div>
-      </h1>
-      <nav className="gnb_menu">
+      <nav className="c_inner">
         <ul className="menu">
-          <li className="menu_list">Home</li>
-          <li className="menu_list">Project</li>
-          <li className="menu_list">Skill</li>
-          <li className="menu_list">Contact</li>
+          <li className="list_item">Home</li>
+          <li className="list_item">Project</li>
+          <li className="list_item">Skill</li>
+          <li className="list_item">Contact</li>
         </ul>
       </nav>
     </header>

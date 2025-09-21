@@ -1,4 +1,4 @@
-import "./style/layout.css";
+import "./style/common/layout.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./app/router";
 

@@ -1,0 +1,5 @@
+.hero {
+  height: 100svh;
+  padding: var(--header-height);
+  background: url(../../assets/images/home/hero_bg.jpg) no-repeat center center;
+}

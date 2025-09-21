@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+.header .menu {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4xl);
+}
+.header .menu .list_item {
+  line-height: 4rem;
+  padding: 0 var(--space-sm) 0 var(--space-sm);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.header .menu .list_item:hover {
+  background-color: var(--color-base-light);
+}
