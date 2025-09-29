@@ -10,15 +10,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-4xl);
+  gap: var(--space-5xl);
 }
 .header .menu .list_item {
-  line-height: 4rem;
+  display: flex;
+  align-items: center;
+  height: 4.4rem;
   padding: 0 var(--space-sm) 0 var(--space-sm);
   border-radius: var(--radius-full);
   cursor: pointer;
-  transition: background-color 0.2s;
 }
-.header .menu .list_item:hover {
-  background-color: var(--color-base-light);
+.header .menu .list_item span {
+  display: block;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+.header .menu .list_item:hover span {
+  transform: translateY(-5px);
+  text-shadow: 0 0 6px hsl(0, 0%, 100%), 0 0 24px hsl(0, 0%, 100%),
+    0 0 32px hsl(0, 0%, 100%);
 }
