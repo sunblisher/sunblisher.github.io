@@ -1,0 +1,29 @@
+.hero {
+  height: 100svh;
+  padding: var(--header-height) 0 0 0;
+  background: url(../../assets/images/home/hero_bg.jpg) no-repeat center center;
+}
+.title {
+  font-family: "Gemola", serif;
+  font-size: clamp(4rem, 100vw, 23rem);
+  font-weight: normal;
+  line-height: 1;
+  opacity: 0.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: var(--header-height);
+}
+
+.title-left,
+.title-right {
+  display: inline-block; /* transform이 span에 적용되려면 필요 */
+  will-change: transform;
+}
+
+.test {
+  height: 100svh;
+  background-color: aqua;
+}

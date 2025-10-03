@@ -11,6 +11,6 @@
   padding-left: var(--inner-space);
   padding-right: var(--inner-space);
 }
-.container {
-  width: 100%;
+.c_section {
+  padding: var(--space-7xl) 0;
 }

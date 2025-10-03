@@ -62,7 +62,6 @@
   --color-error: #ef4444;
   --color-prograss: #3b82f6;
 
-  
   /* Font Sizes */
   --font-size-4xs: 1rem;
   --font-size-3xs: 1.2rem;
@@ -124,6 +123,7 @@
   --radius-12: 1.2rem;
   --radius-16: 1.6rem;
   --radius-24: 2.4rem;
+  --radius-32: 3.2rem;
   --radius-full: 9999px;
 
   /* ===== Shadow 토큰 ===== */

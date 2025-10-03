@@ -80,12 +80,12 @@
 
   /* ===== Text Colors ===== */
   --color-text-white: var(--color-white);
-  --color-text-lighter: var(--color-gray-700);
-  --color-text-light: var(--color-gray-700);
-  --color-text-mid: var(--color-gray-700);
+  --color-text-lighter: var(--color-gray-300);
+  --color-text-light: var(--color-gray-400);
+  --color-text-mid: var(--color-gray-500);
   --color-text-dark: var(--color-gray-700);
-  --color-text-darker: var(--color-gray-700);
-  --color-text-black: var(--color-gray-700);
+  --color-text-darker: var(--color-gray-900);
+  --color-text-black: var(--color-black);
   --color-text-placeholder: var(--color-gray-400);
   --color-text-disabled: var(--color-gray-500);
 
@@ -140,14 +140,11 @@ html {
 
 /* Body 기본 설정 */
 body {
-  min-height: 100vh;
-  min-height: 100dvh; /* 동적 뷰포트 높이 지원 */
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--color-text-white);
-  background-color: var(--color-base-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -273,4 +270,9 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* ===== utill ===== */
+.block {
+  display: block;
 }

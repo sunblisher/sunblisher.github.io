@@ -9,10 +9,10 @@ function Header() {
             <span>Home</span>
           </li>
           <li className="list_item">
-            <span>Project</span>
+            <span>Skill</span>
           </li>
           <li className="list_item">
-            <span>Skill</span>
+            <span>Project</span>
           </li>
           <li className="list_item">
             <span>Contact</span>
