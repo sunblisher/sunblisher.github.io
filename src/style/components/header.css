@@ -5,6 +5,10 @@
   left: 0;
   top: 0;
 }
+.header.scroll {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(50px);
+}
 .header .menu {
   height: 8rem;
   display: flex;
@@ -27,6 +31,10 @@
 }
 .header .menu .list_item:hover span {
   transform: translateY(-5px);
+  text-shadow: 0 0 6px hsl(0, 0%, 100%), 0 0 24px hsl(0, 0%, 100%),
+    0 0 32px hsl(0, 0%, 100%);
+}
+.header .menu .list_item.active {
   text-shadow: 0 0 6px hsl(0, 0%, 100%), 0 0 24px hsl(0, 0%, 100%),
     0 0 32px hsl(0, 0%, 100%);
 }

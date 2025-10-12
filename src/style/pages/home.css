@@ -69,28 +69,38 @@
 }
 .skill .right .cardList {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-xl);
 }
-.skill .right .cardList > .list_item {
-  width: calc(100% / 2 - var(--space-sm));
+.skill .right .cardList .row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  /* width: calc(100% / 2 - var(--space-sm)); */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+.skill .cardList .row.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill .right .cardList .card_item {
   padding: var(--space-2xl);
   background-color: rgba(38, 45, 92, 0.3);
   color: var(--color-text-lighter);
   border-radius: var(--radius-32);
   height: fit-content;
 }
-/* .skill .right .cardList > .list_item:nth-child(2n) {
-  margin-top: 8rem;
-} */
-.skill .right .cardList > .list_item .wrap {
+.skill .right .cardList .card_item .wrap {
   gap: var(--space-md);
 }
-.skill .right .cardList > .list_item .img_wrap {
+.skill .right .cardList .card_item .img_wrap {
   width: 6rem;
 }
-.skill .right .cardList > .list_item .text {
+.skill .right .cardList .card_item .text {
   margin-top: var(--space-2xs);
 }
 .skill .right .cardList .tagList {
@@ -104,7 +114,4 @@
   color: var(--color-text-light);
   border-radius: var(--radius-8);
   font-size: var(--font-size-2xs);
-}
-.mgTop {
-  margin-top: 10rem;
 }

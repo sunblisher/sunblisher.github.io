@@ -276,3 +276,6 @@ svg {
 .block {
   display: block;
 }
+.mgTop {
+  margin-top: 10rem;
+}
