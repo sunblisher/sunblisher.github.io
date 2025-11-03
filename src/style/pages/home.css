@@ -1,11 +1,6 @@
 .main {
   background: linear-gradient(-135deg, #515ead 0%, #a06a91 100%);
 }
-@media (max-width: 1280px) {
-  .main {
-    background: #515dad;
-  }
-}
 .hero {
   height: 100svh;
   padding: var(--header-height) 0 0 0;
@@ -168,10 +163,6 @@
 }
 @media (max-width: 1280px) {
   .left {
-    background-color: #515dad;
-    padding: 0 2rem;
-    margin-left: -2rem;
-    margin-right: -2rem;
     min-width: 0;
     max-width: 100%;
   }

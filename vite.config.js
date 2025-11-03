@@ -34,6 +34,19 @@ function copyAssetsImages() {
       copyRecursive(srcDir, distDir);
       console.log("✅ Assets images copied to dist/src/assets/images");
 
+      // src/publishing 폴더를 dist/src/publishing으로 복사
+      const publishingSrcDir = join(process.cwd(), "src", "publishing");
+      const publishingDistDir = join(
+        process.cwd(),
+        "dist",
+        "src",
+        "publishing"
+      );
+      if (existsSync(publishingSrcDir)) {
+        copyRecursive(publishingSrcDir, publishingDistDir);
+        console.log("✅ Publishing files copied to dist/src/publishing");
+      }
+
       // 404.html도 dist에 복사 (GitHub Pages용)
       const public404 = join(process.cwd(), "public", "404.html");
       const dist404 = join(process.cwd(), "dist", "404.html");

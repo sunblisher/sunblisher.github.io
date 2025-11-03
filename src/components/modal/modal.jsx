@@ -131,6 +131,14 @@ const Modal = ({ item, onClose }) => {
                 className="modal_btn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  // React Router(HashRouter)를 우회하여 직접 링크 이동
+                  if (item.link.startsWith("/src/publishing/") || item.link.startsWith("../")) {
+                    e.preventDefault();
+                    // 새 창에서 열기
+                    window.open(item.link, "_blank", "noopener,noreferrer");
+                  }
+                }}
               >
                 링크이동
                 <img
