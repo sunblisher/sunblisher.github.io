@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="서비스명" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="서비스명" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("../Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <!-- Main START -->
+    <main class="c_contents_container product">
+      <form action="" class="form">
+        <!-- 주문 상세 보기 START -->
+        <div id="orderPreview"></div>
+        <script>
+          fetch("../Components/OrderPreview.html")
+            .then((res) => res.text())
+            .then((data) => {
+              document.getElementById("orderPreview").innerHTML = data;
+            });
+        </script>
+        <!-- 주문 상세 보기 END -->
+        <div class="sectionTitle_wrap">
+          <div class="c_inner">
+            <h2 class="sectionTitle-large">실사출력</h2>
+          </div>
+        </div>
+        <section class="c_section">
+          <div class="c_inner">
+            <div class="layout">
+              <div class="option_area">
+                <div class="title_wrap">
+                  <h3 class="title">주문 옵션</h3>
+                  <p class="custom_info">
+                    선택/입력란의 모든 치수의 단위는 mm입니다.
+                  </p>
+                </div>
+                <ul class="option_list">
+                  <li class="list_item">
+                    <h4 class="label">형태</h4>
+                    <ul class="custom_imgBtn_area">
+                      <!-- comment : .c_imgBtn 클릭 시 .on 추가 -->
+                      <li class="c_imgBtn on">
+                        <div class="img_wrap">
+                          <img
+                            src="../image/product/etc/icon_form_largeformatPrinting.svg"
+                            alt="실사출력"
+                          />
+                        </div>
+                        <p class="text">실사출력</p>
+                      </li>
+                      <li class="c_imgBtn">
+                        <div class="img_wrap">
+                          <img
+                            src="../image/product/etc/icon_form_vinylBanner.svg"
+                            alt="현수막"
+                          />
+                        </div>
+                        <p class="text">현수막</p>
+                      </li>
+                      <li class="c_imgBtn">
+                        <div class="img_wrap">
+                          <img
+                            src="../image/product/etc/icon_form_rollUpBanner.svg"
+                            alt="배너"
+                          />
+                        </div>
+                        <p class="text">배너</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list_item">
+                    <h4 class="label">사이즈</h4>
+                    <ul class="custom_btn_area">
+                      <!-- comment : .c_custom_btn 클릭 시 .on 추가 -->
+                      <li class="c_custom_btn on">A5(148×210)</li>
+                      <li class="c_custom_btn">A5(148×210)</li>
+                      <li class="c_custom_btn">A5(148×210)</li>
+                      <li class="c_custom_btn">A5(148×210)</li>
+                      <li class="c_custom_btn">A5(148×210)</li>
+                    </ul>
+                  </li>
+                  <li class="list_item flex-row">
+                    <h4 class="label">종이</h4>
+                    <div class="field_area">
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">종이1</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">종이1</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                          <li class="list_item">옵션7</li>
+                        </ul>
+                      </div>
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">100g</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">100g</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                          <li class="list_item">옵션7</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list_item flex-row">
+                    <h4 class="label">인쇄</h4>
+                    <div class="field_area">
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">인쇄1</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">인쇄1</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                          <li class="list_item">옵션7</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list_item flex-row">
+                    <h4 class="label">후공정</h4>
+                    <div class="field_area">
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">후공정1</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">옵션1</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                          <li class="list_item">옵션7</li>
+                        </ul>
+                      </div>
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">후공정2</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">후공정2</li>
+                          <li class="list_item">옵션1</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                        </ul>
+                      </div>
+                      <div class="custom_btn_area btn_fieldControls">
+                        <button
+                          type="button"
+                          class="c_custom_btn btn_add"
+                        ></button>
+                        <button
+                          type="button"
+                          class="c_custom_btn btn_delete"
+                        ></button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list_item flex-row">
+                    <h4 class="label">옵션</h4>
+                    <div class="field_area">
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">옵션1</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">옵션1</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                          <li class="list_item">옵션7</li>
+                        </ul>
+                      </div>
+                      <div class="wrap">
+                        <div class="selected">
+                          <span class="value">옵션2</span>
+                          <img
+                            class="icon"
+                            src="../image/common/icon_downward_gray.svg"
+                            alt="옵션 선택"
+                          />
+                        </div>
+                        <ul class="select_list">
+                          <li class="list_item on">옵션2</li>
+                          <li class="list_item">옵션1</li>
+                          <li class="list_item">옵션2</li>
+                          <li class="list_item">옵션3</li>
+                          <li class="list_item">옵션4</li>
+                          <li class="list_item">옵션5</li>
+                          <li class="list_item">옵션6</li>
+                        </ul>
+                      </div>
+                      <div class="custom_btn_area btn_fieldControls">
+                        <button
+                          type="button"
+                          class="c_custom_btn btn_add"
+                        ></button>
+                        <button
+                          type="button"
+                          class="c_custom_btn btn_delete"
+                        ></button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="thumbnail_area">
+                <!-- comment : 썸네일 추가 시 .thumbnailSwiper2 와 .thumbnailSwiper 에 .swiper-slide 구조 각각 생성 -->
+                <!-- comment : 썸네일은 최대 4개 노출 -->
+                <div class="swiper thumbnailSwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper thumbnailSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="img_wrap">
+                        <img src="../image/product/booklet/img_booklet.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="template_area">
+                  <details class="template_view">
+                    <summary class="view_btn c_custom_btn base-mid">
+                      템플릿 보기
+                    </summary>
+                    <div class="template_wrap">
+                      <div class="title_area">
+                        <p class="title">템플릿 보기</p>
+                        <div class="guide_wrap">
+                          <div class="cutLine">재단선</div>
+                          <div class="workLine">작업선</div>
+                        </div>
+                      </div>
+                      <div class="img_wrap">
+                        <img
+                          src="../image/product/common/img_dieLine_01.png"
+                          alt="제품 전개도"
+                        />
+                      </div>
+                      <button type="button" class="c_btn-round-primary">
+                        템플릿 다운로드
+                      </button>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="c_section estimate_area">
+          <div class="c_inner">
+            <div class="option_area">
+              <div class="title_wrap">
+                <h3 class="title">수량</h3>
+                <label for="quantity" class="input_wrap custom">
+                  <input
+                    id="quantity"
+                    type="text"
+                    placeholder="수량을 입력해 주세요."
+                  />
+                </label>
+              </div>
+              <div class="layout">
+                <div class="left">
+                  <ul class="option_list">
+                    <li class="subTitle_wrap">
+                      <div class="sub_title">
+                        <p>오프셋/디지털 견적</p>
+                      </div>
+                      <p class="custom_info">
+                        수량을 입력하시면 실시간으로 금액이 반영됩니다.
+                      </p>
+                    </li>
+                    <li class="list_item">
+                      <table class="auto_table">
+                        <thead>
+                          <tr class="table_head">
+                            <th>수량(개)</th>
+                            <th>금액</th>
+                            <th>방식</th>
+                            <th>납기</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- comment : 수량 'input창'에 수량 입력 시 조건에 맞는 .data 에 .on 추가 -->
+                          <!-- comment : .data 클릭 시 '수량(개)' 데이터가 수량 'input창'에 노출   -->
+                          <tr class="data on">
+                            <td>1</td>
+                            <td>2,600</td>
+                            <td class="digital">디지털</td>
+                            <td>1일 4시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>10</td>
+                            <td>12,000</td>
+                            <td class="digital">디지털</td>
+                            <td>1일 5시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>50</td>
+                            <td>56,000</td>
+                            <td class="digital">디지털</td>
+                            <td>1일 12시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>100</td>
+                            <td>120,100</td>
+                            <td class="digital">디지털</td>
+                            <td>2일 1시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>200</td>
+                            <td>530,000</td>
+                            <td class="offset">오프셋</td>
+                            <td>2일 4시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>500</td>
+                            <td>1,200,000</td>
+                            <td class="offset">오프셋</td>
+                            <td>2일 10시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>1,000</td>
+                            <td>2,400,000</td>
+                            <td class="offset">오프셋</td>
+                            <td>3일 2시간</td>
+                          </tr>
+                          <tr class="data">
+                            <td>5,000</td>
+                            <td>4,800,000</td>
+                            <td class="offset">오프셋</td>
+                            <td>5일 10시간</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                  </ul>
+                </div>
+                <div class="right">
+                  <ul class="option_list">
+                    <li class="list_item flex-row">
+                      <h4 class="label">인쇄 제목</h4>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <label for="printTitle" class="input_wrap custom">
+                            <input
+                              id="printTitle"
+                              type="text"
+                              placeholder="인쇄물의 제목을 입력해 주세요."
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list_item flex-row title-start">
+                      <h4 class="label">요청사항</h4>
+                      <div class="field_area">
+                        <div class="wrap">
+                          <textarea
+                            name=""
+                            id="request"
+                            rows="5"
+                            maxlength="300"
+                            class="textarea custom"
+                            placeholder="300글자 이내로 작성해 주세요."
+                          ></textarea>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list_item flex-row fileUpload title-start">
+                      <h4 class="label">첨부파일</h4>
+                      <div class="fileUpload_area">
+                        <button type="button" class="fileUpload_wrap">
+                          <div class="icon_fileUpload">
+                            <img
+                              src="../image/common/icon_file_gray.svg"
+                              alt="파일업로드"
+                            />
+                          </div>
+                          <p class="text">
+                            디자인파일을 업로드 해주세요.
+                            <span class="space"
+                              >pdf, ai, eps, psd, indd, cdr 파일만 가능 (파일
+                              용량 최대 200MB)</span
+                            >
+                          </p>
+                        </button>
+                        <div class="guide_text">
+                          <p>
+                            - 정확한 납기는 주문페이지를 참고하시거나 고객센터로
+                            문의주시기 바랍니다.
+                          </p>
+                          <p>- 약 3줄 정도 설명 내용을 삽입합니다.</p>
+                          <p>- 공지에 대한 설명란을 간단하게 적습니다.</p>
+                        </div>
+                        <div class="fileUpload_list">
+                          <div class="box_wrap">
+                            <div class="field_area">
+                              <div class="wrap">
+                                <input
+                                  type="text"
+                                  readonly=""
+                                  class="input_wrap custom"
+                                  value="서비스명 패키지 시안.ai"
+                                />
+                              </div>
+                              <div class="custom_btn_area btn_fieldControls">
+                                <button
+                                  type="button"
+                                  class="c_custom_btn btn_delete"
+                                ></button>
+                              </div>
+                            </div>
+                            <div class="field_area">
+                              <div class="wrap">
+                                <input
+                                  type="text"
+                                  readonly=""
+                                  class="input_wrap custom"
+                                  value="리플렛 기획안.pdf"
+                                />
+                              </div>
+                              <div class="custom_btn_area btn_fieldControls">
+                                <button
+                                  type="button"
+                                  class="c_custom_btn btn_delete"
+                                ></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list_item flex-row guide">
+                      <h4 class="label">가이드</h4>
+                      <div class="btn_wrap">
+                        <a
+                          href="../WorkGuide/Paper_normalPaper.html"
+                          class="c_custom_btn"
+                        >
+                          <img
+                            src="../image/common/icon_paper.svg"
+                            alt="종이"
+                          />
+                          종이 보기
+                        </a>
+                        <a
+                          href="../WorkGuide/After_rounding.html"
+                          class="c_custom_btn"
+                        >
+                          <img
+                            src="../image/common/icon_finishing.svg"
+                            alt="후공정"
+                          />후공정 보기
+                        </a>
+                        <a
+                          href="../WorkGuide/Program_illustrator.html"
+                          class="c_custom_btn"
+                        >
+                          <img src="../image/common/icon_guide.svg" alt="" />
+                          접수 가이드 보기
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
+    </main>
+    <!-- Main END -->
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+
+    <!-- FloatingButton START -->
+    <div id="floatingButton"></div>
+    <script>
+      async function loadFloatingButton() {
+        const res = await fetch("../Components/FloatingButton.html");
+        const data = await res.text();
+        document.getElementById("floatingButton").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/FloatingButton.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadFloatingButton);
+    </script>
+    <!-- FloatingButton END -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../JS/Product_DetailPage.js"></script>
+  </body>
+</html>

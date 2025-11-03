@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.서비스명.COM" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.서비스명.COM" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      fetch("../Components/Header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "../JS/Header.js";
+          document.body.appendChild(script);
+        });
+    </script>
+    <!-- Header END -->
+    <!-- 모달-주문내역 상세 START -->
+    <div class="c_section">
+      <div class="c_inner">
+        <div class="modal_container modalOrderDetail">
+          <div class="modal_box">
+            <div class="modal_content">
+              <div class="titleBox">
+                <div class="title">주문내역 상세</div>
+                <button type="button" class="btnClose">
+                  <img src="../image/common/icon_close.svg" alt="x" />
+                </button>
+              </div>
+              <div class="contents none_bottom">
+                <!-- 주문정보 START -->
+                <div class="c_section-gap-small">
+                  <div class="fileInfo">
+                    <div class="sectionTitle_wrap-border">
+                      <h3 class="sectionTitle">주문정보</h3>
+                    </div>
+                    <div class="form_container-typeTable">
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">제목</label>
+                          <div class="input_wrap">서비스명 명함</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">품목</label>
+                          <div class="input_wrap">수입지명함</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">접수/파일문의</label>
+                          <div class="input_wrap">홍길동</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">사이즈</label>
+                          <div class="input_wrap">90x50 (92x52)</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">출고문의</label>
+                          <div class="input_wrap">서울 출고실</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">재질/인쇄도수</label>
+                          <div class="input_wrap">반누보화이트 양면8도</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">배송문의</label>
+                          <div class="input_wrap">서울 출고실</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">수량</label>
+                          <div class="input_wrap">200장 1건</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">입금/환불문의</label>
+                          <div class="input_wrap">경리실</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">후공정 내역</label>
+                          <div class="input_wrap">3단 접지/미싱/오시</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">첨부파일</label>
+                          <div class="input_wrap">
+                            <a href="" class="uploadFileInfo">
+                              <span class="icon_wrap">
+                                <img
+                                  src="../image/common/icon_file.svg"
+                                  alt="첨부파일 아이콘"
+                                />
+                              </span>
+                              <span>서비스명 명함.ai</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">요구사항</label>
+                          <div class="input_wrap">
+                            상품이 상하지 않게 포장 부탁드려요!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 주문정보 END -->
+                <div class="c_section-gap-small">
+                  <div class="containerBox">
+                    <!-- 결제정보 START -->
+                    <div class="fileInfo">
+                      <div class="sectionTitle_wrap-border">
+                        <h3 class="sectionTitle">결제정보</h3>
+                      </div>
+                      <div class="form_container-typeTable">
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">주문금액</label>
+                            <div class="input_wrap">
+                              <div>
+                                <p>선불배송 0원</p>
+                                <p>합계금액 6,050원</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">결제방법</label>
+                            <div class="input_wrap">전용계좌</div>
+                          </div>
+                        </div>
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">결제시간</label>
+                            <div class="input_wrap">2024-08-13 23:59</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 결제정보 END -->
+                    <!-- 회원/배송정보 START -->
+                    <div class="fileInfo">
+                      <div class="sectionTitle_wrap-border">
+                        <h3 class="sectionTitle">회원/배송</h3>
+                      </div>
+                      <div class="form_container-typeTable">
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">발신인</label>
+                            <div class="input_wrap">데버</div>
+                          </div>
+                        </div>
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">배송방법</label>
+                            <div class="input_wrap">선불 택배</div>
+                          </div>
+                        </div>
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">수신정보</label>
+                            <div class="input_wrap">
+                              <div>
+                                <p>수령인: 서비스명</p>
+                                <p>연락처: 02-1234-5678</p>
+                                <p>휴대폰: 010-1234-5678</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_wrap-grid">
+                          <div class="wrap">
+                            <label class="c_label">배송정보</label>
+                            <div class="input_wrap">
+                              서울시 은평구 대조동 12-3
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 회원/배송 END -->
+                  </div>
+                </div>
+                <!-- 진행상태 START -->
+                <div class="c_section-gap-small">
+                  <div class="c_flex-column-gap">
+                    <div class="sectionTitle_wrap-border">
+                      <h3 class="sectionTitle">진행상태</h3>
+                    </div>
+                    <div class="workProcess_container c_boxStyle-white">
+                      <ul class="workProcess_list">
+                        <li class="item">
+                          <a href="/" class="wrap">
+                            <div class="icon_wrap">
+                              <img
+                                src="../image/mypage/icon_status_error.svg"
+                                alt="파일에러 아이콘"
+                              />
+                            </div>
+                            <div class="textBox">
+                              <span class="name">파일에러</span>
+                              <span class="status">
+                                <p>24.08.28</p>
+                                <p>파일 정상</p>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="item">
+                          <a href="/" class="wrap">
+                            <div class="icon_wrap">
+                              <img
+                                src="../image/mypage/icon_status_receipt.svg"
+                                alt="접수 아이콘"
+                              />
+                            </div>
+                            <div class="textBox">
+                              <span class="name">접수</span>
+                              <span class="status">
+                                <p>24.08.29</p>
+                                <p>홍길동</p>
+                              </span>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="item on">
+                          <a href="/" class="wrap">
+                            <div class="icon_wrap">
+                              <img
+                                src="../image/mypage/icon_status_setting.svg"
+                                alt="생산 아이콘"
+                              />
+                            </div>
+                            <div class="textBox">
+                              <span class="name">생산</span>
+                              <!-- <span class="status">
+                                <p>24.08.30</p>
+                                <p>이순신</p>
+                              </span> -->
+                            </div>
+                          </a>
+                        </li>
+                        <li class="item">
+                          <a href="/" class="wrap">
+                            <div class="icon_wrap">
+                              <img
+                                src="../image/mypage/icon_status_warehouse.svg"
+                                alt="출고 아이콘"
+                              />
+                            </div>
+                            <div class="textBox">
+                              <span class="name">출고</span>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- 진행상태 END -->
+                <div class="c_section-gap-small">
+                  <div class="c_flex-column-gap">
+                    <div class="sectionTitle_wrap-border">
+                      <h3 class="sectionTitle">미리보기</h3>
+                    </div>
+                    <div class="preview_container">
+                      <div class="preview envelope">
+                        <div class="workArea workAreaDraw"></div>
+                        <div class="cuttingArea cuttingAreaDraw">
+                          <div class="sideInfo"></div>
+                          <div class="bottomInfo"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 참고사항 START -->
+                <div class="c_section-gap-small">
+                  <div class="c_flex-column-gap">
+                    <div class="sectionTitle_wrap-border">
+                      <h3 class="sectionTitle">참고사항</h3>
+                    </div>
+                    <ul class="c_info_list c_boxStyle">
+                      <li class="item">
+                        제품 이미지 가장자리의 붉은 선은 인쇄가 되지 않는 가상의
+                        선(작업 사이즈)입니다.
+                      </li>
+                      <li class="item">
+                        가장자리(테두리)에 보이는 흰색 실선은 인쇄에 나오지
+                        않습니다.
+                      </li>
+                      <li class="item">
+                        아래 이미지의 색상은 실제 인쇄물의 색상과 상이할 수
+                        있습니다.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 참고사항 END -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 모달-주문내역 상세 END -->
+  </body>
+</html>

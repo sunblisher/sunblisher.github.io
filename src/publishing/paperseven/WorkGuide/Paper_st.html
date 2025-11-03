@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- sns integration -->
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="서비스명" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="서비스명" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("../Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <div id="WorkGuide_SideMenu"></div>
+          <script>
+            fetch("../Components/WorkGuide_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("WorkGuide_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- WorkGuide_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap-addBg">
+                    <img
+                      src="../image/workguide/icon_sticker.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">스티커</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    모니터 색상과 실제 상품과 색상 차이가 날 수 있습니다.
+                    참고해주세요.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container paper">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">
+                            아트지 유광코팅 스티커 90g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              칼라인쇄 후 표면에 코팅작업을 하여 물에 잘 젖지
+                              않으며 잘 찢어지지도 않는 특성을 갖고 있습니다.
+                              <br />
+                              일반적으로 가장 많이 사용되고 저렴한 편입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">
+                            아트지 유광코팅 스티커 90g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              아트지 재질 스티커에 칼라인쇄를 하게 되면 은은한
+                              컬러 표현이 되며 <br />코팅이 안 되었기때문에
+                              손쉽게 찢을 수 있습니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">
+                            유포지 무광코팅 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              물과 습기에 강하여 사용 용도가 다양합니다.
+                              <br />주로 플라스틱 제품에 사용되며 PVC재질에
+                              비하여 가격이 저렴하며 칼라표현이 매우 잘 되고
+                              표면에 <br />무광코팅을 통하여 은은한 고급스러움을
+                              연출하게 됩니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">유포지 스티커 80g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              물과 습기에 강하여 사용 용도가 다양합니다. <br />
+                              주로 플라스틱 제품에 사용되며 PVC재질에 비하여
+                              가격이 저렴하며 <br />
+                              칼라표현이 매우 잘 되고 매끄러운 느낌의 고급스러운
+                              스티커입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">05</div>
+                          <h3 class="sectionTitle-large">
+                            은데드롱 스티커 25g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              회색메탈 느낌을 연출하는 재질로 물에 젖지 않으며
+                              기계 부착용으로 많이 사용됩니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">06</div>
+                          <h3 class="sectionTitle-large">
+                            은데드롱 무광코팅 스티커 25g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              회색메탈 느낌을 연출하는 재질로 물에 젖지 않으며
+                              기계 부착용으로 많이 사용됩니다.<br />
+                              표면에 무광코팅을 하므로 은은하고 부드러운 느낌을
+                              표현하고 있습니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st06.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st06.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">07</div>
+                          <h3 class="sectionTitle-large">
+                            투명데드롱 스티커 25g(유광코팅)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              투명한 재질로서 물에 젖지 않으며 기계 부착용으로
+                              많이 사용되고 은데드롱스티커보다
+                              <br />부착하는 면이 흰색이 아닌 경우 색이 겹쳐
+                              다른 색상으로 보이기도 합니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st07.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st07.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">08</div>
+                          <h3 class="sectionTitle-large">PVC 스티커 125g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              PVC는 플라스틱 재질로 물과 습기에 강하고 두께감이
+                              있으며 잘 찢어지지 않습니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st08.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st08.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">09</div>
+                          <h3 class="sectionTitle-large">
+                            크라프트지 스티커 57g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              100% 천연펄프를 사용한 친환경 용지로서 표백을 하지
+                              않아 독특한 용지색을 가지고 있습니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st09.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st09.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">10</div>
+                          <h3 class="sectionTitle-large">모조 스티커 80g</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              무광택의 은은한 질감으로 인쇄시 자연스러움이
+                              보이고 제품 부착시에 <br />도드라지지 않는
+                              특성으로 수정, 변경 등에 사용을 많이 합니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >일반재단시 접착액이 흘러나올 수 있으며 재단범위
+                                1~3mm의 오차 발생이 있을 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st10.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st10.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">11</div>
+                          <h3 class="sectionTitle-large">
+                            PVC 화이트 카드 025(불투명)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              무광택의 은은한 질감으로 인쇄시 자연스러움이
+                              보이고 제품 부착시에 <br />도드라지지 않는
+                              특성으로 수정, 변경 등에 사용을 많이 합니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 가맹점 양면 스티커, 태그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st11.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st11.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">12</div>
+                          <h3 class="sectionTitle-large">금광데드롱 025</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              플래티늄은 원단이 얇으면서도 탄력성이 뛰어난
+                              재질로 세련되고 화려한 명함을 원하시는 분들이
+                              선호하시는 재질입니다.<br />
+                              PET재질로 찢어짐과 구겨짐이 없는 제품입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 가맹점 양면 스티커, 태그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st12.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st12.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">13</div>
+                          <h3 class="sectionTitle-large">은광데드롱 025</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              플래티늄은 원단이 얇으면서도 탄력성이 뛰어난
+                              재질로 세련되고 화려한 명함을 원하시는 분들이
+                              선호하시는 재질입니다.<br />
+                              PET재질로 찢어짐과 구겨짐이 없는 제품입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 가맹점 양면 스티커, 태그 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st13.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st13.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">14</div>
+                          <h3 class="sectionTitle-large">
+                            무광 금지 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              금지무광 재질의 스티커로 주로 상장에 부착되는
+                              용도로 많이 사용되며, <br />인쇄와 형압가공을
+                              자유롭게 하는 장점이 있습니다. 접착력 또한
+                              강접으로 되어 있습니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st14.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st14.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">15</div>
+                          <h3 class="sectionTitle-large">
+                            유광 금지 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              금지유광 재질의 스티커로 주로 상장에 부착되는
+                              용도로 많이 사용되며, <br />인쇄와 형압가공을
+                              자유롭게 하는 장점이 있습니다. 접착력 또한
+                              강접으로 되어 있습니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st15.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st15.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">16</div>
+                          <h3 class="sectionTitle-large">
+                            무광 은지 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              은지무광 재질의 스티커로 주로 상장에 부착되는
+                              용도로 많이 사용되며, <br />인쇄와 형압가공을
+                              자유롭게 하는 장점이 있습니다. 접착력 또한
+                              강접으로 되어 있습니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st16.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st16.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">17</div>
+                          <h3 class="sectionTitle-large">
+                            은광 은지 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              은지유광 재질의 스티커로 주로 상장에 부착되는
+                              용도로 많이 사용되며, <br />인쇄와 형압가공을
+                              자유롭게 하는 장점이 있습니다. 접착력 또한
+                              강접으로 되어 있습니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st17.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st17.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">18</div>
+                          <h3 class="sectionTitle-large">
+                            동지 스티커 80g(무광)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              동지 재질의 스티커로 주로 상장에 부착되는 용도로
+                              많이 사용되며, <br />인쇄와 형압가공을 자유롭게
+                              하는 장점이 있습니다. 접착력 또한 강접으로 되어
+                              있습니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st18.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st18.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">19</div>
+                          <h3 class="sectionTitle-large">
+                            실버 헤어라인 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              표면이 가로결로 되어있으며 인쇄가 용이하며
+                              고급스럽고 은은한 표면으로 되어 있습니다.
+                              <br />형압가공은 불가한 제품입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st19.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st19.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">20</div>
+                          <h3 class="sectionTitle-large">
+                            골드 헤어라인 스티커 80g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              표면이 가로결로 되어있으며 인쇄가 용이하며
+                              고급스럽고 은은한 표면으로 되어 있습니다.
+                              <br />형압가공은 불가한 제품입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st20.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st20.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">21</div>
+                          <h3 class="sectionTitle-large">
+                            보이드 스티커 25μ (위조방지용)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              은회색 재질에 VOID 영문표기로 되어 있는 원단이며
+                              주로 봉인스티커 또는 위조방지 스티커에 사용이 되고
+                              <br />
+                              잔류형으로 스티커를 떼었을때 표면에 영문이 조금씩
+                              남아 있는 스티커 재질입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >스티커를 떼었을때 표면에 따라 잔류량의 차이가
+                                날 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st21.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st21.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">22</div>
+                          <h3 class="sectionTitle-large">
+                            봉인 은지 스티커 25μ (위조방지용)
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              은광 재질에 일정한 간격의 원형 표기가 된 원단이며
+                              주로 봉인스티커 또는 위조방지 스티커에 사용이 되고
+                              <br />
+                              잔류형으로 스티커를 떼었을때 표면에 영문이 조금씩
+                              남아 있는 스티커 재질입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >스티커를 떼었을때 표면에 따라 잔류량의 차이가
+                                날 수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st22.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st22.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">23</div>
+                          <h3 class="sectionTitle-large">
+                            파스칼 백색 스티커 100g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              백색 PP재질로 표면이 부드럽고 매끄러운 재질로
+                              인쇄품질이 우수하며 <br />물기에 강하고 찢어지지
+                              않는 재질로 고급스티커로 사용을 하는 제품입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st23.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st23.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">24</div>
+                          <h3 class="sectionTitle-large">
+                            파스칼 투명 스티커 100g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              투명 PP재질로 표면이 부드럽고 매끄러운 재질로
+                              인쇄품질이 우수하며 <br />물기에 강하고 찢어지지
+                              않는 재질로 고급스티커로 사용을 하는 제품입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >투명 스티커 재질로 되어 있기때문에 어두운
+                                표면에 부착할시 인쇄 색상과 겹칠 수
+                                있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st24.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st24.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">25</div>
+                          <h3 class="sectionTitle-large">
+                            정전기 투명 스티커 100g
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              투명 PP재질로 표면이 부드럽고 매끄러운 재질로
+                              인쇄품질이 우수하며 <br />물기에 강하고 찢어지지
+                              않는 재질이며 접착력이 없고 정전기 방식으로
+                              부착되는 스티커입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >주로 자동차 내부 유리 부착용으로
+                                사용됩니다.(오일교환용)</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st25.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st25.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">26</div>
+                          <h3 class="sectionTitle-large">실버메탈 스티커</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              제작하고자 하는 디자인의 금형을 뜨고 난후 제작되는
+                              방식으로 <br />짧은 기간내에 고급스러운 스티커를
+                              연출하는 상품입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >기본수량 300x400mm 1판 기준입니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st26.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st26.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">27</div>
+                          <h3 class="sectionTitle-large">골드메탈 스티커</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              제작하고자 하는 디자인의 금형을 뜨고 난후 제작되는
+                              방식으로 <br />짧은 기간내에 고급스러운 스티커를
+                              연출하는 상품입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >기본수량 300x400mm 1판 기준입니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st27.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st27.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">28</div>
+                          <h3 class="sectionTitle-large">애폭시 스티커</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              유포지스티커 원단에 주로 인쇄하여 애폭가공을 하는
+                              형식의 고급스러운 스티커입니다. <br />
+                              인쇄된 표면을 볼륨감있게 제작되는 상품입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st28.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st28.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">29</div>
+                          <h3 class="sectionTitle-large">알루미늄 스티커</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              디자인된 제품의 금형을 제작후 가공되는 상품이며
+                              색상과 볼륨감을 사용하므로
+                              <br />제품홍보용으로 많이 사용되고 매우 고급스러운
+                              상품입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st29.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st29.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">30</div>
+                          <h3 class="sectionTitle-large">다이아커팅 스티커</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              디자인된 제품의 금형을 제작후 가공되는 상품이며
+                              색상과 볼륨감을 사용하므로
+                              <br />제품홍보용으로 많이 사용되고 매우 고급스러운
+                              상품입니다.
+                            </p>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >가구, 창틀, 문, 기계제품 등에 부착됨</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st30.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st30.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">31</div>
+                          <h3 class="sectionTitle-large">스폰지 양면 스티커</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              두께감이 있는 스폰지 재질에 양면으로 접착이 되어
+                              있는 스티커 재질입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st31.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st31.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">32</div>
+                          <h3 class="sectionTitle-large">
+                            나일론크로스 스티커
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              나일론 소재의 스티커로 칼라인쇄를 할 수 있으며
+                              원단소재로 되어 있어서 <br />인쇄 색상은 매끄럽지
+                              않고 자연스럽게 연출하는 제품입니다.
+                            </p>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st32.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st32.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">33</div>
+                          <h3 class="sectionTitle-large">
+                            홀로그램 스티커(무지) 50μ
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              특수코팅 가공을 통하여 무지개빛이 좌우로
+                              움직일때마다 변화되는 색상으로 <br />연출되며
+                              표면이 매끄럽고 광이 나며 고급스러운 재질의
+                              스티커입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 스티커, 보안위조방지스티커,
+                                고급인쇄물 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st33.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st33.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">34</div>
+                          <h3 class="sectionTitle-large">
+                            홀로그램 스티커(모래알) 50μ
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              특수코팅 가공을 통하여 무지개빛이 좌우로
+                              움직일때마다 변화되는 색상으로 <br />연출되며
+                              표면이 매끄럽고 광이 나며 고급스러운 재질의
+                              스티커입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 스티커, 보안위조방지스티커,
+                                고급인쇄물 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st34.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st34.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">35</div>
+                          <h3 class="sectionTitle-large">
+                            홀로그램 스티커(도넛) 50μ
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              특수코팅 가공을 통하여 무지개빛이 좌우로
+                              움직일때마다 변화되는 색상으로 <br />연출되며
+                              표면이 매끄럽고 광이 나며 고급스러운 재질의
+                              스티커입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 스티커, 보안위조방지스티커,
+                                고급인쇄물 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st35.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st35.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">36</div>
+                          <h3 class="sectionTitle-large">
+                            홀로그램 스티커(다이아몬드) 50μ
+                          </h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              특수코팅 가공을 통하여 무지개빛이 좌우로
+                              움직일때마다 변화되는 색상으로 <br />연출되며
+                              표면이 매끄럽고 광이 나며 고급스러운 재질의
+                              스티커입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 스티커, 보안위조방지스티커,
+                                고급인쇄물 등</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st36.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_paper_st36.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

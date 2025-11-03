@@ -12,7 +12,7 @@
 .modal_content {
   max-width: 1140px;
   width: 100%;
-  
+
   margin: 0 auto;
 }
 
@@ -133,7 +133,6 @@
   width: calc((100% / 4) - 2rem);
 }
 
-
 @media (max-width: 1024px) {
   .modal_info {
     flex-direction: column;
@@ -201,7 +200,6 @@
   }
 
   .modal_images .img_wrap {
-    
     max-width: 100%;
   }
 
@@ -248,11 +246,65 @@
 
 .modal_overlay::-webkit-scrollbar,
 .modal_content::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .modal_overlay,
 .modal_content {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.modal_scroll_top {
+  position: fixed;
+  right: var(--space-3xl);
+  bottom: var(--space-3xl);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2rem);
+  transition: all 0.3s ease;
+  color: var(--color-text-white);
+  backdrop-filter: blur(8px);
+  padding: unset;
+}
+
+.modal_scroll_top:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(0) scale(1.05);
+}
+
+.modal_scroll_top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.modal_scroll_top svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .modal_scroll_top {
+    width: 4.4rem;
+    height: 4.4rem;
+    right: var(--space-md);
+    bottom: var(--space-md);
+  }
+
+  .modal_scroll_top svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }

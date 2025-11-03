@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.서비스명.COM" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.서비스명.COM" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      fetch("../Components/Header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "../JS/Header.js";
+          document.body.appendChild(script);
+        });
+    </script>
+    <!-- Header END -->
+    <!-- 모달-견적내역 상세 START -->
+    <div class="c_section">
+      <div class="c_inner">
+        <div class="modal_container modalOrderDetail">
+          <div class="modal_box">
+            <div class="modal_content">
+              <div class="titleBox">
+                <div class="title">견적내역 상세</div>
+                <button type="button" class="btnClose">
+                  <img src="../image/common/icon_close.svg" alt="x" />
+                </button>
+              </div>
+              <div class="contents none_bottom">
+                <!-- 견적정보 START -->
+                <div class="c_section-gap-small">
+                  <div class="fileInfo">
+                    <div class="sectionTitle_wrap-border">
+                      <h3 class="sectionTitle">견적정보</h3>
+                    </div>
+                    <div class="form_container-typeTable">
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">제목</label>
+                          <div class="input_wrap">서비스명 명함</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">품목</label>
+                          <div class="input_wrap">수입지명함</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">견적날짜</label>
+                          <div class="input_wrap">2024-08-29</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">사이즈</label>
+                          <div class="input_wrap">90x50 (92x52)</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">담당자</label>
+                          <div class="input_wrap">홍길동</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">재질/인쇄도수</label>
+                          <div class="input_wrap">반누보화이트 양면8도</div>
+                        </div>
+                        <div class="wrap">
+                          <label class="c_label">진행상태</label>
+                          <div class="input_wrap">결제완료</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">수량</label>
+                          <div class="input_wrap">200장 1건</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">후공정 내역</label>
+                          <div class="input_wrap">3단 접지/미싱/오시</div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">첨부파일</label>
+                          <div class="input_wrap">
+                            <a href="" class="uploadFileInfo">
+                              <span class="icon_wrap">
+                                <img
+                                  src="../image/common/icon_file.svg"
+                                  alt="첨부파일 아이콘"
+                                />
+                              </span>
+                              <span>서비스명 명함.ai</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap">
+                          <label class="c_label">요구사항</label>
+                          <div class="input_wrap">
+                            상품이 상하지 않게 포장 부탁드려요!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 견적정보 END -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 모달-견적내역 상세 END -->
+  </body>
+</html>

@@ -10,6 +10,11 @@
   height: 100svh;
   padding: var(--header-height) 0 0 0;
   background: url(../../assets/images/home/hero_bg.jpg) no-repeat center center;
+  position: relative;
+}
+.hero .c_inner {
+  height: 100%;
+  position: relative;
 }
 .hero .textWrap {
   padding-bottom: var(--header-height);
@@ -45,6 +50,71 @@
 @keyframes fadein {
   100% {
     opacity: 0.6;
+  }
+}
+
+.hero_scroll_indicator {
+  position: absolute;
+  bottom: var(--space-4xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  opacity: 0;
+  animation: fadeInScrollIndicator 1s 1.2s forwards;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeInScrollIndicator {
+  to {
+    opacity: 1;
+  }
+}
+
+.scroll_icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scrollBounce 2s infinite ease-in-out;
+}
+
+.scroll_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(0.8rem);
+    opacity: 1;
+  }
+}
+
+.scroll_text {
+  font-size: var(--font-size-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  animation: textFade 2s infinite ease-in-out;
+}
+
+@keyframes textFade {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
   }
 }
 @media (max-width: 1320px) {
@@ -378,6 +448,19 @@
 
   .hero .subText {
     font-size: var(--font-size-lg);
+  }
+
+  .hero_scroll_indicator {
+    bottom: var(--space-2xl);
+  }
+
+  .scroll_icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .scroll_text {
+    font-size: var(--font-size-3xs);
   }
 
   .sectionTitle {

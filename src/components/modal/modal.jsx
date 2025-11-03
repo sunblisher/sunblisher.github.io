@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../../style/components/modal.css";
 
 const Modal = ({ item, onClose }) => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const overlayRef = useRef(null);
   
   useEffect(() => {
     if (!item) return; 
@@ -12,6 +14,25 @@ const Modal = ({ item, onClose }) => {
       
       document.body.style.overflow = "auto";
     };
+  }, [item]);
+
+  useEffect(() => {
+    if (!item || !overlayRef.current) return;
+
+    const handleScroll = () => {
+      const scrollTop = overlayRef.current.scrollTop;
+      setShowScrollTop(scrollTop > 300);
+    };
+
+    const overlay = overlayRef.current;
+    overlay.addEventListener("scroll", handleScroll);
+    
+    // 초기 체크
+    handleScroll();
+
+    return () => {
+      overlay.removeEventListener("scroll", handleScroll);
+    };
   }, [item]); 
 
   if (!item) return null;
@@ -21,11 +42,41 @@ const Modal = ({ item, onClose }) => {
     onClose?.();
   };
 
+  const handleScrollToTop = () => {
+    if (overlayRef.current) {
+      overlayRef.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="modal_overlay">
+    <div className="modal_overlay" ref={overlayRef}>
       <div className="modal_content">
         <button className="modal_close" onClick={handleClose}>
           닫기
+        </button>
+        <button
+          className={`modal_scroll_top ${showScrollTop ? "show" : ""}`}
+          onClick={handleScrollToTop}
+          aria-label="맨 위로 스크롤"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12L12 5L19 12M12 5V19"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
         <div className="modal_info">
           <div className="info_text">

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.nuri.ne.kr" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="서비스명" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta name="twitter:description" content="서비스명" />
+    <meta name="twitter:url" content="http://www.nuri.ne.kr" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/utility.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeader() {
+        const res = await fetch("../Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <!-- Header END -->
+
+    <!-- Main START -->
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <div id="WorkGuide_SideMenu"></div>
+          <script>
+            fetch("../Components/WorkGuide_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("WorkGuide_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- WorkGuide_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap-addBg">
+                    <img
+                      src="../image/workguide/After_binding.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">제본 작업가이드</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    후공정할 크기와 재질에 따라 퀄리티 차이가 날 수 있습니다.
+                    담당자와 상담 후 진행해주세요.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container after">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">중철제본</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              가장 많이 사용하는 제본방법으로 페이지물 중앙에
+                              스테플러로 찝어 묶는 방법입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 팜플렛, 브로셔, 카다로그 등</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >페이지가 많을 경우 무선제본으로 해야
+                                됩니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding01.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">무선제본</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              제본된 부분에 접착제로 가공하여 고정하는 방식으로
+                              페이지 양이 많거나 고급스러운 인쇄물에 사용
+                              됩니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 팜플렛, 브로셔, 카다로그 등</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >페이지가 적을 경우 중철제본으로 해야
+                                됩니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding02.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">양장제본</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              주로 두껍고 단단한 표지와 내지를 제본하는 방식으로
+                              실로 묶어 단단히 고정이 되며 최고급
+                              제본방식입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span>적용 상품: 수첩, 다이어리, 책</span>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding03.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">스프링제본</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              인쇄물을 재단한 후 타공후 스프링으로 제본하는
+                              방식으로 낱장씩 페이지 추가가 가능하며 손쉽게 넘길
+                              수 있는 부분이 장점입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 리플렛, 브로셔, 카다로그,
+                                단행본</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding04.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">05</div>
+                          <h3 class="sectionTitle-large">계단제본</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              종이와 종이를 조금씩 밀어서 제본하는 방식으로
+                              페이지 제목을 손쉽게 알 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 리플렛, 브로셔, 카다로그,
+                                단행본</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding05.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">06</div>
+                          <h3 class="sectionTitle-large">톰슨제본</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              원하는 내용과 모양으로 제작하는 방식으로 중요한
+                              부분을 부각시키며 페이지의 구성내용을 한 눈에 볼
+                              수 있도록 하는 방식입니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품: 리플렛, 브로셔, 카다로그,
+                                단행본</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding06.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_binding06.jpg"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Main END -->
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+
+    <!-- FloatingButton START -->
+    <div id="floatingButton"></div>
+    <script>
+      async function loadFloatingButton() {
+        const res = await fetch("../Components/FloatingButton.html");
+        const data = await res.text();
+        document.getElementById("floatingButton").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/FloatingButton.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadFloatingButton);
+    </script>
+    <!-- FloatingButton END -->
+  </body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.서비스명.COM" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.서비스명.COM" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      async function loadHeaderAndScript() {
+        const res = await fetch("../Components/Header.html");
+        const data = await res.text();
+        document.getElementById("header").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../JS/Header.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      window.addEventListener("DOMContentLoaded", loadHeaderAndScript);
+    </script>
+    <!-- Header END -->
+
+    <!-- fixdButton START -->
+    <div id="fixedButton"></div>
+    <script>
+      fetch("../Components/FixedButton.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("fixedButton").innerHTML = data;
+        });
+    </script>
+    <!-- fixdButton END -->
+
+    <main class="c_contents_container workguide">
+      <div class="c_inner">
+        <div class="layout_container">
+          <!-- WorkGuide_SideMenu START -->
+          <div id="WorkGuide_SideMenu"></div>
+          <script>
+            fetch("../Components/WorkGuide_SideMenu.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("WorkGuide_SideMenu").innerHTML = data;
+              });
+          </script>
+          <!-- WorkGuide_SideMenu END -->
+          <div class="layout_contents">
+            <!-- 작업가이드 제목 START -->
+            <div class="c_section-gap">
+              <div class="c_flex-column-gap c_boxStyle">
+                <div class="sectionTitle_wrap-row">
+                  <span class="icon_wrap-addBg">
+                    <img
+                      src="../image/workguide/After_foil.svg"
+                      alt="제목 아이콘"
+                    />
+                  </span>
+                  <h3 class="sectionTitle">박</h3>
+                </div>
+                <ul class="c_info_list">
+                  <li class="item">
+                    박에 압을 가하여 도장처럼 찍어내는 후가공으로 특정부분을
+                    강조할 때 많이 사용됩니다.
+                  </li>
+                  <li class="item">
+                    인쇄로는 표현할 수 없는 화려하고 고습스러운 느낌을 다양한
+                    박으로 표현할 수 있습니다.
+                  </li>
+                  <li class="item">
+                    후가공 박의 크기와 종이 재질차이에 따라 퀄리티 차이가 날 수
+                    있습니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 작업가이드 제목 END -->
+            <!-- 작업가이드 컨텐츠 START -->
+            <div class="c_section-gap">
+              <div class="guideContents_container after">
+                <div class="contents_container">
+                  <div class="c_section-gap">
+                    <div class="contents">
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">01</div>
+                          <h3 class="sectionTitle-large">금박(유광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              금색의 화려한 광 때문에 고급스럽고 품격있는 효과를
+                              표현할 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap c_object-positionBottom">
+                              <img
+                                src="../image/workguide/img_after_foil_01.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap c_object-positionBottom">
+                              <img
+                                src="../image/workguide/img_after_foil_01.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">02</div>
+                          <h3 class="sectionTitle-large">금박(무광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              유광보다 광이 적기때문에 부드럽고 조금 더 차분한
+                              느낌을 표현할 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_02.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_02.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">03</div>
+                          <h3 class="sectionTitle-large">은박(유광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              은박의 은은한 광으로 심플한 느낌과 깨끗한 느낌을
+                              표현할 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_03.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_03.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">04</div>
+                          <h3 class="sectionTitle-large">은박(무광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              유광보다 광이 적어 조금 더 세련된 분위기를 표현할
+                              수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_04.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_04.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">05</div>
+                          <h3 class="sectionTitle-large">적박(유광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              붉은색이 조금씩 반짝거리면서 독특한 분위기를
+                              연출할 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛, 스티커
+                              </span>
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_05.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_05.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">06</div>
+                          <h3 class="sectionTitle-large">청박(유광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              시원하고 청량한 느낌을 표현할 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap c_object-positionBottom">
+                              <img
+                                src="../image/workguide/img_after_foil_06.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap c_object-positionBottom">
+                              <img
+                                src="../image/workguide/img_after_foil_06.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">07</div>
+                          <h3 class="sectionTitle-large">녹박(유광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              녹색의 광이 조금씩 비추면서 특별함을 더해줄 수
+                              있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_07.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_07.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">08</div>
+                          <h3 class="sectionTitle-large">먹박</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              평범한 먹색의 느낌에서 좀 더 감각적인 느낌을 살릴
+                              수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_08.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_08.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">09</div>
+                          <h3 class="sectionTitle-large">백박</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              화려한 효과를 주기보다는 깔끔한 느낌의 표현을
+                              연출할 수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_09.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap">
+                              <img
+                                src="../image/workguide/img_after_foil_09.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="c_section-gap">
+                        <div class="sectionTitle_wrap-center">
+                          <div class="number">10</div>
+                          <h3 class="sectionTitle-large">홀로그램 박(은광)</h3>
+                          <div class="text_wrap">
+                            <p class="description-center">
+                              눈에 띄고 화려한 색감으로 유니크한 느낌을 표현할
+                              수 있습니다.
+                            </p>
+                            <div class="useProduct">
+                              <span
+                                >적용 상품 : 종이박스, 쇼핑백, 리플렛,
+                                스티커</span
+                              >
+                            </div>
+                            <div class="tip">
+                              <div class="icon_wrap">
+                                <img
+                                  src="../image/workguide/icon_info.svg"
+                                  alt="가이드정보 아이콘"
+                                />
+                              </div>
+                              <span class="text"
+                                >박의 크기와 재질 표면에 따라 퀄리티 차이가 날
+                                수 있습니다.</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="guideImg_list">
+                          <li class="item">
+                            <div class="img_wrap c_object-positionBottom">
+                              <img
+                                src="../image/workguide/img_after_foil_10.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="img_wrap c_object-positionBottom">
+                              <img
+                                src="../image/workguide/img_after_foil_10.png"
+                                alt="후공정 이미지"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 작업가이드 컨텐츠 END -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer START -->
+    <div id="footer"></div>
+    <script>
+      fetch("../Components/Footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- Footer END -->
+  </body>
+</html>

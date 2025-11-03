@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>서비스명</title>
+    <meta name="description" content="서비스명" />
+    <meta name="keywords" content="서비스명, 인쇄 제작" />
+    <meta name="author" content="서비스명" />
+    <meta name="robots" content="all" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta property="og:title" content="서비스명" />
+    <meta property="og:image" content="/opengraph.png" />
+    <meta property="og:url" content="http://www.서비스명.COM" />
+    <meta property="og:site_name" content="서비스명" />
+    <meta property="og:description" content="패키지 인쇄 및 제조 전문 브랜드" />
+    <meta name="twitter:title" content="서비스명" />
+    <meta name="twitter:image" content="/opengraph.png" />
+    <meta
+      name="twitter:description"
+      content="패키지 인쇄 및 제조 전문 브랜드"
+    />
+    <meta name="twitter:url" content="http://www.서비스명.COM" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/class.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/components/button.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/components/input.css" />
+    <link rel="stylesheet" type="text/css" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <!-- Header START -->
+    <div id="header"></div>
+    <script>
+      fetch("../Components/Header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "../JS/Header.js";
+          document.body.appendChild(script);
+        });
+    </script>
+    <!-- Header END -->
+    <!-- 모달-견적내역 상세 START -->
+    <div class="c_section">
+      <div class="c_inner">
+        <div class="modal_container modalOrderDetail">
+          <div class="modal_box">
+            <div class="modal_content">
+              <div class="titleBox">
+                <div class="title">주문리스트 상세</div>
+                <button type="button" class="btnClose">
+                  <img src="../image/common/icon_close.svg" alt="x" />
+                </button>
+              </div>
+              <div class="contents none_bottom">
+                <!-- 견적정보 START -->
+                <div class="c_section-gap-small">
+                  <div class="fileInfo">
+                    <div class="sectionTitle_wrap-border">
+                      <h3 class="sectionTitle">주문리스트</h3>
+                    </div>
+                    <div class="form_container-typeTable">
+                      <div class="form_wrap-grid">
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">종류</label>
+                          <ul class="input_wrap category_list">
+                            <li class="1depth data">종이박스</li>
+                            <li class="2depth data">단상자</li>
+                          </ul>
+                        </div>
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">형태</label>
+                          <ul class="input_wrap category_list">
+                            <li class="shape data">맞뚜껑형</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">사이즈</label>
+                          <ul class="input_wrap category_list">
+                            <li class="size data">장60*폭60*고</li>
+                          </ul>
+                        </div>
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">종이</label>
+                          <ul class="input_wrap category_list">
+                            <li class="kind data">BV(박스용편면코팅지)</li>
+                            <li class="grammage data">백색 240g</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">인쇄</label>
+                          <ul class="input_wrap category_list">
+                            <li class="cmyk-color data">단면 4도</li>
+                            <li class="special-color data">별색 1도</li>
+                          </ul>
+                        </div>
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">수량</label>
+                          <ul class="input_wrap category_list">
+                            <li class="sheet data">100장</li>
+                            <li class="order data">1건</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form_wrap-grid">
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">후공정</label>
+                          <ul class="input_wrap category_list">
+                            <li class="post-processing data">금박무광</li>
+                            <li class="size data">20*20</li>
+                          </ul>
+                        </div>
+                        <div class="wrap order_list_wrap">
+                          <label class="c_label">옵션</label>
+                          <ul class="input_wrap category_list">
+                            <li class="production-options data">긴급출고</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 견적정보 END -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 모달-견적내역 상세 END -->
+  </body>
+</html>

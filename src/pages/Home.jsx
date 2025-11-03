@@ -76,7 +76,7 @@ function Home() {
     {
       id: "1",
       title: "실리콘",
-      desc: "기기에 있는 모든 기프티콘을 자동 업로드 및 직접 등록이 가능한 스마트 모바일쿠폰 관리어플",
+      desc: "모바일쿠폰을 자동으로 찾아 스마트하게 관리할 수 있는 어플",
       period: "2025.01 - 2025.05",
       tags: ["웹/앱", "디자인 100%", "화면설계 30%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -117,7 +117,7 @@ function Home() {
     {
       id: "2",
       title: "온기 랜딩페이지",
-      desc: "ON:GI는 QR코드로 쉽고 빠르게 기부할 수 있는 간편기부 플랫폼으로, 기부 경험을 제공합니다.",
+      desc: "기부 플랫폼 홍보용 랜딩페이지",
       period: "2025.10",
       tags: ["출시 전", "반응형", "디자인 100%", "화면설계 100%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -170,7 +170,7 @@ function Home() {
     {
       id: "4",
       title: "데버 Gift",
-      desc: "대량 발송부터 취소, 환불까지 한 번에 관리 가능한 통합형 기프티콘 구매 사이트",
+      desc: "개인/단체 주문이 가능한 기프티콘 발송 사이트",
       period: "2025.07 - 2025.08",
       tags: ["반응형", "디자인 100%", "화면설계 90%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -208,7 +208,7 @@ function Home() {
     {
       id: "5",
       title: "헤이홀더 커뮤니티 사이트",
-      desc: "주주가 쉽고 빠르게 의결권을 행사하고 기업 가치 제고에 참여할 수 있도록 돕는 플랫폼입니다.",
+      desc: "주주가 쉽고 빠르게 의결권을 행사하고 기업 가치 제고에 참여할 수 있도록 돕는 플랫폼",
       period: "2025.07",
       tags: ["출시 전", "리디자인", "PC 최적화", "디자인 40%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -225,8 +225,8 @@ function Home() {
     },
     {
       id: "6",
-      title: "임상 데이터 관리자",
-      desc: "임상 데이터 수집부터 관리까지 지원하는 전용 관리자 플랫폼",
+      title: "특수 데이터 관리자페이지",
+      desc: "특수 데이터 수집/관리를 지원하는 관리자페이지",
       period: "2025.08",
       tags: ["PC 최적화", "디자인 100%", "화면설계 70%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -253,7 +253,7 @@ function Home() {
     {
       id: "7",
       title: "통합 관리자페이지",
-      desc: "플랫폼 통합 관리, 인사관리를 한번에 사용할 수 있는 플랫폼",
+      desc: "솔루션 통합 관리/인사관리를 한번에 처리할 수 있는 플랫폼",
       period: "2025.07",
       tags: ["PC최적화", "디자인 30%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -275,7 +275,7 @@ function Home() {
     {
       id: "8",
       title: "데버 Accounts",
-      desc: "로그인과 계정 설정을 간편하게 진행할 수 있는 통합 로그인 플랫폼",
+      desc: "관련 솔루션의 통합 로그인/계정 설정을 할 수 있는 통합 로그인 플랫폼",
       period: "2024. 10",
       tags: ["반응형", "디자인 40%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -300,7 +300,7 @@ function Home() {
     {
       id: "9",
       title: "온기 관리자페이지",
-      desc: "4가지 케이스의 사용자 구분으로 관리자 ~ 사용자 페이지까지 작업한 프로젝트",
+      desc: "4가지 관리자페이지로 구성된 기부 관련 관리자페이지와 플랫폼",
       period: "2025.09",
       tags: ["출시 전", "일부 반응형", "디자인 100%", "화면설계 50%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -333,7 +333,7 @@ function Home() {
     {
       id: "10",
       title: "데버 고객센터",
-      desc: "각 서비스의 자주묻는질문과 1:1문의, 서비스 개선 피드백을 줄 수 있는 고객지원 플랫폼",
+      desc: "솔루션별 자주묻는질문/1:1문의를 지원하는 고객센터",
       period: "2024. 10",
       tags: ["반응형", "디자인 100%", "화면기획 60%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -386,40 +386,40 @@ function Home() {
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
       mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/print_thumbnail.png",
-      link: "https://sunblisher.github.io/paperseven/Home/Home.html",
+      link: "/src/publishing/paperseven/Home/Home.html",
       height: 1000,
       projectType: "personal",
     },
     {
       id: "13",
       title: "인쇄 주문제작 사이트2",
-      desc: "아이콘 형태 위주의 인쇄 주문 제작 사이트",
+      desc: "실사형/목업 위주의 인쇄 주문 제작 사이트",
       period: "2025.01 - 2025.02",
       tags: ["출시 전", "반응형", "디자인 70%", "화면기획 50%", "퍼블리싱 60%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
       mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/print2_thumbnail.png",
-      link: "https://sunblisher.github.io/boxguide/Home/Home.html",
+      link: "/src/publishing/boxguide/Home/Home.html",
       height: 600,
       projectType: "personal",
     },
     {
       id: "14",
-      title: "2024 권효선 포트폴리오",
-      desc: "신입 퍼블리셔 권효선의 포트폴리오",
+      title: "2023 권효선 포트폴리오",
+      desc: "UIUX 퍼블리셔 권효선 포트폴리오",
       period: "2023.10 - 2023.11 ",
       tags: ["반응형", "디자인 100%", "화면기획 100%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
       mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/2024portfolio_thumbnail.png",
-      link: "https://sunblisher.github.io/",
+      link: "/src/publishing/portpolio/home.html",
       height: 900,
       projectType: "personal",
     },
     {
       id: "15",
-      title: "실리콘 BI제작",
-      desc: "실리콘 서비스의 브랜드아이덴티티 제작",
+      title: "실리콘 BI구축",
+      desc: "실리콘 서비스의 브랜드아이덴티티 구축",
       period: "2025. 01",
       tags: ["디자인 100%", "기획 60%"],
       tools: ["photoshop", "illustrator"],
@@ -433,7 +433,7 @@ function Home() {
     {
       id: "16",
       title: "함께하는 요양보호사교육원",
-      desc: "기존 기능은 유지하며, UI/UX를 재정의한 리디자인 프로젝트",
+      desc: "기존 기능은 유지하며, UI/UX를 재정의한 교육원 사이트",
       period: "2025. 06",
       tags: ["출시 전전", "반응형", "리디자인", "디자인 80%"],
       tools: ["photoshop", "illustrator", "figma"],
@@ -488,12 +488,12 @@ function Home() {
       id: "18",
       title: "잭시믹스 랜딩페이지",
       period: "2023.09",
-      desc: "잭시믹스 행사 랜딩페이지 사이드프로젝트",
+      desc: "기존 이벤트를 재해석/리디자인한 잭시믹스 랜딩페이지",
       tags: ["사이드프로젝트", "반응형", "디자인 100%", "화면기획 100%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css"],
       mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/xexymix_thumbnail.png",
-      link: "https://sunblisher.github.io/xexymix/index.html",
+      link: "/src/publishing/xexymix/home.html",
       height: 600,
       projectType: "personal",
     },
@@ -509,6 +509,26 @@ function Home() {
               세상을 밝게 비춰주는 일출처럼 <span className="block"></span>
               프로덕트에 생기를 불어넣는 디자이너 권효선입니다.
             </p>
+          </div>
+          <div className="hero_scroll_indicator">
+            <div className="scroll_icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ffffffa4"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevrons-down-icon lucide-chevrons-down"
+              >
+                <path d="m7 6 5 5 5-5" />
+                <path d="m7 13 5 5 5-5" />
+              </svg>
+            </div>
+            <span className="scroll_text">scroll</span>
           </div>
         </div>
       </section>
