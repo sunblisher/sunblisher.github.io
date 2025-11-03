@@ -38,3 +38,37 @@
   text-shadow: 0 0 6px hsl(0, 0%, 100%), 0 0 24px hsl(0, 0%, 100%),
     0 0 32px hsl(0, 0%, 100%);
 }
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .header .menu {
+    gap: var(--space-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .header .menu {
+    height: 6rem;
+    gap: var(--space-xl);
+  }
+
+  .header .menu .list_item {
+    height: 3.6rem;
+    padding: 0 var(--space-xs);
+  }
+
+  .header .menu .list_item span {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .header .menu {
+    height: 5rem;
+    gap: var(--space-md);
+  }
+
+  .header .menu .list_item span {
+    font-size: var(--font-size-xs);
+  }
+}

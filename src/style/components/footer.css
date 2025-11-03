@@ -1,0 +1,68 @@
+.footer {
+  background-color: #191e3f;
+}
+.footer .c_section {
+  padding: var(--space-5xl) 0;
+}
+.footer .c_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+}
+.footer .subText {
+  margin-top: unset;
+  font-size: var(--font-size-xl);
+}
+.footer_text {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-400);
+  color: var(--color-text-light);
+  opacity: 0.7;
+  line-height: 1.6;
+  max-width: 610px;
+}
+
+.footer_copyright {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-400);
+  color: var(--color-text-light);
+  opacity: 0.4;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .footer .c_section {
+    padding: var(--space-4xl) 0;
+  }
+
+  .footer .subText {
+    font-size: var(--font-size-lg);
+  }
+
+  .footer_text {
+    font-size: var(--font-size-2xs);
+    max-width: 100%;
+    padding: 0 var(--inner-space);
+  }
+
+  .footer_copyright {
+    font-size: var(--font-size-2xs);
+    padding: 0 var(--inner-space);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .c_section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .footer .subText {
+    font-size: var(--font-size-base);
+  }
+
+  .footer .sectionTitle {
+    font-size: var(--font-size-3xl);
+  }
+}

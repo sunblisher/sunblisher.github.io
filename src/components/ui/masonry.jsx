@@ -114,7 +114,7 @@ const Masonry = ({ items, onSelect }) => {
         <div
           key={item.id}
           className="item-wrapper"
-          onClick={() => onSelect(item)} // ✅ 클릭 시 Home으로 전달
+          onClick={() => onSelect(item)}
           style={{
             left: `${item.x}px`,
             top: `${item.y}px`,
@@ -125,7 +125,7 @@ const Masonry = ({ items, onSelect }) => {
           <div
             className="item-img"
             style={{
-              backgroundImage: `url(${item.img})`,
+              backgroundImage: `url(${item.mainImg})`,
             }}
           />
         </div>
