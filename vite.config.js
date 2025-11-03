@@ -10,19 +10,19 @@ function copyAssetsImages() {
     closeBundle() {
       const srcDir = join(process.cwd(), "src", "assets", "images");
       const distDir = join(process.cwd(), "dist", "src", "assets", "images");
-      
+
       if (!existsSync(srcDir)) return;
-      
+
       function copyRecursive(src, dest) {
         if (!existsSync(dest)) {
           mkdirSync(dest, { recursive: true });
         }
-        
+
         const entries = readdirSync(src);
         for (const entry of entries) {
           const srcPath = join(src, entry);
           const destPath = join(dest, entry);
-          
+
           if (statSync(srcPath).isDirectory()) {
             copyRecursive(srcPath, destPath);
           } else {
@@ -30,7 +30,7 @@ function copyAssetsImages() {
           }
         }
       }
-      
+
       copyRecursive(srcDir, distDir);
       console.log("✅ Assets images copied to dist/src/assets/images");
     },
@@ -40,4 +40,5 @@ function copyAssetsImages() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), copyAssetsImages()],
+  base: "/",
 });
