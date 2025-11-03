@@ -517,7 +517,7 @@ function Home() {
             <h1 className="heroTitle">Sunrise</h1>
             <p className="subText">
               세상을 밝게 비춰주는 일출처럼 <sapn className="block"></sapn>
-              프로덕트에 생기를 주고싶은 디자이너 권효선입니다.
+              프로덕트에 생기를 불어넣는 디자이너 권효선입니다.
             </p>
           </div>
         </div>
