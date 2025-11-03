@@ -1,18 +1,16 @@
-import "../style/pages/home.css";
-import { useEffect, useState, useRef } from "react"; // ✅ useState, useRef 추가
-import Modal from "../components/modal/modal"; // ✅ Modal 추가
+import "/src/style/pages/home.css";
+import { useEffect, useState, useRef } from "react";
+import Modal from "../components/modal/modal";
 
 function Home() {
-  // ✅ 모달 상태 추가
   const [selectedItem, setSelectedItem] = useState(null);
-  // ✅ 탭 상태 추가
+
   const [activeTab, setActiveTab] = useState("company");
-  // ✅ 탭 참조 추가
+
   const tabRefs = useRef({});
   const projectSectionRef = useRef(null);
   const [sliderStyle, setSliderStyle] = useState({});
 
-  // ✅ 슬라이더 위치 업데이트 useEffect
   useEffect(() => {
     const updateSliderPosition = () => {
       const activeTabElement = tabRefs.current[activeTab];
@@ -25,18 +23,14 @@ function Home() {
       }
     };
 
-    // 초기 위치 설정
     updateSliderPosition();
 
-    // 윈도우 리사이즈 시에도 업데이트
     window.addEventListener("resize", updateSliderPosition);
     return () => window.removeEventListener("resize", updateSliderPosition);
   }, [activeTab]);
 
-  // ✅ 탭 변경 시 프로젝트 섹션으로 스크롤 (초기 로드 제외)
   const prevActiveTabRef = useRef(activeTab);
   useEffect(() => {
-    // activeTab이 실제로 변경되었을 때만 스크롤
     if (prevActiveTabRef.current !== activeTab && projectSectionRef.current) {
       projectSectionRef.current.scrollIntoView({
         behavior: "smooth",
@@ -46,11 +40,9 @@ function Home() {
     }
   }, [activeTab]);
 
-  // ✅ fade-in 애니메이션 useEffect 추가
   useEffect(() => {
-    // Skill 섹션 카드들
     const skillCards = document.querySelectorAll(".skill .cardList .card_item");
-    // Project 섹션 카드들
+
     const projectCards = document.querySelectorAll(
       ".project_grid .project_card"
     );
@@ -60,27 +52,25 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
-            observer.unobserve(entry.target); // 한 번만 실행
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.2 } // 화면의 20% 진입 시 트리거
+      { threshold: 0.15 }
     );
 
-    // Skill 카드들 순차적으로 나타나도록 delay 설정
     skillCards.forEach((card, index) => {
       card.style.transitionDelay = `${index * 0.15}s`;
       observer.observe(card);
     });
 
-    // Project 카드들 순차적으로 나타나도록 delay 설정
     projectCards.forEach((card, index) => {
       card.style.transitionDelay = `${index * 0.1}s`;
       observer.observe(card);
     });
 
     return () => observer.disconnect();
-  }, [activeTab]); // activeTab 변경 시 재실행 (프로젝트 필터링 시)
+  }, [activeTab]);
 
   const items = [
     {
@@ -516,7 +506,7 @@ function Home() {
           <div className="textWrap">
             <h1 className="heroTitle">Sunrise</h1>
             <p className="subText">
-              세상을 밝게 비춰주는 일출처럼 <sapn className="block"></sapn>
+              세상을 밝게 비춰주는 일출처럼 <span className="block"></span>
               프로덕트에 생기를 불어넣는 디자이너 권효선입니다.
             </p>
           </div>
@@ -526,7 +516,13 @@ function Home() {
         <div className="c_inner">
           <div className="left">
             <h2 className="sectionTitle">Skill</h2>
-            <p className="subText">실무에서 사용하고 있는 기술스택입니다.</p>
+            <p className="subText">
+              <span className="block">
+                실무에서 사용하고 있는 기술스택입니다.
+              </span>
+              최근 AI 도구를 적극 활용해 라이브러리나 리액트를 학습하고, 이미지
+              제작을 실무에 적용하고 있습니다.
+            </p>
           </div>
           <div className="right">
             <div className="cardList">
@@ -670,7 +666,6 @@ function Home() {
             <div className="project_grid">
               {items
                 .filter((item) => {
-                  // projectType 필드가 있으면 그걸 사용, 없으면 기본값으로 회사 프로젝트
                   const itemType = item.projectType || "company";
                   return itemType === activeTab;
                 })

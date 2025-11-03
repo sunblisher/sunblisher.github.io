@@ -12,7 +12,7 @@
 .modal_content {
   max-width: 1140px;
   width: 100%;
-  
+  /* margin: calc(4.8rem + var(--space-3xl)) auto; */
   margin: 0 auto;
 }
 
@@ -133,7 +133,7 @@
   width: calc((100% / 4) - 2rem);
 }
 
-
+/* 반응형 스타일 */
 @media (max-width: 1024px) {
   .modal_info {
     flex-direction: column;
@@ -201,7 +201,7 @@
   }
 
   .modal_images .img_wrap {
-    
+    /* flex: 1 1 100%; */
     max-width: 100%;
   }
 
@@ -248,11 +248,11 @@
 
 .modal_overlay::-webkit-scrollbar,
 .modal_content::-webkit-scrollbar {
-  display: none; 
+  display: none; /* Chrome, Safari */
 }
 
 .modal_overlay,
 .modal_content {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
 }

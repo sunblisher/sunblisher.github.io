@@ -93,6 +93,8 @@
 }
 .left {
   z-index: 100;
+  min-width: 46rem;
+  max-width: 46rem;
 }
 @media (max-width: 1280px) {
   .left {
@@ -100,12 +102,13 @@
     padding: 0 2rem;
     margin-left: -2rem;
     margin-right: -2rem;
+    min-width: 0;
+    max-width: 100%;
   }
 }
 .skill .left {
   position: sticky;
   top: var(--header-height);
-  min-width: 46rem;
   height: fit-content;
   padding-bottom: var(--space-xl);
 }
@@ -146,8 +149,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit; /* 부모 radius 상속 */
-  padding: 1px; /* 보더 두께 */
+  border-radius: inherit;
+  padding: 1px;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.02),
@@ -156,8 +159,8 @@
     rgba(235, 235, 235, 0.2)
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; /* Safari/Chrome */
-  mask-composite: exclude; /* 최신 문법 */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   z-index: -1;
 }
 
@@ -192,12 +195,9 @@
   font-weight: var(--font-weight-400);
 }
 
-/* Project Section */
-
 .project .left {
   position: sticky;
   top: var(--header-height);
-  min-width: 46rem;
   height: fit-content;
 }
 
@@ -321,7 +321,8 @@
 .project_card_year {
   font-size: var(--font-size-2xs);
   color: rgba(255, 255, 255, 0.5);
-  padding: var(--space-4xs) var(--space-2xs);
+  padding: 0 var(--space-2xs);
+  line-height: 2.6rem;
   border-radius: var(--radius-8);
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -351,18 +352,10 @@
   border-radius: var(--radius-8);
 }
 
-/* 반응형 스타일 */
-@media (max-width: 1440px) {
-  .skill .left,
-  .project .left {
-    min-width: 36rem;
-  }
-}
 @media (max-width: 1280px) {
   .skill .left,
   .project .left {
     position: static;
-    min-width: 0;
   }
 }
 

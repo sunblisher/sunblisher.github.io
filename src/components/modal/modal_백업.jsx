@@ -2,20 +2,23 @@ import React, { useEffect } from "react";
 import "../../style/components/modal.css";
 
 const Modal = ({ item, onClose }) => {
-  
+  // ✅ item이 있을 때만 useEffect 실행
   useEffect(() => {
-    if (!item) return; 
+    if (!item) return; // 모달이 열리지 않았으면 아무것도 안 함
 
+    // ✅ body 스크롤 막기
     document.body.style.overflow = "hidden";
 
     return () => {
-      
+      // ✅ 모달 닫힐 때 스크롤 다시 활성화
       document.body.style.overflow = "auto";
     };
-  }, [item]); 
+  }, [item]); // item이 바뀔 때만 실행
 
+  // ✅ 모달 열리지 않았으면 렌더하지 않음
   if (!item) return null;
 
+  // ✅ 닫기 버튼 클릭 시 스크롤 즉시 복원
   const handleClose = () => {
     document.body.style.overflow = "auto";
     onClose?.();

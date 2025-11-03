@@ -1,8 +1,12 @@
-
+/* =========================================
+   디자인 토큰 (Design Tokens)
+   - 순수 값만 정의 (컬러, 폰트, spacing, shadow 등)
+   - CSS 변수로 관리하여 일관성 유지
+   ======================================== */
 
 :root {
-  
-  
+  /* ===== 컬러 토큰 ===== */
+  /* Primary Colors */
   --color-primary-50: #eaecf5;
   --color-primary-100: #c9cee7;
   --color-primary-200: #a6afd6;
@@ -14,7 +18,7 @@
   --color-primary-800: #3a418a;
   --color-primary-900: #2e3074;
 
-  
+  /* Secondary Colors */
   --color-secondary-50: #f8fafc;
   --color-secondary-100: #f1f5f9;
   --color-secondary-200: #e2e8f0;
@@ -26,7 +30,7 @@
   --color-secondary-800: #1e293b;
   --color-secondary-900: #0f172a;
 
-  
+  /* Accent Colors */
   --color-accent-50: #fef2f2;
   --color-accent-100: #fee2e2;
   --color-accent-200: #fecaca;
@@ -38,7 +42,7 @@
   --color-accent-800: #991b1b;
   --color-accent-900: #7f1d1d;
 
-  
+  /* Neutral Colors */
   --color-white: #ffffff;
   --color-black: #000000;
   --color-gray-50: #f9fafb;
@@ -52,13 +56,13 @@
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
 
-  
+  /* Semantic Colors */
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
   --color-prograss: #3b82f6;
 
-  
+  /* Font Sizes */
   --font-size-4xs: 1rem;
   --font-size-3xs: 1.2rem;
   --font-size-2xs: 1.3rem;
@@ -76,7 +80,7 @@
   --font-size-8xl: 6rem;
   --font-size-9xl: 6.4rem;
 
-  
+  /* Font Weights */
   --font-weight-100: 100;
   --font-weight-300: 300;
   --font-weight-400: 400;
@@ -86,15 +90,15 @@
   --font-weight-800: 800;
   --font-weight-900: 900;
 
-  
-  
-  
-  
-  
-  
-  
+  /* Letter Spacing */
+  /* --letter-spacing-tighter: -0.05em; */
+  /* --letter-spacing-tight: -0.025em; */
+  /* --letter-spacing-normal: 0em; */
+  /* --letter-spacing-wide: 0.025em; */
+  /* --letter-spacing-wider: 0.05em; */
+  /* --letter-spacing-widest: 0.1em; */
 
-  
+  /* ===== Space 토큰 ===== */
   --space-4xs: 0.2rem;
   --space-3xs: 0.4rem;
   --space-2xs: 0.8rem;
@@ -110,7 +114,7 @@
   --space-6xl: 8rem;
   --space-7xl: 10rem;
 
-  
+  /* ===== Border Radius 토큰 ===== */
   --radius-none: 0;
   --radius-2: 0.2rem;
   --radius-4: 0.4rem;
@@ -122,7 +126,7 @@
   --radius-32: 3.2rem;
   --radius-full: 9999px;
 
-  
+  /* ===== Shadow 토큰 ===== */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -133,7 +137,7 @@
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 
-  
+  /* ===== Z-Index 토큰 ===== */
   --z-index-dropdown: 1000;
   --z-index-sticky: 1020;
   --z-index-fixed: 1030;
@@ -142,12 +146,12 @@
   --z-index-popover: 1060;
   --z-index-tooltip: 1070;
 
-  
+  /* ===== Transition 토큰 ===== */
   --transition-fast: 150ms ease-in-out;
   --transition-base: 250ms ease-in-out;
   --transition-slow: 350ms ease-in-out;
 
-  
+  /* ===== Breakpoint 토큰 ===== */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;

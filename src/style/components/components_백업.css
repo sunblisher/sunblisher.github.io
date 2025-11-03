@@ -1,6 +1,10 @@
+/* =========================================
+   Component Styles
+   - 버튼, 인풋, 카드 등 재사용 가능한 컴포넌트 스타일
+   - tokens.css의 변수들을 활용한 일관된 디자인
+   ======================================== */
 
-
-
+/* ===== 버튼 컴포넌트 ===== */
 
 .btn {
   display: inline-flex;
@@ -31,7 +35,7 @@
   pointer-events: none;
 }
 
-
+/* 버튼 크기 */
 .btn-sm {
   padding: var(--space-3xs) var(--space-xs);
   font-size: var(--font-size-3xs);
@@ -55,7 +59,7 @@
   border-radius: var(--radius-8);
 }
 
-
+/* 버튼 스타일 */
 .btn-primary {
   background-color: var(--color-primary-600);
   color: var(--color-white);
@@ -110,7 +114,7 @@
   border-color: var(--color-accent-700);
 }
 
-
+/* ===== 인풋 컴포넌트 ===== */
 
 .input {
   display: block;
@@ -150,7 +154,7 @@
   box-shadow: 0 0 0 3px rgb(var(--color-error) / 0.1);
 }
 
-
+/* 인풋 크기 */
 .input-sm {
   padding: var(--space-3xs) var(--space-2xs);
   font-size: var(--font-size-3xs);
@@ -163,7 +167,7 @@
   border-radius: var(--radius-8);
 }
 
-
+/* ===== 카드 컴포넌트 ===== */
 
 .card {
   background-color: var(--color-background);
@@ -206,7 +210,7 @@
   background-color: var(--color-muted);
 }
 
-
+/* ===== 배지 컴포넌트 ===== */
 
 .badge {
   display: inline-flex;
@@ -243,7 +247,7 @@
   color: var(--color-error);
 }
 
-
+/* ===== 알림 컴포넌트 ===== */
 
 .alert {
   padding: var(--space-sm);
@@ -276,7 +280,7 @@
   color: var(--color-error);
 }
 
-
+/* ===== 모달 컴포넌트 ===== */
 
 .modal-overlay {
   position: fixed;
@@ -342,7 +346,7 @@
   justify-content: flex-end;
 }
 
-
+/* ===== 드롭다운 컴포넌트 ===== */
 
 .dropdown {
   position: relative;
@@ -401,7 +405,7 @@
   background-color: var(--color-muted);
 }
 
-
+/* ===== 로딩 스피너 ===== */
 
 .spinner {
   display: inline-block;
@@ -434,7 +438,7 @@
   }
 }
 
-
+/* ===== 아바타 컴포넌트 ===== */
 
 .avatar {
   display: inline-flex;
@@ -474,7 +478,7 @@
   object-fit: cover;
 }
 
-
+/* ===== 구분선 컴포넌트 ===== */
 
 .divider {
   height: 1px;
@@ -491,7 +495,7 @@
   margin: 0 var(--space-sm);
 }
 
-
+/* ===== 툴팁 컴포넌트 ===== */
 
 .tooltip {
   position: relative;

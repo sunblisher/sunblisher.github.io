@@ -7,9 +7,9 @@
 .footer .c_inner {
   display: flex;
   flex-direction: column;
-  
+  /* align-items: center; */
   gap: var(--space-lg);
-  
+  /* text-align: center; */
 }
 .footer .sectionTitle {
   margin-top: unset;
@@ -47,7 +47,7 @@
 .footer_info_value {
   font-size: var(--font-size-md);
   color: var(--color-text-lighter);
-  
+  /* font-weight: var(--font-weight-400); */
 }
 
 .footer_text {
@@ -75,7 +75,7 @@
   }
 }
 
-
+/* 반응형 스타일 */
 @media (max-width: 768px) {
   .footer .c_section {
     padding: var(--space-4xl) 0;
