@@ -1,28 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 44 44" style="enable-background:new 0 0 44 44;" xml:space="preserve">
-<style type="text/css">
-	.st0{clip-path:url(#SVGID_00000052816432294545138160000009208567623547041681_);}
-	.st1{fill:#E44D26;}
-	.st2{fill:#F16529;}
-	.st3{fill:#EBEBEB;}
-	.st4{fill:#FFFFFF;}
-</style>
-<g>
-	<defs>
-		<rect id="SVGID_1_" x="6.5" y="0.1" width="31.1" height="43.8"/>
-	</defs>
-	<clipPath id="SVGID_00000174570743399579754870000014447307630915766706_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-	<g style="clip-path:url(#SVGID_00000174570743399579754870000014447307630915766706_);">
-		<path d="M9.4,0.1h2v1.9h1.8V0.1h2V6h-2v-2h-1.8v2h-2 M17.7,2.1H16v-2h5.4v2h-1.7V6h-2 M22.3,0.1h2.1l1.3,2.1l1.3-2.1h2.1V6h-2V3.1
-			l-1.4,2.1l-1.4-2.1V6h-1.9 M29.9,0.1h2v3.9h2.8V6h-4.8"/>
-		<path class="st1" d="M9.3,40.4L6.5,8.7h31l-2.8,31.6L22,43.9"/>
-		<path class="st2" d="M22,41.2V11.3h12.7l-2.4,27"/>
-		<path class="st3" d="M12.3,15.2H22v3.9h-5.5l0.4,4H22v3.9h-8.7 M13.5,28.9h3.9l0.3,3.1l4.3,1.2v4.1L14,35"/>
-		<path class="st4" d="M31.7,15.2H22v3.9h9.4 M31,23h-9v3.9h4.8l-0.5,5L22,33.1v4l7.9-2.2"/>
-	</g>
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_84_2163" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="5" width="29" height="40">
+<path d="M39.4018 5H11V45H39.4018V5Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_84_2163)">
+<path d="M13.6484 5H15.4749V6.73516H17.1188V5H18.9452V10.3881H17.1188V8.56164H15.4749V10.3881H13.6484M21.2283 6.82648H19.6758V5H24.6073V6.82648H23.0548V10.3881H21.2283M25.4293 5H27.3471L28.5343 6.91781L29.7215 5H31.6393V10.3881H29.8128V7.73973L28.5343 9.65753L27.2557 7.73973V10.3881H25.5206M32.3699 5H34.1964V8.56164H36.7535V10.3881H32.3699" fill="black"/>
+<path d="M13.5571 41.8038L11 12.854H39.3105L36.7534 41.7124L25.1552 45.0001" fill="#E44D26"/>
+<path d="M25.1553 42.534V15.228H36.7534L34.5617 39.8856" fill="#F16529"/>
+<path d="M16.2969 18.79H25.1553V22.3517H20.1325L20.4978 26.0047H25.1553V29.5663H17.2101M17.3928 31.3015H20.9544L21.2284 34.1325L25.1553 35.2284V38.9727L17.8494 36.8722" fill="#EBEBEB"/>
+<path d="M34.0137 18.79H25.1553V22.3517H33.7397M33.3745 25.9133H25.1553V29.475H29.5388L29.0822 34.0412L25.1553 35.1371V38.79L32.3699 36.7809" fill="white"/>
 </g>
 </svg>

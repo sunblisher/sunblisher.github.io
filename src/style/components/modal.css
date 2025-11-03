@@ -4,14 +4,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1c1c1c;
+  background: #252525;
   z-index: 999;
-  /* backdrop-filter: blur(8px); */
   overflow-y: auto;
 }
 
 .modal_content {
-  max-width: 1100px;
+  max-width: 1140px;
   width: 100%;
   /* margin: calc(4.8rem + var(--space-3xl)) auto; */
   margin: 0 auto;
@@ -22,16 +21,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: clamp(4rem, 2vw + 3rem, 4.8rem);
+  height: 5.2rem;
   padding: var(--space-2xs);
-  background-color: var(--color-base-darker);
+  background-color: #515ead;
   border: none;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-500);
   cursor: pointer;
   color: var(--text-color-white);
+  z-index: 999;
 }
 .modal_close:hover {
-  opacity: 0.8;
+  backdrop-filter: blur(16px);
+  background-color: rgba(81, 93, 173, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 .modal_image img {
   width: 100%;
@@ -44,6 +47,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100svh;
+  padding: 0 var(--inner-space);
 }
 .info_text {
   width: 40rem;
@@ -105,7 +109,12 @@
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-8);
-  /* font-weight: var(--font-weight-400); */
+}
+.modal_btn img {
+  transition: 0.2s;
+}
+.modal_btn:hover img {
+  transform: translateX(4px);
 }
 
 .modal_thumnail {
@@ -117,6 +126,7 @@
   flex-wrap: wrap;
   gap: var(--space-md);
   row-gap: 12rem;
+  padding: 0 var(--inner-space);
 }
 
 .modal_images .img_wrap.app {
@@ -135,11 +145,13 @@
   .info_text {
     width: 100%;
     margin-bottom: var(--space-4xl);
+    order: 2;
   }
 
   .modal_thumnail {
     max-width: 100%;
     width: 100%;
+    order: 1;
   }
 
   .modal_thumnail img {
@@ -149,10 +161,6 @@
 
   .modal_images {
     padding: 0 var(--inner-space);
-  }
-
-  .modal_images .img_wrap.app {
-    width: calc(50% - 1rem);
   }
 }
 
@@ -193,7 +201,7 @@
   }
 
   .modal_images .img_wrap {
-    flex: 1 1 100%;
+    /* flex: 1 1 100%; */
     max-width: 100%;
   }
 
@@ -201,9 +209,8 @@
   .modal_images .img_wrap.desktop:nth-of-type(even) {
     width: 100%;
   }
-
   .modal_images .img_wrap.app {
-    width: 100%;
+    width: calc(50% - 1rem);
   }
 }
 
@@ -214,11 +221,6 @@
 
   .info_text {
     gap: var(--space-md);
-  }
-
-  .modal_btn {
-    width: 100%;
-    justify-content: space-between;
   }
 }
 

@@ -16,16 +16,32 @@ function Header() {
     };
     window.addEventListener("scroll", handleScroll);
 
+    const handleMenuClick = (index, e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // 섹션을 다시 찾아서 최신 상태로 가져옴
+      const allSections = document.querySelectorAll(".c_section");
+      const targetSection = allSections[index];
+      if (targetSection) {
+        // 헤더 높이 가져오기
+        const header = document.querySelector(".header");
+        const headerHeight = header ? header.offsetHeight : 80;
+        
+        // 헤더 높이를 고려한 스크롤 위치 계산
+        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    const clickHandlers = [];
     menuItems.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        const targetSection = sections[index];
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      });
+      const handler = (e) => handleMenuClick(index, e);
+      item.addEventListener("click", handler);
+      clickHandlers.push({ item, handler });
     });
 
     const sectionMap = {
@@ -101,6 +117,10 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("scroll", updateActiveSection);
       observer.disconnect();
+      // 이벤트 리스너 정리
+      clickHandlers.forEach(({ item, handler }) => {
+        item.removeEventListener("click", handler);
+      });
     };
   }, []);
 

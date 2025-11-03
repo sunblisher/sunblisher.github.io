@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <section className="c_section contact">
         <div className="c_inner">
-          <h2 className="sectionTitle">Contact</h2>
+          {/* <h2 className="sectionTitle">Contact</h2> */}
           <p className="subText">sunblisher@gmail.com</p>
           <p className="footer_text">
             본 사이트는 개인 포트폴리오 사이트입니다. 본 사이트에 게시된 모든

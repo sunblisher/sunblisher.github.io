@@ -64,7 +64,7 @@
 
   /* ===== dark theme ===== */
   /* ===== Brand primary ===== */
-  --color-primary: var(--color-primary-900);
+  --color-primary: var(--color-primary-500);
   --color-primary-hover: var(--color-primary-400);
   --color-primary-focus: var(--color-primary-600);
 

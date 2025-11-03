@@ -1,28 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
-<style type="text/css">
-	.st0{clip-path:url(#SVGID_00000092428257467757470920000011013805718406907830_);}
-	.st1{fill:#0ACF83;}
-	.st2{fill:#A259FF;}
-	.st3{fill:#F24E1E;}
-	.st4{fill:#FF7262;}
-	.st5{fill:#1ABCFE;}
-</style>
-<g>
-	<defs>
-		<rect id="SVGID_1_" x="6.3" y="0.5" width="23.3" height="35"/>
-	</defs>
-	<clipPath id="SVGID_00000142890864770628989480000007581594387207840666_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-	<g style="clip-path:url(#SVGID_00000142890864770628989480000007581594387207840666_);">
-		<path class="st1" d="M12.2,35.5c3.2,0,5.8-2.6,5.8-5.8v-5.8h-5.8c-3.2,0-5.8,2.6-5.8,5.8S8.9,35.5,12.2,35.5z"/>
-		<path class="st2" d="M6.3,18c0-3.2,2.6-5.8,5.8-5.8H18v11.7h-5.8C8.9,23.8,6.3,21.2,6.3,18z"/>
-		<path class="st3" d="M6.3,6.3c0-3.2,2.6-5.8,5.8-5.8H18v11.7h-5.8C8.9,12.2,6.3,9.6,6.3,6.3z"/>
-		<path class="st4" d="M18,0.5h5.8c3.2,0,5.8,2.6,5.8,5.8s-2.6,5.8-5.8,5.8H18V0.5z"/>
-		<path class="st5" d="M29.7,18c0,3.2-2.6,5.8-5.8,5.8S18,21.2,18,18s2.6-5.8,5.8-5.8S29.7,14.8,29.7,18z"/>
-	</g>
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_84_2213" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="9" width="21" height="32">
+<path d="M35 9H14V41H35V9Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_84_2213)">
+<path d="M19.3173 40.9998C22.2014 40.9998 24.5448 38.6226 24.5448 35.6969V30.394H19.3173C16.4332 30.394 14.0898 32.7712 14.0898 35.6969C14.0898 38.6226 16.3431 40.9998 19.3173 40.9998Z" fill="#0ACF83"/>
+<path d="M14 25.0001C14 22.0744 16.3433 19.6973 19.2275 19.6973H24.5451V30.3944H19.3176C16.3433 30.303 14 27.9258 14 25.0001Z" fill="#A259FF"/>
+<path d="M14 14.3029C14 11.3771 16.3433 9 19.2275 9H24.5451V19.6971H19.3176C16.3433 19.6971 14 17.32 14 14.3029Z" fill="#F24E1E"/>
+<path d="M24.5459 9H29.7734C32.6575 9 35.0008 11.3771 35.0008 14.3029C35.0008 17.2286 32.6575 19.6057 29.7734 19.6057H24.5459V9Z" fill="#FF7262"/>
+<path d="M35.091 25.0001C35.091 27.9258 32.7476 30.303 29.8635 30.303C26.9794 30.303 24.5459 27.9258 24.5459 25.0001C24.5459 22.0744 26.8892 19.6973 29.7734 19.6973C32.6575 19.6973 35.091 22.0744 35.091 25.0001Z" fill="#1ABCFE"/>
 </g>
 </svg>

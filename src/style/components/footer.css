@@ -1,5 +1,5 @@
 .footer {
-  background-color: #191e3f;
+  background-color: #1a1a1a;
 }
 .footer .c_section {
   padding: var(--space-5xl) 0;
@@ -10,6 +10,9 @@
   align-items: center;
   gap: var(--space-lg);
   text-align: center;
+}
+.footer .sectionTitle {
+  margin-top: unset;
 }
 .footer .subText {
   margin-top: unset;

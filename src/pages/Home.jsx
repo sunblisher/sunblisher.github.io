@@ -9,6 +9,7 @@ function Home() {
   const [activeTab, setActiveTab] = useState("company");
   // ✅ 탭 참조 추가
   const tabRefs = useRef({});
+  const projectSectionRef = useRef(null);
   const [sliderStyle, setSliderStyle] = useState({});
 
   // ✅ 슬라이더 위치 업데이트 useEffect
@@ -30,6 +31,19 @@ function Home() {
     // 윈도우 리사이즈 시에도 업데이트
     window.addEventListener("resize", updateSliderPosition);
     return () => window.removeEventListener("resize", updateSliderPosition);
+  }, [activeTab]);
+
+  // ✅ 탭 변경 시 프로젝트 섹션으로 스크롤 (초기 로드 제외)
+  const prevActiveTabRef = useRef(activeTab);
+  useEffect(() => {
+    // activeTab이 실제로 변경되었을 때만 스크롤
+    if (prevActiveTabRef.current !== activeTab && projectSectionRef.current) {
+      projectSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      prevActiveTabRef.current = activeTab;
+    }
   }, [activeTab]);
 
   // ✅ fade-in 애니메이션 useEffect 추가
@@ -129,39 +143,6 @@ function Home() {
     },
     {
       id: "3",
-      title: "온기 관리자페이지",
-      desc: "4가지 케이스의 사용자 구분으로 관리자 ~ 사용자 페이지까지 작업한 프로젝트",
-      period: "2025.09",
-      tags: ["출시 전", "일부 반응형", "디자인 100%", "화면설계 50%"],
-      tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/ongiAdmin_main.jpg",
-      thumbnail: "/src/assets/images/home/ongiAdmin_thumbnail.png",
-      imgs: [
-        { src: "/src/assets/images/home/ongiAdmin_01.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_02.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_03.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_04.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_05.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_06.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_07.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_08.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_09.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_10.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_11.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_12.jpg", type: "desktop" },
-        { src: "/src/assets/images/home/ongiAdmin_13.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_14.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_15.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_16.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_17.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_18.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_19.jpg", type: "wide" },
-        { src: "/src/assets/images/home/ongiAdmin_20.jpg", type: "wide" },
-      ],
-      height: 800,
-    },
-    {
-      id: "4",
       title: "데버 Careers",
       desc: "기업 비전과 문화를 담은 채용/영입 전용 사이트",
       period: "2025.12",
@@ -197,7 +178,7 @@ function Home() {
       height: 900,
     },
     {
-      id: "5",
+      id: "4",
       title: "데버 Gift",
       desc: "대량 발송부터 취소, 환불까지 한 번에 관리 가능한 통합형 기프티콘 구매 사이트",
       period: "2025.07 - 2025.08",
@@ -233,6 +214,24 @@ function Home() {
       ],
       link: "https://gift.dever.team/#price-range-recommendation",
       height: 1000,
+    },
+    {
+      id: "5",
+      title: "헤이홀더 커뮤니티 사이트",
+      desc: "주주가 쉽고 빠르게 의결권을 행사하고 기업 가치 제고에 참여할 수 있도록 돕는 플랫폼입니다.",
+      period: "2025.07",
+      tags: ["출시 전", "리디자인", "PC 최적화", "디자인 40%"],
+      tools: ["photoshop", "illustrator", "figma"],
+      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
+      thumbnail: "/src/assets/images/home/heyholder_thumbnail.png",
+      imgs: [
+        { src: "/src/assets/images/home/heyholder_01.jpg", type: "wide" },
+        { src: "/src/assets/images/home/heyholder_02.jpg", type: "wide" },
+        { src: "/src/assets/images/home/heyholder_03.jpg", type: "wide" },
+        { src: "/src/assets/images/home/heyholder_04.jpg", type: "wide" },
+        { src: "/src/assets/images/home/heyholder_05.jpg", type: "wide" },
+      ],
+      height: 800,
     },
     {
       id: "6",
@@ -310,19 +309,34 @@ function Home() {
     },
     {
       id: "9",
-      title: "헤이홀더 커뮤니티 사이트",
-      desc: "주주가 쉽고 빠르게 의결권을 행사하고 기업 가치 제고에 참여할 수 있도록 돕는 플랫폼입니다.",
-      period: "2025.07",
-      tags: ["출시 전", "리디자인", "PC 최적화", "디자인 40%"],
+      title: "온기 관리자페이지",
+      desc: "4가지 케이스의 사용자 구분으로 관리자 ~ 사용자 페이지까지 작업한 프로젝트",
+      period: "2025.09",
+      tags: ["출시 전", "일부 반응형", "디자인 100%", "화면설계 50%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
-      thumbnail: "/src/assets/images/home/heyholder_thumbnail.png",
+      mainImg: "/src/assets/images/home/ongiAdmin_main.jpg",
+      thumbnail: "/src/assets/images/home/ongiAdmin_thumbnail.png",
       imgs: [
-        { src: "/src/assets/images/home/heyholder_01.jpg", type: "wide" },
-        { src: "/src/assets/images/home/heyholder_02.jpg", type: "wide" },
-        { src: "/src/assets/images/home/heyholder_03.jpg", type: "wide" },
-        { src: "/src/assets/images/home/heyholder_04.jpg", type: "wide" },
-        { src: "/src/assets/images/home/heyholder_05.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_01.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_02.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_03.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_04.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_05.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_06.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_07.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_08.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_09.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_10.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_11.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_12.jpg", type: "desktop" },
+        { src: "/src/assets/images/home/ongiAdmin_13.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_14.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_15.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_16.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_17.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_18.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_19.jpg", type: "wide" },
+        { src: "/src/assets/images/home/ongiAdmin_20.jpg", type: "wide" },
       ],
       height: 800,
     },
@@ -401,15 +415,15 @@ function Home() {
     },
     {
       id: "14",
-      title: "JNSONS KOREA",
-      desc: "미용 관련 소품을 볼 수 있으며, 기업 정보를 확인할 수 있는 사이트",
-      period: "2024.07",
-      tags: ["반응형", "디자인 100%", "화면기획 90%", "퍼블리싱 100%"],
+      title: "2024 권효선 포트폴리오",
+      desc: "신입 퍼블리셔 권효선의 포트폴리오",
+      period: "2023.10 - 2023.11 ",
+      tags: ["반응형", "디자인 100%", "화면기획 100%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
       mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
-      thumbnail: "/src/assets/images/home/jnsonskorea_thumbnail.png",
-      link: "https://www.jnsonskorea.com/",
-      height: 500,
+      thumbnail: "/src/assets/images/home/2024portfolio_thumbnail.png",
+      link: "https://sunblisher.github.io/",
+      height: 900,
       projectType: "personal",
     },
     {
@@ -469,15 +483,15 @@ function Home() {
     },
     {
       id: "17",
-      title: "2024 권효선 포트폴리오",
-      desc: "신입 퍼블리셔 권효선의 포트폴리오",
-      period: "2023.10 - 2023.11 ",
-      tags: ["반응형", "디자인 100%", "화면기획 100%"],
+      title: "JNSONS KOREA",
+      desc: "미용 관련 소품을 볼 수 있으며, 기업 정보를 확인할 수 있는 사이트",
+      period: "2024.07",
+      tags: ["반응형", "디자인 100%", "화면기획 90%", "퍼블리싱 100%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
       mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
-      thumbnail: "/src/assets/images/home/2024portfolio_thumbnail.png",
-      link: "https://sunblisher.github.io/",
-      height: 900,
+      thumbnail: "/src/assets/images/home/jnsonskorea_thumbnail.png",
+      link: "https://www.jnsonskorea.com/",
+      height: 500,
       projectType: "personal",
     },
     {
@@ -512,9 +526,7 @@ function Home() {
         <div className="c_inner">
           <div className="left">
             <h2 className="sectionTitle">Skill</h2>
-            <p className="subText">
-              현재 프로젝트 투입 시 사용하고 있는 스킬 현황입니다.
-            </p>
+            <p className="subText">실무에서 사용하고 있는 기술스택입니다.</p>
           </div>
           <div className="right">
             <div className="cardList">
@@ -524,14 +536,14 @@ function Home() {
                     <img src="/src/assets/images/home/ps.svg" alt="포토샵" />
                   </div>
                   <p className="text">
-                    포토샵 작업 10년 경력이 있으며, 리터칭/합성 능숙하며 시안
-                    작업이 가능한 정도로 준수한 실력을 보유했습니다.
+                    제품 리터칭·색보정·합성 작업에 능숙합니다. 프로모션 배너,
+                    이벤트 페이지, 상세페이지 등 실무 중심의 웹 그래픽 제작
+                    경험을 다수 보유하고 있습니다.
                   </p>
                 </div>
                 <ul className="tagList">
-                  <li className="list_item">#누끼</li>
                   <li className="list_item">#리터칭</li>
-                  <li className="list_item">#AI활용</li>
+                  <li className="list_item">#웹그래픽제작</li>
                 </ul>
               </div>
               <div className="card_item">
@@ -540,14 +552,14 @@ function Home() {
                     <img src="/src/assets/images/home/ai.svg" alt="일러스트" />
                   </div>
                   <p className="text">
-                    일러스트 기반의 벡터 디자인 및 로고, 아이콘 제작에 능숙하며
-                    심볼/브랜딩 그래픽 작업 경험이 풍부합니다.
+                    벡터 기반의 로고, 아이콘 제작이 가능하며 브랜드 아이덴티티
+                    구축 경험이 있습니다.
                   </p>
                 </div>
                 <ul className="tagList">
                   <li className="list_item">#로고디자인</li>
                   <li className="list_item">#아이콘제작</li>
-                  <li className="list_item">#브랜딩</li>
+                  <li className="list_item">#벡터그래픽</li>
                 </ul>
               </div>
               <div className="card_item">
@@ -556,14 +568,16 @@ function Home() {
                     <img src="/src/assets/images/home/figma.svg" alt="피그마" />
                   </div>
                   <p className="text">
-                    디자인 시스템 구축 및 프로토타입 설계 경험이 있으며 협업
-                    환경(Figma)을 통한 커뮤니케이션 능력이 뛰어납니다.
+                    UI/UX 디자인 시 주력 툴로 사용하며, Component·Auto
+                    Layout·Prototype 설계 등 협업 기반 기능에 능숙합니다. 디자인
+                    시스템과 토큰 단위를 활용하여 일관된 UI 구조와 인터랙션
+                    플로우를 설계할 수 있습니다.
                   </p>
                 </div>
                 <ul className="tagList">
-                  <li className="list_item">#DesignSystem</li>
-                  <li className="list_item">#Component</li>
-                  <li className="list_item">#UIFlow</li>
+                  <li className="list_item">#컴포넌트</li>
+                  <li className="list_item">#오토 레이아웃</li>
+                  <li className="list_item">#디자인시스템</li>
                 </ul>
               </div>
               <div className="card_item">
@@ -572,14 +586,14 @@ function Home() {
                     <img src="/src/assets/images/home/html.svg" alt="HTML" />
                   </div>
                   <p className="text">
-                    시멘틱 마크업과 구조적인 HTML 설계에 능숙하며, 웹 표준과
-                    접근성을 고려한 반응형 레이아웃을 구현합니다.
+                    시멘틱 마크업을 기반으로 구조적인 HTML 설계가 가능하며, 웹
+                    표준·접근성·SEO를 고려한 반응형 페이지를 구축할 수 있습니다.
                   </p>
                 </div>
                 <ul className="tagList">
-                  <li className="list_item">#Semantic</li>
-                  <li className="list_item">#Responsive</li>
-                  <li className="list_item">#Accessibility</li>
+                  <li className="list_item">#시멘틱 마크업</li>
+                  <li className="list_item">#웹표준</li>
+                  <li className="list_item">#접근성</li>
                 </ul>
               </div>
               <div className="card_item">
@@ -588,14 +602,15 @@ function Home() {
                     <img src="/src/assets/images/home/css.svg" alt="CSS" />
                   </div>
                   <p className="text">
-                    CSS 변수 기반 토큰 시스템을 구축하며, 애니메이션과 트랜지션
-                    효과를 활용한 인터랙티브 UI 구현이 가능합니다.
+                    디자인 토큰 시스템을 구축하여 변수 기반의 스타일 관리 및
+                    유지보수가 용이한 구조를 구현할 수 있습니다. 애니메이션,
+                    상호작용을 활용해 직관적인 인터랙션 UI를 제공합니다.
                   </p>
                 </div>
                 <ul className="tagList">
-                  <li className="list_item">#Token</li>
-                  <li className="list_item">#Animation</li>
-                  <li className="list_item">#GridFlex</li>
+                  <li className="list_item">#디자인 토큰</li>
+                  <li className="list_item">#변수 활용</li>
+                  <li className="list_item">#반응형</li>
                 </ul>
               </div>
               <div className="card_item">
@@ -607,26 +622,27 @@ function Home() {
                     />
                   </div>
                   <p className="text">
-                    바닐라 JS를 통한 이벤트 핸들링, 스크롤 트리거, GSAP 활용
-                    애니메이션을 구현하며 React 기본 구조를 이해하고 있습니다.
+                    바닐라 JS를 활용하여 이벤트 핸들링·DOM 조작·조건 기반
+                    인터랙션을 구현할 수 있습니다. ScrollTrigger, Intersection
+                    Observer 등을 이용해 상호작용에 따른 애니메이션과 UI 동작을
+                    설계할 수 있습니다.
                   </p>
                 </div>
                 <ul className="tagList">
-                  <li className="list_item">#GSAP</li>
-                  <li className="list_item">#ScrollTrigger</li>
-                  <li className="list_item">#ReactBasic</li>
+                  <li className="list_item">#인터랙션 구현</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="c_section project">
+      <section ref={projectSectionRef} className="c_section project">
         <div className="c_inner">
           <div className="left">
             <h2 className="sectionTitle">Project</h2>
             <p className="subText">
-              퍼블리싱과 디자인 작업물을 구분하여 확인할 수 있습니다.
+              카테고리에 맞춰 작업물을 확인하실 수 있으며,
+              <span className="block">클릭 시 상세화면을 볼 수 있습니다.</span>
             </p>
             <div className="project_tabs">
               <div className="project_tab_slider" style={sliderStyle}></div>

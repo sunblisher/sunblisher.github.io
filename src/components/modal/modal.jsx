@@ -25,8 +25,8 @@ const Modal = ({ item, onClose }) => {
   };
 
   return (
-    <div className="modal_overlay" onClick={handleClose}>
-      <div className="modal_content" onClick={(e) => e.stopPropagation()}>
+    <div className="modal_overlay">
+      <div className="modal_content">
         <button className="modal_close" onClick={handleClose}>
           닫기
         </button>
