@@ -33,6 +33,14 @@ function copyAssetsImages() {
 
       copyRecursive(srcDir, distDir);
       console.log("✅ Assets images copied to dist/src/assets/images");
+
+      // 404.html도 dist에 복사 (GitHub Pages용)
+      const public404 = join(process.cwd(), "public", "404.html");
+      const dist404 = join(process.cwd(), "dist", "404.html");
+      if (existsSync(public404)) {
+        copyFileSync(public404, dist404);
+        console.log("✅ 404.html copied to dist");
+      }
     },
   };
 }
