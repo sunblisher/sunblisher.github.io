@@ -19,16 +19,18 @@ function Header() {
     const handleMenuClick = (index, e) => {
       e.preventDefault();
       e.stopPropagation();
-      
+
       const allSections = document.querySelectorAll(".c_section");
       const targetSection = allSections[index];
       if (targetSection) {
-        
         const header = document.querySelector(".header");
         const headerHeight = header ? header.offsetHeight : 80;
 
-        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-        
+        const targetPosition =
+          targetSection.getBoundingClientRect().top +
+          window.pageYOffset -
+          headerHeight;
+
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth",
@@ -71,7 +73,6 @@ function Header() {
             }
           }
         } else {
-          
           if (rect.top <= viewportHeight / 2 && rect.bottom > 0) {
             const distance = Math.abs(rect.top - 100);
             if (
@@ -113,7 +114,7 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("scroll", updateActiveSection);
       observer.disconnect();
-      
+
       clickHandlers.forEach(({ item, handler }) => {
         item.removeEventListener("click", handler);
       });
@@ -128,8 +129,11 @@ function Header() {
             <span>Home</span>
           </li>
           <li className="list_item">
-            <span>Skill</span>
+            <span>Profill</span>
           </li>
+          {/* <li className="list_item">
+            <span>Skill</span>
+          </li> */}
           <li className="list_item">
             <span>Project</span>
           </li>

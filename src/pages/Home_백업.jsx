@@ -49,7 +49,7 @@ function Home() {
   // ✅ fade-in 애니메이션 useEffect 추가
   useEffect(() => {
     // Skill 섹션 카드들
-    const skillCards = document.querySelectorAll(".skill .cardList .card_item");
+    const skillCards = document.querySelectorAll(".card_item");
     // Project 섹션 카드들
     const projectCards = document.querySelectorAll(
       ".project_grid .project_card"
@@ -659,7 +659,7 @@ function Home() {
                 }`}
                 onClick={() => setActiveTab("company")}
               >
-                디자인 작업
+                디자인
               </button>
               <button
                 ref={(el) => (tabRefs.current["personal"] = el)}
@@ -668,7 +668,7 @@ function Home() {
                 }`}
                 onClick={() => setActiveTab("personal")}
               >
-                퍼블리싱 작업
+                퍼블리싱
               </button>
             </div>
           </div>

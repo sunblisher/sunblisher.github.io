@@ -4,14 +4,13 @@ import "../../style/components/modal.css";
 const Modal = ({ item, onClose }) => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const overlayRef = useRef(null);
-  
+
   useEffect(() => {
-    if (!item) return; 
+    if (!item) return;
 
     document.body.style.overflow = "hidden";
 
     return () => {
-      
       document.body.style.overflow = "auto";
     };
   }, [item]);
@@ -26,14 +25,14 @@ const Modal = ({ item, onClose }) => {
 
     const overlay = overlayRef.current;
     overlay.addEventListener("scroll", handleScroll);
-    
+
     // 초기 체크
     handleScroll();
 
     return () => {
       overlay.removeEventListener("scroll", handleScroll);
     };
-  }, [item]); 
+  }, [item]);
 
   if (!item) return null;
 
@@ -103,7 +102,7 @@ const Modal = ({ item, onClose }) => {
               </ul>
             </div>
             <div className="info_wrap">
-              <h3 className="sub_title">사용 프로그램</h3>
+              <h3 className="sub_title">사용 스킬</h3>
               {item.tools && (
                 <ul className="modal_tools">
                   {item.tools.map((tool, i) => {
@@ -133,7 +132,10 @@ const Modal = ({ item, onClose }) => {
                 rel="noopener noreferrer"
                 onClick={(e) => {
                   // React Router(HashRouter)를 우회하여 직접 링크 이동
-                  if (item.link.startsWith("/src/publishing/") || item.link.startsWith("../")) {
+                  if (
+                    item.link.startsWith("/src/publishing/") ||
+                    item.link.startsWith("../")
+                  ) {
                     e.preventDefault();
                     // 새 창에서 열기
                     window.open(item.link, "_blank", "noopener,noreferrer");
@@ -152,13 +154,15 @@ const Modal = ({ item, onClose }) => {
             <img src={item.thumbnail} alt={item.title} />
           </div>
         </div>
-        <div className="modal_images">
-          {item.imgs?.map((image, i) => (
-            <div key={i} className={`img_wrap ${image.type || ""}`}>
-              <img src={image.src} alt={image.alt || item.title} />
-            </div>
-          ))}
-        </div>
+        {item.imgs && item.imgs.length > 0 && (
+          <div className="modal_images">
+            {item.imgs.map((image, i) => (
+              <div key={i} className={`img_wrap ${image.type || ""}`}>
+                <img src={image.src} alt={image.alt || item.title} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

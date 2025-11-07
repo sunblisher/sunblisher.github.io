@@ -127,6 +127,7 @@
   gap: var(--space-md);
   row-gap: 12rem;
   padding: 0 var(--inner-space);
+  padding-bottom: 10rem;
 }
 
 .modal_images .img_wrap.app {

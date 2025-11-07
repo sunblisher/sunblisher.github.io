@@ -5,7 +5,7 @@ import Modal from "../components/modal/modal";
 function Home() {
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const [activeTab, setActiveTab] = useState("company");
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const tabRefs = useRef({});
   const projectSectionRef = useRef(null);
@@ -13,7 +13,7 @@ function Home() {
 
   useEffect(() => {
     const updateSliderPosition = () => {
-      const activeTabElement = tabRefs.current[activeTab];
+      const activeTabElement = tabRefs.current[activeFilter];
       if (activeTabElement) {
         const { offsetLeft, offsetWidth } = activeTabElement;
         setSliderStyle({
@@ -27,18 +27,21 @@ function Home() {
 
     window.addEventListener("resize", updateSliderPosition);
     return () => window.removeEventListener("resize", updateSliderPosition);
-  }, [activeTab]);
+  }, [activeFilter]);
 
-  const prevActiveTabRef = useRef(activeTab);
+  const prevActiveFilterRef = useRef(activeFilter);
   useEffect(() => {
-    if (prevActiveTabRef.current !== activeTab && projectSectionRef.current) {
+    if (
+      prevActiveFilterRef.current !== activeFilter &&
+      projectSectionRef.current
+    ) {
       projectSectionRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-      prevActiveTabRef.current = activeTab;
+      prevActiveFilterRef.current = activeFilter;
     }
-  }, [activeTab]);
+  }, [activeFilter]);
 
   useEffect(() => {
     const skillCards = document.querySelectorAll(".skill .cardList .card_item");
@@ -46,6 +49,9 @@ function Home() {
     const projectCards = document.querySelectorAll(
       ".project_grid .project_card"
     );
+
+    const profileItems = document.querySelectorAll(".profile_info_item");
+    const profileIntro = document.querySelector(".profile_intro");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -56,7 +62,19 @@ function Home() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0 }
+    );
+
+    const projectObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            projectObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "0px 0px -50px 0px" }
     );
 
     skillCards.forEach((card, index) => {
@@ -65,22 +83,35 @@ function Home() {
     });
 
     projectCards.forEach((card, index) => {
-      card.style.transitionDelay = `${index * 0.1}s`;
-      observer.observe(card);
+      const row = Math.floor(index / 3);
+      card.style.transitionDelay = `${row * 0.1}s`;
+      projectObserver.observe(card);
     });
 
-    return () => observer.disconnect();
-  }, [activeTab]);
+    profileItems.forEach((item, index) => {
+      item.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(item);
+    });
+
+    if (profileIntro) {
+      profileIntro.style.transitionDelay = `${profileItems.length * 0.1}s`;
+      observer.observe(profileIntro);
+    }
+
+    return () => {
+      observer.disconnect();
+      projectObserver.disconnect();
+    };
+  }, [activeFilter]);
 
   const items = [
     {
       id: "1",
-      title: "실리콘",
+      title: "실리콘 APP",
       desc: "모바일쿠폰을 자동으로 찾아 스마트하게 관리할 수 있는 어플",
       period: "2025.01 - 2025.05",
       tags: ["웹/앱", "디자인 100%", "화면설계 30%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/sealecon_main.jpg",
       thumbnail: "/src/assets/images/home/sealecon_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/sealecon_01.jpg", type: "app" },
@@ -111,7 +142,6 @@ function Home() {
         { src: "/src/assets/images/home/sealecon_26.jpg", type: "app" },
       ],
       link: "https://apps.apple.com/kr/app/%EC%8B%A4%EB%A6%AC%EC%BD%98-%EB%82%B4-%EC%86%90-%EC%95%88%EC%9D%98-%EC%BF%A0%ED%8F%B0%EB%A7%A4%EB%8B%88%EC%A0%80/id6744006001",
-      height: 700,
     },
 
     {
@@ -121,7 +151,6 @@ function Home() {
       period: "2025.10",
       tags: ["출시 전", "반응형", "디자인 100%", "화면설계 100%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/ongi_main.jpg",
       thumbnail: "/src/assets/images/home/ongi_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/ongi_01.jpg", type: "desktop" },
@@ -129,16 +158,14 @@ function Home() {
         { src: "/src/assets/images/home/ongi_03.jpg", type: "desktop" },
         { src: "/src/assets/images/home/ongi_04.jpg", type: "desktop" },
       ],
-      height: 1000,
     },
     {
       id: "3",
-      title: "데버 Careers",
+      title: "데버 Careers 사이트",
       desc: "기업 비전과 문화를 담은 채용/영입 전용 사이트",
       period: "2025.12",
       tags: ["반응형", "디자인 100%", "화면설계 70%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/deverCareers_main.jpg",
       thumbnail: "/src/assets/images/home/deverCareers_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/deverCareers_01.jpg", type: "desktop" },
@@ -165,16 +192,14 @@ function Home() {
         { src: "/src/assets/images/home/deverCareers_22.jpg", type: "desktop" },
       ],
       link: "https://careers.dever.team/",
-      height: 900,
     },
     {
       id: "4",
-      title: "데버 Gift",
+      title: "데버 Gift 사이트",
       desc: "개인/단체 주문이 가능한 기프티콘 발송 사이트",
       period: "2025.07 - 2025.08",
       tags: ["반응형", "디자인 100%", "화면설계 90%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/deverGift_main.jpg",
       thumbnail: "/src/assets/images/home/deverGift_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/deverGift_01.jpg", type: "desktop" },
@@ -203,7 +228,6 @@ function Home() {
         { src: "/src/assets/images/home/deverGift_22.jpg", type: "app" },
       ],
       link: "https://gift.dever.team/#price-range-recommendation",
-      height: 1000,
     },
     {
       id: "5",
@@ -212,7 +236,6 @@ function Home() {
       period: "2025.07",
       tags: ["출시 전", "리디자인", "PC 최적화", "디자인 40%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/heyholder_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/heyholder_01.jpg", type: "wide" },
@@ -221,16 +244,14 @@ function Home() {
         { src: "/src/assets/images/home/heyholder_04.jpg", type: "wide" },
         { src: "/src/assets/images/home/heyholder_05.jpg", type: "wide" },
       ],
-      height: 800,
     },
     {
       id: "6",
-      title: "특수 데이터 관리자페이지",
-      desc: "특수 데이터 수집/관리를 지원하는 관리자페이지",
+      title: "임상시험 데이터 관리 솔루션",
+      desc: "임상시험 데이터 수집/관리등을 지원하는 관리 솔루션",
       period: "2025.08",
       tags: ["PC 최적화", "디자인 100%", "화면설계 70%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/dataAdmin_main.jpg",
       thumbnail: "/src/assets/images/home/dataAdmin_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/dataAdmin_02.jpg", type: "wide" },
@@ -248,16 +269,14 @@ function Home() {
         { src: "/src/assets/images/home/dataAdmin_14.jpg", type: "wide" },
         { src: "/src/assets/images/home/dataAdmin_15.jpg", type: "wide" },
       ],
-      height: 1000,
     },
     {
       id: "7",
       title: "통합 관리자페이지",
-      desc: "솔루션 통합 관리/인사관리를 한번에 처리할 수 있는 플랫폼",
+      desc: "여러개의 플랫폼을 통합적으로 관리하고 인사관리를 처리할 수 있는 통합 관리 솔루션",
       period: "2025.07",
       tags: ["PC최적화", "디자인 30%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/admin_main.jpg",
       thumbnail: "/src/assets/images/home/admin_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/admin_01.jpg", type: "wide" },
@@ -270,16 +289,14 @@ function Home() {
         { src: "/src/assets/images/home/admin_08.jpg", type: "desktop" },
         { src: "/src/assets/images/home/admin_09.jpg", type: "wide" },
       ],
-      height: 700,
     },
     {
       id: "8",
-      title: "데버 Accounts",
+      title: "데버 Accounts 사이트",
       desc: "관련 솔루션의 통합 로그인/계정 설정을 할 수 있는 통합 로그인 플랫폼",
       period: "2024. 10",
       tags: ["반응형", "디자인 40%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/accounts_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/accounts_01.jpg", type: "desktop" },
@@ -295,16 +312,14 @@ function Home() {
         { src: "/src/assets/images/home/accounts_11.jpg", type: "wide" },
       ],
       link: "https://accounts.dever.team/auth/login",
-      height: 600,
     },
     {
       id: "9",
       title: "온기 관리자페이지",
-      desc: "4가지 관리자페이지로 구성된 기부 관련 관리자페이지와 플랫폼",
+      desc: "기부관련하여 여러개의 관리자페이지로 구성됐으며, 관리자페이지들의 데이터 로직을 고려하여 제작된 관리 플랫폼",
       period: "2025.09",
       tags: ["출시 전", "일부 반응형", "디자인 100%", "화면설계 50%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "/src/assets/images/home/ongiAdmin_main.jpg",
       thumbnail: "/src/assets/images/home/ongiAdmin_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/ongiAdmin_01.jpg", type: "desktop" },
@@ -328,16 +343,14 @@ function Home() {
         { src: "/src/assets/images/home/ongiAdmin_19.jpg", type: "wide" },
         { src: "/src/assets/images/home/ongiAdmin_20.jpg", type: "wide" },
       ],
-      height: 800,
     },
     {
       id: "10",
-      title: "데버 고객센터",
+      title: "데버 고객센터 사이트",
       desc: "솔루션별 자주묻는질문/1:1문의를 지원하는 고객센터",
       period: "2024. 10",
       tags: ["반응형", "디자인 100%", "화면기획 60%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/deverCs_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/deverCs_01.jpg", type: "desktop" },
@@ -357,16 +370,14 @@ function Home() {
         { src: "/src/assets/images/home/deverCs_13.jpg", type: "wide" },
       ],
       link: "https://cs.dever.team/",
-      height: 1000,
     },
     {
       id: "11",
-      title: "데버 Tech",
+      title: "데버 Tech 기술블로그",
       desc: "사내 기술과 프로젝트 인사이트를 공유하는 기업형 테크 블로그",
       period: "2025. 01",
       tags: ["반응형", "디자인 100%", "화면기획 100%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/deverTech_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/deverTech_01.jpg", type: "desktop" },
@@ -375,7 +386,6 @@ function Home() {
         { src: "/src/assets/images/home/deverTech_04.jpg", type: "desktop" },
       ],
       link: "https://tech.dever.team/",
-      height: 400,
     },
     {
       id: "12",
@@ -384,10 +394,8 @@ function Home() {
       period: "2025.03 - 2025.05",
       tags: ["출시 전", "반응형", "디자인 70%", "화면기획 50%", "퍼블리싱 60%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/print_thumbnail.png",
       link: "/src/publishing/paperseven/Home/Home.html",
-      height: 1000,
       projectType: "personal",
     },
     {
@@ -397,47 +405,30 @@ function Home() {
       period: "2025.01 - 2025.02",
       tags: ["출시 전", "반응형", "디자인 70%", "화면기획 50%", "퍼블리싱 60%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/print2_thumbnail.png",
       link: "/src/publishing/boxguide/Home/Home.html",
-      height: 600,
       projectType: "personal",
     },
+
     {
       id: "14",
-      title: "2023 권효선 포트폴리오",
-      desc: "UIUX 퍼블리셔 권효선 포트폴리오",
-      period: "2023.10 - 2023.11 ",
-      tags: ["반응형", "디자인 100%", "화면기획 100%"],
-      tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
-      thumbnail: "/src/assets/images/home/2024portfolio_thumbnail.png",
-      link: "/src/publishing/portpolio/home.html",
-      height: 900,
-      projectType: "personal",
-    },
-    {
-      id: "15",
       title: "실리콘 BI구축",
       desc: "실리콘 서비스의 브랜드아이덴티티 구축",
       period: "2025. 01",
       tags: ["디자인 100%", "기획 60%"],
       tools: ["photoshop", "illustrator"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/sealeconBi_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/sealeconBi_01.png", type: "wide" },
       ],
-      height: 700,
     },
     {
-      id: "16",
-      title: "함께하는 요양보호사교육원",
+      id: "15",
+      title: "함께하는 요양보호사교육원 사이트",
       desc: "기존 기능은 유지하며, UI/UX를 재정의한 교육원 사이트",
       period: "2025. 06",
-      tags: ["출시 전전", "반응형", "리디자인", "디자인 80%"],
+      tags: ["출시 전", "반응형", "리디자인", "디자인 80%"],
       tools: ["photoshop", "illustrator", "figma"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/together_thumbnail.png",
       imgs: [
         { src: "/src/assets/images/home/together_01.jpg", type: "desktop" },
@@ -469,19 +460,28 @@ function Home() {
         { src: "/src/assets/images/home/together_27.jpg", type: "desktop" },
         { src: "/src/assets/images/home/together_28.jpg", type: "desktop" },
       ],
-      height: 1000,
+    },
+    {
+      id: "16",
+      title: "2023 권효선 포트폴리오",
+      desc: "UIUX 퍼블리셔 권효선 포트폴리오",
+      period: "2023.10 - 2023.11 ",
+      tags: ["사이드프로젝트", "반응형", "디자인 100%", "화면기획 100%"],
+      tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
+      thumbnail: "/src/assets/images/home/2024portfolio_thumbnail.png",
+      link: "/src/publishing/portpolio/home.html",
+      projectType: "personal",
+      isPersonal: true,
     },
     {
       id: "17",
-      title: "JNSONS KOREA",
+      title: "JNSONS KOREA 사이트",
       desc: "미용 관련 소품을 볼 수 있으며, 기업 정보를 확인할 수 있는 사이트",
       period: "2024.07",
       tags: ["반응형", "디자인 100%", "화면기획 90%", "퍼블리싱 100%"],
       tools: ["photoshop", "illustrator", "figma", "html", "css", "javascript"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/jnsonskorea_thumbnail.png",
       link: "https://www.jnsonskorea.com/",
-      height: 500,
       projectType: "personal",
     },
     {
@@ -489,13 +489,70 @@ function Home() {
       title: "잭시믹스 랜딩페이지",
       period: "2023.09",
       desc: "기존 이벤트를 재해석/리디자인한 잭시믹스 랜딩페이지",
-      tags: ["사이드프로젝트", "반응형", "디자인 100%", "화면기획 100%"],
+      tags: [
+        "사이드프로젝트",
+        "반응형",
+        "디자인 100%",
+        "화면기획 100%",
+        "퍼블리싱 100%",
+      ],
       tools: ["photoshop", "illustrator", "figma", "html", "css"],
-      mainImg: "https://picsum.photos/id/1015/600/900?grayscale",
       thumbnail: "/src/assets/images/home/xexymix_thumbnail.png",
       link: "/src/publishing/xexymix/home.html",
-      height: 600,
       projectType: "personal",
+      isPersonal: true,
+    },
+    {
+      id: "19",
+      title: "아로마티카 이벤트페이지",
+      period: "2023.09",
+      desc: "기존 이벤트를 재해석/리디자인한 아로마티카 이벤트페이지",
+      tags: ["사이드프로젝트", "디자인 100%", "화면기획 100%"],
+      tools: ["photoshop", "illustrator"],
+      thumbnail: "/src/assets/images/home/aromatica_thumbnail.png",
+      isPersonal: true,
+      imgs: [
+        {
+          src: "/src/assets/images/home/aromatica_01.jpg",
+          type: "wide",
+        },
+      ],
+    },
+    {
+      id: "20",
+      title: "마리끌레르 22fw 컬렉션 인트로",
+      period: "2022.07",
+      desc: "시즌 컬렉션의 브랜드 무드와 컨셉을 녹여낸 브랜드 인트로",
+      tags: ["디자인 100%"],
+      tools: ["photoshop"],
+      thumbnail: "/src/assets/images/home/graphic01_thumbnail.png",
+    },
+    {
+      id: "21",
+      title: "마리끌레르 22ss 컬렉션 인트로",
+      period: "2022.01",
+      desc: "시즌 컬렉션의 브랜드 무드와 컨셉을 녹여낸 브랜드 인트로",
+      tags: ["디자인 100%"],
+      tools: ["photoshop"],
+      thumbnail: "/src/assets/images/home/graphic02_thumbnail.png",
+    },
+    {
+      id: "22",
+      title: "시엔 23ss 컬렉션 인트로",
+      period: "2023.01",
+      desc: "시즌 컬렉션의 브랜드 무드와 컨셉을 녹여낸 브랜드 인트로",
+      tags: ["디자인 100%"],
+      tools: ["photoshop"],
+      thumbnail: "/src/assets/images/home/graphic03_thumbnail.png",
+    },
+    {
+      id: "23",
+      title: "마리끌레르 23ss 컬렉션 인트로",
+      period: "2023.01",
+      desc: "시즌 컬렉션의 브랜드 무드와 컨셉을 녹여낸 브랜드 인트로",
+      tags: ["디자인 100%"],
+      tools: ["photoshop"],
+      thumbnail: "/src/assets/images/home/graphic04_thumbnail.png",
     },
   ];
 
@@ -533,16 +590,157 @@ function Home() {
         </div>
       </section>
       <section className="c_section skill">
+        <div className="c_inner profile">
+          <div className="left">
+            <h2 className="sectionTitle">Profile</h2>
+            <p className="subText">
+              안녕하세요.
+              <span className="block">협업능력, 성실함, 소통력이 우수한</span>
+              UIUX 디자이너/퍼블리셔 권효선입니다.
+            </p>
+          </div>
+          <div className="right">
+            <div className="profile_container">
+              <ul className="profile_info_list">
+                <li className="profile_info_item">
+                  <h3 className="info_title">이름</h3>
+                  <p className="text">권효선</p>
+                </li>
+                <li className="profile_info_item">
+                  <h3 className="info_title">이메일</h3>
+                  <p className="text">sunblisher@gmail.com</p>
+                </li>
+                <li className="profile_info_item">
+                  <h3 className="info_title">교육이력</h3>
+                  <div className="date_wrap">
+                    <p className="date">2013.03 - 2016.02</p>
+                    <p className="text">세그루패션디자인고등학교 졸업</p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2023.03 - 2023.04</p>
+                    <p className="text">
+                      웹퍼블리셔 기초 교육과정 (하이미디어컴퓨터학원)
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2023.07 - 2023.11</p>
+                    <p className="text">
+                      웹&앱 디자인 퍼블리셔 교육과정 (이젠아카데미 DX교육센터)
+                    </p>
+                  </div>
+                </li>
+                <li className="profile_info_item">
+                  <h3 className="info_title">자격증</h3>
+                  <div className="date_wrap">
+                    <p className="date">2014.08</p>
+                    <p className="text">샵마스터3급</p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2015.07</p>
+                    <p className="text">컴퓨터그래픽스운용기능사</p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2015.08</p>
+                    <p className="text">정보기술자격 (ITQ)인증시험</p>
+                  </div>
+                </li>
+                <li className="profile_info_item experience">
+                  <h3 className="info_title">경력사항</h3>
+                  <div className="date_wrap">
+                    <p className="date">2015.08 - 2016.03</p>
+                    <p className="text">
+                      이오F&P (팬시/문구 쇼핑몰)
+                      <sapn className="work">
+                        배너 제작, 제품 상세페이지 제작, 이벤트페이지 제작
+                      </sapn>
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2016.10 ~ 2017.11</p>
+                    <p className="text">
+                      쥬뗌므 (의류 쇼핑몰)
+                      <sapn className="work">
+                        인물/제품 리터칭, 배너 제작, 제품 상세페이지 제작,
+                        이벤트페이지 제작
+                      </sapn>
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2018.10 ~ 2019.01</p>
+                    <p className="text">
+                      부티크드루시드 (의류 쇼핑몰)
+                      <sapn className="work">
+                        인물/제품 리터칭, 배너 제작, 제품 상세페이지 제작,
+                        이벤트페이지 제작
+                      </sapn>
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2019.01 ~ 2019.07</p>
+                    <p className="text">
+                      내셔널비 (의류 쇼핑몰)
+                      <sapn className="work">
+                        인물/제품 리터칭, 제품 상세페이지 제작
+                      </sapn>
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2019.11 ~ 2020.12</p>
+                    <p className="text">
+                      에프엠씨패션코리아 (의류 벤더사)
+                      <sapn className="work">
+                        인물/제품 리터칭, 제품 상세페이지 제작, 이벤트 페이지
+                        제작, 오픈마켓 딜 제작
+                      </sapn>
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2021.04 ~ 2023.07</p>
+                    <p className="text">
+                      퍼스트에프엔씨 (마리끌레르 브랜드)
+                      <sapn className="work">
+                        인물/제품 리터칭, 배너 제작, 제품 상세페이지 제작,
+                        이벤트페이지 제작, 제품 촬영, 팜플렛 제작
+                      </sapn>
+                    </p>
+                  </div>
+                  <div className="date_wrap">
+                    <p className="date">2024.05 ~ 2025.11</p>
+                    <p className="text">
+                      데버 (IT 웹에이전시)
+                      <sapn className="work">
+                        UIUX디자인, 퍼블리싱, BI제작, 사내 디자인
+                      </sapn>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div className="profile_intro profile_info_item">
+                <h4 className="info_title">자기소개</h4>
+                <p className="text">
+                  저는 사용자의 행동을 이해하고 그 경험을 시각적으로 풀어내는
+                  UI/UX 디자이너이자 웹 퍼블리셔 권효선입니다. 단순히 예쁜
+                  화면을 만드는 것이 아니라, 논리적인 구조와 명확한 정보 전달을
+                  통해 사용자가 '생각하지 않아도 자연스럽게 이해할 수 있는
+                  인터페이스'를 구현하는 데 집중합니다. 약 6년간 웹디자인을 통해
+                  비주얼 스토리텔링과 브랜드 이해력을 쌓았고, 이후 UI/UX
+                  디자인과 퍼블리싱을 병행하며 구조적 UI 구현과 사용자 흐름
+                  중심의 설계에 집중했습니다. 이를 통해 디자인과 개발의 연결
+                  고리를 이해하고, 복잡한 정보를 '이해 → 단순화 → 시각화'의
+                  과정으로 정리하여 일관된 톤앤매너로 표현하는 능력을
+                  길렀습니다. 저에게 디자인은 단순한 감각의 표현이 아니라,
+                  이해와 공감에서 출발한 사용자 경험의 설계라고 생각합니다.
+                  사용자 관점에서의 생각하며, 직관적이고 완성도 높은 프로덕트를
+                  구현하는 것을 목표로 합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="c_inner">
           <div className="left">
             <h2 className="sectionTitle">Skill</h2>
-            <p className="subText">
-              <span className="block">
-                실무에서 사용하고 있는 기술스택입니다.
-              </span>
-              최근 AI 도구를 적극 활용해 라이브러리나 리액트를 학습하고, 이미지
-              제작을 실무에 적용하고 있습니다.
-            </p>
+            <p className="subText">실무에서 사용하고 있는 기술스택입니다.</p>
           </div>
           <div className="right">
             <div className="cardList">
@@ -663,22 +861,31 @@ function Home() {
             <div className="project_tabs">
               <div className="project_tab_slider" style={sliderStyle}></div>
               <button
-                ref={(el) => (tabRefs.current["company"] = el)}
+                ref={(el) => (tabRefs.current["all"] = el)}
                 className={`project_tab ${
-                  activeTab === "company" ? "active" : ""
+                  activeFilter === "all" ? "active" : ""
                 }`}
-                onClick={() => setActiveTab("company")}
+                onClick={() => setActiveFilter("all")}
               >
-                디자인 작업
+                전체
               </button>
               <button
-                ref={(el) => (tabRefs.current["personal"] = el)}
+                ref={(el) => (tabRefs.current["design"] = el)}
                 className={`project_tab ${
-                  activeTab === "personal" ? "active" : ""
+                  activeFilter === "design" ? "active" : ""
                 }`}
-                onClick={() => setActiveTab("personal")}
+                onClick={() => setActiveFilter("design")}
               >
-                퍼블리싱 작업
+                디자인
+              </button>
+              <button
+                ref={(el) => (tabRefs.current["publishing"] = el)}
+                className={`project_tab ${
+                  activeFilter === "publishing" ? "active" : ""
+                }`}
+                onClick={() => setActiveFilter("publishing")}
+              >
+                퍼블리싱
               </button>
             </div>
           </div>
@@ -686,42 +893,69 @@ function Home() {
             <div className="project_grid">
               {items
                 .filter((item) => {
-                  const itemType = item.projectType || "company";
-                  return itemType === activeTab;
+                  if (activeFilter === "all") return true;
+
+                  const isPublishing = item.projectType === "personal";
+
+                  if (activeFilter === "design") {
+                    return !isPublishing;
+                  }
+                  if (activeFilter === "publishing") {
+                    return isPublishing;
+                  }
+                  return true;
                 })
-                .map((item) => (
-                  <div
-                    key={item.id}
-                    className="project_card"
-                    onClick={() => setSelectedItem(item)}
-                  >
-                    <div className="project_card_image">
-                      <img
-                        src={item.thumbnail || item.mainImg}
-                        alt={item.title}
-                      />
+                .map((item) => {
+                  const isPublishing = item.projectType === "personal";
+                  const isPersonal = item.isPersonal === true;
+
+                  return (
+                    <div
+                      key={item.id}
+                      className="project_card"
+                      onClick={() => setSelectedItem(item)}
+                    >
+                      <div className="project_card_image">
+                        <img
+                          src={item.thumbnail || item.mainImg}
+                          alt={item.title}
+                        />
+                      </div>
+                      <div className="project_card_content">
+                        <h3 className="project_card_title">{item.title}</h3>
+                        {item.desc && (
+                          <p className="project_card_desc">{item.desc}</p>
+                        )}
+                        <div className="project_card_badges">
+                          {item.period &&
+                            (() => {
+                              const year =
+                                item.period.split(".")[0] ||
+                                item.period.split(" ")[0];
+                              return (
+                                <span className="project_card_year">
+                                  {year}
+                                </span>
+                              );
+                            })()}
+                          <span className="project_card_type project_card_type_design">
+                            디자인
+                          </span>
+                          {isPublishing && (
+                            <span className="project_card_type project_card_type_publishing">
+                              퍼블리싱
+                            </span>
+                          )}
+                          {isPersonal && (
+                            <span className="project_card_type project_card_type_personal">
+                              개인작업
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                    <div className="project_card_content">
-                      <h3 className="project_card_title">{item.title}</h3>
-                      {item.desc && (
-                        <p className="project_card_desc">{item.desc}</p>
-                      )}
-                      {item.period &&
-                        (() => {
-                          const year =
-                            item.period.split(".")[0] ||
-                            item.period.split(" ")[0];
-                          return (
-                            <p
-                              className={`project_card_year project_card_year_${year}`}
-                            >
-                              {year}
-                            </p>
-                          );
-                        })()}
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
           </div>
         </div>

@@ -12,14 +12,8 @@ function Footer() {
               <span className="footer_info_value">권효선</span>
             </div>
             <div className="footer_info_item">
-              <span className="footer_info_label">생년월일</span>
-              <span className="footer_info_value">1997.12.18</span>
-            </div>
-            <div className="footer_info_item">
-              <span className="footer_info_label">경력</span>
-              <span className="footer_info_value">
-                총 7.8년 (디자이너 7.8년 / 퍼블리셔 1.5년)
-              </span>
+              <span className="footer_info_label">연락처</span>
+              <span className="footer_info_value">01076952242</span>
             </div>
             <div className="footer_info_item">
               <span className="footer_info_label">이메일</span>
