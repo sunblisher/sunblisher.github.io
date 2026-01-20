@@ -158,6 +158,7 @@ function Home() {
         { src: "/src/assets/images/home/ongi_03.jpg", type: "desktop" },
         { src: "/src/assets/images/home/ongi_04.jpg", type: "desktop" },
       ],
+      link: "https://www.ongi.site/",
     },
     {
       id: "3",
